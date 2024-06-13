@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Myongji Univ.
+// Engineer: Tony CHA
 // 
 // Create Date: 06/13/2024 12:21:06 PM
 // Module Name: tb_RV32I_SoC

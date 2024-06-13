@@ -1066,3 +1066,958 @@ add_files -fileset sim_1 -norecurse /mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_S
 set_property xsim.view /mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg [get_filesets sim_1]
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
+close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/fa_1bit.v w ]
+add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/fa_1bit.v
+update_compile_order -fileset sources_1
+close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v w ]
+add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v
+update_compile_order -fileset sources_1
+close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v w ]
+add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v
+update_compile_order -fileset sources_1
+close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v w ]
+add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v w ]
+add_files -fileset sim_1 /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v
+update_compile_order -fileset sim_1
+set_property top tb_bka32 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/tony/tools/xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/home/tony/tools/xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bka32' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim/insts_data.coe'
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim/ram_2port_2048x32.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bka32_behav -key {Behavioral:sim_1:Functional:tb_bka32} -tclbatch {tb_bka32.tcl} -view {/mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config /mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg
+WARNING: Simulation object /tb_RV32I_SoC/DUT/rst was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/clk_main was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/clk_text was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/fetch_addr was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/inst was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/iCPU/rs2_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/iCPU/rs1_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/iCPU/rd_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/iCPU/pc was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/clk_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/data_addr was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/read_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/write_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/seg_com was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/seg_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/leds was not found in the design.
+source tb_bka32.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bka32_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+set_property top brent_kung_add_32bit [current_fileset]
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/tony/tools/xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/home/tony/tools/xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_bka32' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim/insts_data.coe'
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim/ram_2port_2048x32.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_bka32_behav -key {Behavioral:sim_1:Functional:tb_bka32} -tclbatch {tb_bka32.tcl} -view {/mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config /mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg
+WARNING: Simulation object /tb_RV32I_SoC/DUT/rst was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/clk_main was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/clk_text was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/fetch_addr was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/inst was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/iCPU/rs2_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/iCPU/rs1_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/iCPU/rd_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/iCPU/pc was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/clk_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/data_addr was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/read_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/DUT/write_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/seg_com was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/seg_data was not found in the design.
+WARNING: Simulation object /tb_RV32I_SoC/leds was not found in the design.
+source tb_bka32.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_bka32_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 10 s
+run: Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:09 . Memory (MB): peak = 10306.938 ; gain = 0.000 ; free physical = 4508 ; free virtual = 62829
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module brent_kung_add_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_2bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_bka32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bka32
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.g_2bits
+Compiling module xil_defaultlib.p_2bits
+Compiling module xil_defaultlib.brent_kung_add_32bit_default
+Compiling module xil_defaultlib.tb_bka32
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_bka32_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_bka32_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_bka32'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_bka32_behav xil_defaultlib.tb_bka32 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top RV32I_SoC [current_fileset]
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

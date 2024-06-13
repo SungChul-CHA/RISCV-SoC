@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../2_homework.gen/sources_1/ip/clk_wiz_0" \
+"../../../../2_homework.srcs/sources_1/new/brent_kung_add_32bit.v" \
+"../../../../2_homework.srcs/sources_1/new/g_2bits.v" \
+"../../../../2_homework.srcs/sources_1/new/p_2bits.v" \
+"../../../../2_homework.srcs/sim_1/new/tb_bka32.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

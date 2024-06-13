@@ -30,8 +30,17 @@ module alu(
     output  V
     );
     
-// case statements
-// use addsub module in digital system course
+    wire sign, cout;
+    wire [31:0] bxor, sum;
+    wire [31:0] c;
+    
+    // case statements
+    // use addsub module in digital system course
+    assign sign = control[4];
+    assign bxor = (sign) ? ~b : b;
+    
+    brent_kung_add_32bit inst0 (.a(a), .b(bxor), .cin(sign), .sum(sum), .cout(cout), .c(c));
+
 
     always @* begin
         case (control) 
