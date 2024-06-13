@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Thu Jun 13 12:14:25 2024
+# Process ID: 19533
+# Current directory: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/clk_wiz_0_synth_1
+# Command line: vivado -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
+# Log file: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
+# Journal file: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/clk_wiz_0_synth_1/vivado.jou
+# Running On: tony-ubuntu, OS: Linux, CPU Frequency: 1704.631 MHz, CPU Physical cores: 14, Host memory: 33372 MB
+#-----------------------------------------------------------
+source clk_wiz_0.tcl -notrace

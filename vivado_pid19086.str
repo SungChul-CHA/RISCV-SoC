@@ -1,0 +1,1633 @@
+/*
+
+Xilinx Vivado v2022.2.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3788238 on Tue Feb 21 19:59:23 MST 2023
+IP Build: 3783773 on Tue Feb 21 23:41:56 MST 2023
+
+Process ID (PID): 19086
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Jun 13 12:12:05 KST 2024
+Time zone: 	Korean Standard Time (Asia/Seoul)
+
+OS: Ubuntu
+OS Version: 6.5.0-35-generic
+OS Architecture: amd64
+Available processors (cores): 20
+
+Display: 0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/home/tony/tools/xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/home/tony/tools/xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	tony
+User home directory: /home/tony
+User working directory: /mnt/Shared/SoC/Vivado/2_homework
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/tony/tools/xilinx/Vivado
+HDI_APPROOT: /home/tony/tools/xilinx/Vivado/2022.2
+RDI_DATADIR: /home/tony/tools/xilinx/Vivado/2022.2/data
+RDI_BINDIR: /home/tony/tools/xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: /home/tony/.Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: /home/tony/.Xilinx/Vivado/2022.2/
+Vivado layouts directory: /home/tony/.Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	/home/tony/tools/xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	/mnt/Shared/SoC/Vivado/2_homework/vivado.log
+Vivado journal file: 	/mnt/Shared/SoC/Vivado/2_homework/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-19086-tony-ubuntu
+
+Xilinx Environment Variables
+----------------------------
+RDI_APPROOT: /home/tony/tools/xilinx/Vivado/2022.2
+RDI_BASEROOT: /home/tony/tools/xilinx/Vivado
+RDI_BINROOT: /home/tony/tools/xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/tony/tools/xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: /home/tony/tools/xilinx
+RDI_INSTALLVER: 2022.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: /home/tony/tools/xilinx/Vivado/2022.2/lib/lnx64.o/Ubuntu:/home/tony/tools/xilinx/Vivado/2022.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/tony/tools/xilinx/Vitis/2022.2/bin:/home/tony/tools/xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/vivado
+RDI_TPS_ROOT: /home/tony/tools/xilinx/Vivado/2022.2/tps/lnx64
+RDI_USE_JDK11: True
+XILINX: /home/tony/tools/xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: /home/tony/tools/xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: /home/tony/tools/xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: /home/tony/tools/xilinx/Vivado/2022.2
+XILINX_SDK: /home/tony/tools/xilinx/Vitis/2022.2
+XILINX_VITIS: /home/tony/tools/xilinx/Vitis/2022.2
+XILINX_VIVADO: /home/tony/tools/xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: /home/tony/tools/xilinx/Vivado/2022.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,060 MB
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,063 MB. GUI used memory: 58 MB. Current time: 6/13/24, 12:12:06 PM KST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/mnt/Shared/SoC/Vivado/2_homework/2_homework.xpr", 0); // b.a
+// Opening Vivado Project: /mnt/Shared/SoC/Vivado/2_homework/2_homework.xpr. Version: Vivado v2022.2.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 79 MB (+80703kb) [00:01:00]
+// [Engine Memory]: 1,182 MB (+1087900kb) [00:01:00]
+// WARNING: HEventQueue.dispatchEvent() is taking  1291 ms.
+// Tcl Message: open_project /mnt/Shared/SoC/Vivado/2_homework/2_homework.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/tony/tools/xilinx/Vivado/2022.2/data/ip'. 
+// Project name: 2_homework; location: /mnt/Shared/SoC/Vivado/2_homework; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bq
+// [GUI Memory]: 102 MB (+19899kb) [00:01:02]
+// [Engine Memory]: 1,261 MB (+20543kb) [00:01:02]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,271 MB. GUI used memory: 61 MB. Current time: 6/13/24, 12:13:01 PM KST
+// [GUI Memory]: 110 MB (+3021kb) [00:01:04]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // f
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "clock wi"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:6.0", 3, "Clocking Wizard", 0, false); // z
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:6.0", 3); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Clocking Wizard ; AXI4 ; Production ; Included ; xilinx.com:ip:clk_wiz:6.0", 3, "Clocking Wizard", 0, false, false, false, false, false, true); // z - Double Click
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// TclEventType: LOAD_FEATURE
+// [GUI Memory]: 116 MB (+587kb) [00:01:16]
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,365 MB. GUI used memory: 82 MB. Current time: 6/13/24, 12:13:17 PM KST
+dismissDialog("Customize IP"); // i
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH
+// [Engine Memory]: 1,367 MB (+45059kb) [00:01:22]
+setText("PRIM IN FREQ", (String) null); // v
+setText("PRIM IN FREQ", "125"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH
+setText("CLK OUT1 PORT", (String) null); // v
+setText("CLK OUT1 PORT", "clk0"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT1 REQUESTED OUT FREQ", (String) null); // v
+setText("CLKOUT1 REQUESTED OUT FREQ", "10"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out2", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectCheckBox((HResource) null, "clk_out3", true); // f: TRUE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLK OUT2 PORT", "clk90"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLK OUT3 PORT", "clk180"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT2 REQUESTED OUT FREQ", "10"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT3 REQUESTED OUT FREQ", "10"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT2 REQUESTED PHASE", "90"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLKOUT3 REQUESTED PHASE", "180"); // v
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+dismissDialog("Customize IP"); // m
+// TclEventType: CREATE_IP_CORE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// [GUI Memory]: 147 MB (+26211kb) [00:02:21]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'... 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,413 MB. GUI used memory: 82 MB. Current time: 6/13/24, 12:14:21 PM KST
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all clk_wiz_0] } 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0 
+// Tcl Message: export_ip_user_files -of_objects [get_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs clk_wiz_0_synth_1 -jobs 20 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0 
+// Tcl Message: [Thu Jun 13 12:14:23 2024] Launched clk_wiz_0_synth_1... Run output will be captured here: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/clk_wiz_0_synth_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: RUN_STATUS_CHANGE
+// [Engine Memory]: 1,438 MB (+3144kb) [00:02:27]
+// Elapsed time: 10 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 23 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "block memory"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.4", 6, "Block Memory Generator", 0, false); // z
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.4", 6); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.4", 6, "Block Memory Generator", 0, false, false, false, false, false, true); // z - Double Click
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// Elapsed time: 20 seconds
+setText("Component Name", "ram_2port_2048x32"); // v
+selectComboBox("Memory Type (Memory_Type)", "True Dual Port RAM", 2); // D
+selectCheckBox((HResource) null, "Byte Write Enable", true); // f: TRUE
+selectComboBox("Byte Size (bits) (Byte_Size)", "8", 0); // D
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // ba
+setText("Defines the PortA Write Width(DINA)", "32"); // v
+// Elapsed time: 11 seconds
+setText("Write Depth", "2048"); // v
+selectCheckBox((HResource) null, "Primitives Output Register", false); // f: FALSE
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port B Options", 2); // ba
+selectCheckBox((HResource) null, "Primitives Output Register", false); // f: FALSE
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 3); // ba
+// Elapsed time: 29 seconds
+selectCheckBox((HResource) null, "Load Init File", true); // f: TRUE
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_BROWSE, "Browse"); // a
+dismissFileChooser();
+selectCheckBox((HResource) null, "Load Init File", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Customize IP"); // m
+// TclEventType: CREATE_IP_CORE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name ram_2port_2048x32 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list \   CONFIG.Byte_Size {8} \   CONFIG.Component_Name {ram_2port_2048x32} \   CONFIG.Load_Init_File {false} \   CONFIG.Memory_Type {True_Dual_Port_RAM} \   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \   CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \   CONFIG.Use_Byte_Write_Enable {true} \   CONFIG.Write_Depth_A {2048} \   CONFIG.Write_Width_A {32} \ ] [get_ips ram_2port_2048x32] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_2port_2048x32'... 
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ram_2port_2048x32'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ram_2port_2048x32'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ram_2port_2048x32'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ram_2port_2048x32'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all ram_2port_2048x32] } 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ram_2port_2048x32 
+// Tcl Message: export_ip_user_files -of_objects [get_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32.xci] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32.xci] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 160 MB (+5687kb) [00:04:36]
+// Tcl Message: launch_runs ram_2port_2048x32_synth_1 -jobs 20 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ram_2port_2048x32 
+// Tcl Message: [Thu Jun 13 12:16:35 2024] Launched ram_2port_2048x32_synth_1... Run output will be captured here: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/ram_2port_2048x32_synth_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,492 MB. GUI used memory: 93 MB. Current time: 6/13/24, 12:16:36 PM KST
+selectButton("OptionPane.button", "OK"); // JButton
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ram_2port_2048x32 (ram_2port_2048x32.xci)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ram_2port_2048x32 (ram_2port_2048x32.xci)]", 2, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 3); // ba
+selectCheckBox((HResource) null, "Load Init File", true); // f: TRUE
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_BROWSE, "Browse"); // a
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 56 seconds
+selectButton(RDIResource.HJFileChooserHelpers_REFRESH_FOLDER_VIEW_TO_REFLECT_EXTERNAL, (String) null); // a
+setFileChooser("/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data.coe");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_EDIT, "Edit"); // a
+selectButton(PAResourceEtoH.HACGCCoeFileDialog_SAVE, "Save"); // a
+selectButton(PAResourceEtoH.HACGCCoeFileDialog_CLOSE, "Close"); // a
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_EDIT, "Edit"); // a
+selectButton(PAResourceEtoH.HACGCCoeFileDialog_SAVE, "Save"); // a
+selectButton(PAResourceEtoH.HACGCCoeFileDialog_CLOSE, "Close"); // a
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port B Options", 2); // ba
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 3); // ba
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port B Options", 2); // ba
+selectCheckBox((HResource) null, "Primitives Output Register", true); // f: TRUE
+selectCheckBox((HResource) null, "Primitives Output Register", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 3); // ba
+// HMemoryUtils.trashcanNow. Engine heap size: 1,511 MB. GUI used memory: 103 MB. Current time: 6/13/24, 12:18:26 PM KST
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // ba
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize IP"); // m
+// [Engine Memory]: 1,511 MB (+1324kb) [00:06:34]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ram_2port_2048x32 (ram_2port_2048x32.xci)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ram_2port_2048x32 (ram_2port_2048x32.xci)]", 2, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 3); // ba
+selectCheckBox((HResource) null, "Load Init File", true); // f: TRUE
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_EDIT, "Edit"); // a
+selectButton("OptionPane.button", "No"); // JButton
+selectButton(PAResourceEtoH.HACGCCoeFileWidget_BROWSE, "Browse"); // a
+setFileChooser("/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data.coe");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list \   CONFIG.Coe_File {/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data.coe} \   CONFIG.Load_Init_File {true} \ ] [get_ips ram_2port_2048x32] 
+// Tcl Message: INFO: [IP_Flow 19-3484] Absolute path of file '/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data.coe' provided. It will be converted relative to IP Instance files 'insts_data.coe' 
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32.xci] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,533 MB. GUI used memory: 103 MB. Current time: 6/13/24, 12:18:47 PM KST
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_2port_2048x32'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ram_2port_2048x32'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ram_2port_2048x32'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ram_2port_2048x32'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ram_2port_2048x32'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all ram_2port_2048x32] } 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ram_2port_2048x32 
+// Tcl Message: export_ip_user_files -of_objects [get_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32.xci] -no_script -sync -force -quiet 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run ram_2port_2048x32_synth_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs ram_2port_2048x32_synth_1 -jobs 20 
+// Tcl Message: INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ram_2port_2048x32 
+// Tcl Message: [Thu Jun 13 12:18:47 2024] Launched ram_2port_2048x32_synth_1... Run output will be captured here: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/ram_2port_2048x32_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 47 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IP Catalog", 1); // o
+closeView(PAResourceOtoP.PAViews_IP_CATALOG, "IP Catalog"); // H
+// Elapsed time: 27 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or create constraints"); // a
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_CREATE_FILE, "Create File"); // a
+// Tcl Command: 'file mkdir /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1'
+// Tcl Message: file mkdir /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1 
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "RV32I_"); // Q
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "RV32I_SoC"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Constraints File"); // u
+selectButton("FINISH", "Finish"); // JButton
+// Tcl Command: 'file mkdir /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1/new'
+// 'f' command handler elapsed time: 18 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: file mkdir /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1/new 
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1/new/RV32I_SoC.xdc w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1/new/RV32I_SoC.xdc 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, RV32I_SoC.xdc]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, RV32I_SoC.xdc]", 6, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("RV32I_SoC.xdc", 278, 119); // ac
+typeControlKey((HResource) null, "RV32I_SoC.xdc", 'v'); // ac
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("RV32I_SoC.xdc", 471, 488); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 8, true, false, false, false, false, true); // D - Double Click - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "tb_RV32I_SoC"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Tcl Command: 'file mkdir /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new'
+dismissDialog("Create Source File"); // m
+// Tcl Message: file mkdir /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new 
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton
+dismissDialog("Define Module"); // p
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("RV32I_SoC.xdc", 537, 366); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 11, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 11, false, false, false, false, false, true); // D - Double Click
+typeControlKey((HResource) null, "tb_RV32I_SoC.v", 'v'); // ac
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, RV32I_SoC.xdc]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, RV32I_SoC.xdc]", 6, false, false, false, false, false, true); // D - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,560 MB. GUI used memory: 109 MB. Current time: 6/13/24, 12:21:16 PM KST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 9, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 9, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 980 seconds
+selectCodeEditor("tb_RV32I_SoC.v", 381, 242); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 74, 195); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 120, 140); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 70, 190); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 230, 250); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 362, 343); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tb_RV32I_SoC.v", 258, 359); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 220, 404); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("tb_RV32I_SoC.v", 404, 375); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 345, 399); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 335, 453); // ac
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 9, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 9, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("tb_RV32I_SoC.v", 181, 101); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,592 MB (+5064kb) [00:26:46]
+// Elapsed time: 13 seconds
+selectCodeEditor("tb_RV32I_SoC.v", 150, 99); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 164, 129); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,600 MB. GUI used memory: 106 MB. Current time: 6/13/24, 12:38:56 PM KST
+selectCodeEditor("tb_RV32I_SoC.v", 159, 141); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tb_RV32I_SoC.v", 231, 155); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectCodeEditor("tb_RV32I_SoC.v", 297, 176); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 275, 116); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("tb_RV32I_SoC.v", 168, 124); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 170, 132); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 197, 139); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,626 MB. GUI used memory: 106 MB. Current time: 6/13/24, 12:39:41 PM KST
+selectCodeEditor("tb_RV32I_SoC.v", 198, 175); // ac
+// Elapsed time: 51 seconds
+selectCodeEditor("tb_RV32I_SoC.v", 321, 250); // ac
+selectCodeEditor("tb_RV32I_SoC.v", 487, 169); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("tb_RV32I_SoC.v", 631, 190); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_wiz_0 (clk_wiz_0.xci)]", 1, false); // D
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "RV32I_SoC"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Tcl Command: 'file mkdir /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new'
+dismissDialog("Create Source File"); // m
+// Tcl Message: file mkdir /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new 
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 12 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // p
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("tb_RV32I_SoC.v", 324, 218); // ac
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,655 MB. GUI used memory: 106 MB. Current time: 6/13/24, 12:41:16 PM KST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v)]", 1, false, false, false, false, false, true); // D - Double Click
+// [Engine Memory]: 1,688 MB (+17044kb) [00:29:20]
+selectCodeEditor("RV32I_SoC.v", 342, 195); // ac
+selectCodeEditor("RV32I_SoC.v", 88, 381); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 178, 93); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 237, 125); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,709 MB. GUI used memory: 106 MB. Current time: 6/13/24, 12:41:41 PM KST
+selectCodeEditor("RV32I_SoC.v", 197, 37); // ac
+selectCodeEditor("RV32I_SoC.v", 248, 46); // ac
+selectCodeEditor("RV32I_SoC.v", 260, 119); // ac
+selectCodeEditor("RV32I_SoC.v", 230, 160); // ac
+selectCodeEditor("RV32I_SoC.v", 242, 137); // ac
+selectCodeEditor("RV32I_SoC.v", 248, 166); // ac
+selectCodeEditor("RV32I_SoC.v", 242, 155); // ac
+selectCodeEditor("RV32I_SoC.v", 262, 165); // ac
+selectCodeEditor("RV32I_SoC.v", 240, 206); // ac
+selectCodeEditor("RV32I_SoC.v", 187, 168); // ac
+selectCodeEditor("RV32I_SoC.v", 495, 237); // ac
+selectCodeEditor("RV32I_SoC.v", 216, 202); // ac
+selectCodeEditor("RV32I_SoC.v", 153, 170); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 426, 245); // ac
+selectCodeEditor("RV32I_SoC.v", 60, 458); // ac
+selectCodeEditor("RV32I_SoC.v", 31, 214, true, false, false, false, false); // ac - Shift Key
+selectCodeEditor("RV32I_SoC.v", 128, 317); // ac
+// Elapsed time: 36 seconds
+selectCodeEditor("RV32I_SoC.v", 485, 462); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 453, 265); // ac
+selectCodeEditor("RV32I_SoC.v", 216, 89); // ac
+selectCodeEditor("RV32I_SoC.v", 171, 96); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,735 MB. GUI used memory: 106 MB. Current time: 6/13/24, 12:43:36 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 35 seconds
+selectCodeEditor("RV32I_SoC.v", 283, 93); // ac
+selectCodeEditor("RV32I_SoC.v", 298, 94); // ac
+selectCodeEditor("RV32I_SoC.v", 297, 93, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 312, 84); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("RV32I_SoC.v", 27, 93); // ac
+selectCodeEditor("RV32I_SoC.v", 174, 412); // ac
+selectCodeEditor("RV32I_SoC.v", 106, 108); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 188, 142); // ac
+selectCodeEditor("RV32I_SoC.v", 249, 229); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,768 MB. GUI used memory: 106 MB. Current time: 6/13/24, 12:44:41 PM KST
+// Elapsed time: 28 seconds
+selectCodeEditor("RV32I_SoC.v", 281, 113); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 308, 181); // ac
+selectCodeEditor("RV32I_SoC.v", 374, 21); // ac
+// [Engine Memory]: 1,784 MB (+12464kb) [00:33:13]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 498, 173); // ac
+selectCodeEditor("RV32I_SoC.v", 438, 223); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,800 MB. GUI used memory: 106 MB. Current time: 6/13/24, 12:45:26 PM KST
+selectCodeEditor("RV32I_SoC.v", 478, 314); // ac
+selectCodeEditor("RV32I_SoC.v", 123, 367); // ac
+selectCodeEditor("RV32I_SoC.v", 123, 367, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("RV32I_SoC.v", 207, 157); // ac
+selectCodeEditor("RV32I_SoC.v", 367, 461); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 288, 24); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 363, 20); // ac
+selectCodeEditor("RV32I_SoC.v", 289, 19, true, false, false, false, false); // ac - Shift Key
+selectCodeEditor("RV32I_SoC.v", 533, 23); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("RV32I_SoC.v", 305, 248); // ac
+selectCodeEditor("RV32I_SoC.v", 305, 248, false, false, false, false, true); // ac - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test (RV32I_SoC.v)]", 2, false); // D
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+// Elapsed time: 12 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, (String) null); // Q
+// Elapsed time: 314 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "seg7"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+// Elapsed time: 56 seconds
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 393 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton
+dismissDialog("Define Module"); // p
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("RV32I_SoC.v", 77, 507); // ac
+selectCodeEditor("RV32I_SoC.v", 3, 72, true, false, false, false, false); // ac - Shift Key
+// HMemoryUtils.trashcanNow. Engine heap size: 1,851 MB. GUI used memory: 107 MB. Current time: 6/13/24, 12:53:11 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test (RV32I_SoC.v)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, test (RV32I_SoC.v)]", 3, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, seg7 (seg7.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, seg7 (seg7.v)]", 2, false, false, false, false, false, true); // D - Double Click
+// [Engine Memory]: 1,880 MB (+7293kb) [00:41:17]
+selectCodeEditor("seg7.v", 128, 394); // ac
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("seg7.v", 65, 203); // ac
+selectCodeEditor("seg7.v", 65, 203, false, false, false, false, true); // ac - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("seg7.v", 169, 250); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,904 MB. GUI used memory: 107 MB. Current time: 6/13/24, 12:53:26 PM KST
+selectCodeEditor("seg7.v", 0, 200); // ac
+typeControlKey((HResource) null, "seg7.v", 'c'); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("seg7.v", 93, 439); // ac
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+selectCodeEditor("seg7.v", 86, 203); // ac
+selectCodeEditor("seg7.v", 140, 65); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("seg7.v", 287, 189); // ac
+selectCodeEditor("seg7.v", 528, 189, true, false, false, false, false); // ac - Shift Key
+typeControlKey((HResource) null, "seg7.v", 'c'); // ac
+selectCodeEditor("seg7.v", 142, 94); // ac
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+// Elapsed time: 20 seconds
+selectCodeEditor("seg7.v", 27, 234); // ac
+selectCodeEditor("seg7.v", 166, 233, true, false, false, false, false); // ac - Shift Key
+selectCodeEditor("seg7.v", 164, 143); // ac
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+selectCodeEditor("seg7.v", 174, 84); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("seg7.v", 208, 206); // ac
+selectCodeEditor("seg7.v", 226, 231); // ac
+selectCodeEditor("seg7.v", 94, 496, true, false, false, false, false); // ac - Shift Key
+selectCodeEditor("seg7.v", 175, 135, true, false, false, false, false); // ac - Shift Key
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("seg7.v", 305, 180); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,926 MB. GUI used memory: 107 MB. Current time: 6/13/24, 12:54:41 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+selectCodeEditor("seg7.v", 78, 170); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("seg7.v", 193, 368); // ac
+selectCodeEditor("seg7.v", 193, 368, false, false, false, false, true); // ac - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,961 MB. GUI used memory: 107 MB. Current time: 6/13/24, 12:55:06 PM KST
+selectCodeEditor("seg7.v", 90, 83); // ac
+selectCodeEditor("seg7.v", 90, 83, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("seg7.v", 348, 100); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 2); // o
+selectCodeEditor("RV32I_SoC.v", 111, 470); // ac
+selectCodeEditor("RV32I_SoC.v", 132, 455); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "seg7.v", 3); // o
+selectMenuItem((HResource) null, "New Vertical Group"); // JMenuItem
+selectCodeEditor("RV32I_SoC.v", 76, 144); // ac
+selectCodeEditor("RV32I_SoC.v", 76, 144, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 104, 156); // ac
+selectCodeEditor("RV32I_SoC.v", 104, 156, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 121, 290); // ac
+selectCodeEditor("RV32I_SoC.v", 121, 290, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 96, 275); // ac
+selectCodeEditor("RV32I_SoC.v", 228, 269); // ac
+selectCodeEditor("RV32I_SoC.v", 267, 235); // ac
+selectCodeEditor("RV32I_SoC.v", 288, 209); // ac
+selectCodeEditor("RV32I_SoC.v", 249, 222); // ac
+selectCodeEditor("RV32I_SoC.v", 199, 165); // ac
+selectCodeEditor("RV32I_SoC.v", 199, 165, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 190, 156); // ac
+selectCodeEditor("RV32I_SoC.v", 190, 156, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 202, 143); // ac
+selectCodeEditor("RV32I_SoC.v", 202, 143, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 239, 162); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "seg7.v", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 2); // o
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "seg7.v", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 2); // o
+selectCodeEditor("RV32I_SoC.v", 155, 469); // ac
+selectCodeEditor("RV32I_SoC.v", 169, 445); // ac
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "seg7.v", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "seg7.v", 3); // o
+selectCodeEditor("seg7.v", 188, 41); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("seg7.v", 201, 97); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 9, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 9, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("tb_RV32I_SoC.v", 244, 99); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, seg7 (seg7.v)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, seg7 (seg7.v)]", 2, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("seg7.v", 149, 102); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("RV32I_SoC.v", 246, 103); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, seg7 (seg7.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, seg7 (seg7.v)]", 7, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("seg7.v", 156, 102); // ac
+// [Engine Memory]: 1,993 MB (+20117kb) [00:45:28]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,009 MB. GUI used memory: 107 MB. Current time: 6/13/24, 12:57:31 PM KST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 29 seconds
+typeControlKey((HResource) null, "seg7.v", 'c'); // ac
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+selectCodeEditor("seg7.v", 363, 96); // ac
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "seg7.v", 'v'); // ac
+selectCodeEditor("seg7.v", 613, 96); // ac
+selectCodeEditor("seg7.v", 720, 95); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("seg7.v", 172, 132); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("seg7.v", 252, 141); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,058 MB. GUI used memory: 107 MB. Current time: 6/13/24, 12:58:36 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("seg7.v", 258, 154); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("seg7.v", 241, 172); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 56 seconds
+selectCodeEditor("seg7.v", 250, 161); // ac
+// [Engine Memory]: 2,108 MB (+15980kb) [00:47:44]
+selectCodeEditor("seg7.v", 79, 93); // ac
+typeControlKey((HResource) null, "seg7.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 2); // o
+selectCodeEditor("RV32I_SoC.v", 296, 456); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 83, 456); // ac
+selectCodeEditor("RV32I_SoC.v", 83, 456, false, false, false, false, true); // ac - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,117 MB. GUI used memory: 107 MB. Current time: 6/13/24, 12:59:56 PM KST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 95, 451); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 206, 410); // ac
+selectCodeEditor("RV32I_SoC.v", 196, 419); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,170 MB. GUI used memory: 107 MB. Current time: 6/13/24, 1:00:16 PM KST
+// Elapsed time: 15 seconds
+selectCodeEditor("RV32I_SoC.v", 111, 351); // ac
+selectCodeEditor("RV32I_SoC.v", 111, 351, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 300, 372); // ac
+selectCodeEditor("RV32I_SoC.v", 112, 440); // ac
+selectCodeEditor("RV32I_SoC.v", 112, 440, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 103, 329); // ac
+selectCodeEditor("RV32I_SoC.v", 103, 329, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 114, 337); // ac
+selectCodeEditor("RV32I_SoC.v", 114, 337, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 151, 359); // ac
+selectCodeEditor("RV32I_SoC.v", 104, 380); // ac
+selectCodeEditor("RV32I_SoC.v", 102, 369); // ac
+selectCodeEditor("RV32I_SoC.v", 75, 496); // ac
+selectCodeEditor("RV32I_SoC.v", 75, 496, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 249, 184); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 61, 423); // ac
+selectCodeEditor("RV32I_SoC.v", 61, 423, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 319, 97); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 51, 269); // ac
+selectCodeEditor("RV32I_SoC.v", 68, 276); // ac
+selectCodeEditor("RV32I_SoC.v", 68, 276, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 394, 105); // ac
+selectCodeEditor("RV32I_SoC.v", 406, 92); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 62, 291); // ac
+selectCodeEditor("RV32I_SoC.v", 62, 291, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 475, 187); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 67, 274); // ac
+selectCodeEditor("RV32I_SoC.v", 42, 275); // ac
+selectCodeEditor("RV32I_SoC.v", 42, 275, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 602, 169); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 51, 455); // ac
+selectCodeEditor("RV32I_SoC.v", 51, 455, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 629, 190); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 143, 458); // ac
+// Elapsed time: 18 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "seg7.v", 3); // o
+selectCodeEditor("seg7.v", 338, 137); // ac
+selectCodeEditor("seg7.v", 332, 96); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,192 MB. GUI used memory: 101 MB. Current time: 6/13/24, 1:02:42 PM KST
+selectCodeEditor("seg7.v", 583, 100); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("seg7.v", 743, 142); // ac
+selectCodeEditor("seg7.v", 538, 250); // ac
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+// Elapsed time: 28 seconds
+selectCodeEditor("RV32I_SoC.v", 134, 79); // ac
+selectCodeEditor("RV32I_SoC.v", 86, 82); // ac
+selectCodeEditor("RV32I_SoC.v", 110, 129); // ac
+selectCodeEditor("RV32I_SoC.v", 110, 129, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 84, 257); // ac
+selectCodeEditor("RV32I_SoC.v", 165, 266); // ac
+selectCodeEditor("RV32I_SoC.v", 161, 266); // ac
+selectCodeEditor("RV32I_SoC.v", 161, 266, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 167, 215); // ac
+selectCodeEditor("RV32I_SoC.v", 237, 215); // ac
+selectCodeEditor("RV32I_SoC.v", 237, 215, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 202, 216); // ac
+selectCodeEditor("RV32I_SoC.v", 246, 213); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 343, 208); // ac
+selectCodeEditor("RV32I_SoC.v", 189, 218); // ac
+selectCodeEditor("RV32I_SoC.v", 173, 220); // ac
+selectCodeEditor("RV32I_SoC.v", 173, 220, false, false, false, false, true); // ac - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,232 MB. GUI used memory: 100 MB. Current time: 6/13/24, 1:04:02 PM KST
+// [Engine Memory]: 2,232 MB (+19167kb) [00:52:04]
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 130, 306); // ac
+selectCodeEditor("RV32I_SoC.v", 130, 306, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 130, 325); // ac
+selectCodeEditor("RV32I_SoC.v", 130, 325, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 95, 171); // ac
+selectCodeEditor("RV32I_SoC.v", 96, 171, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 109, 394); // ac
+selectCodeEditor("RV32I_SoC.v", 109, 394, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 103, 229); // ac
+selectCodeEditor("RV32I_SoC.v", 103, 229, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 103, 351); // ac
+selectCodeEditor("RV32I_SoC.v", 103, 351, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 105, 352); // ac
+selectCodeEditor("RV32I_SoC.v", 105, 352, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RV32I_SoC.v", 159, 350); // ac
+selectCodeEditor("RV32I_SoC.v", 159, 350, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 84, 324); // ac
+selectCodeEditor("RV32I_SoC.v", 84, 324, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 238, 306); // ac
+selectCodeEditor("RV32I_SoC.v", 238, 306, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectCodeEditor("RV32I_SoC.v", 136, 384); // ac
+selectCodeEditor("RV32I_SoC.v", 136, 384, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+selectCodeEditor("RV32I_SoC.v", 125, 215); // ac
+selectCodeEditor("RV32I_SoC.v", 125, 215, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iPLL : clk_wiz_0 (clk_wiz_0.xci)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iPLL : clk_wiz_0 (clk_wiz_0.xci)]", 3, false, false, false, false, false, true); // D - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,260 MB. GUI used memory: 115 MB. Current time: 6/13/24, 1:04:42 PM KST
+dismissDialog("Re-customize IP"); // C
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Clocking Options", 1); // cH
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Output Clocks", 2); // cH
+setText("CLK OUT1 PORT", "clk_main"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText("CLK OUT2 PORT", "clk_text"); // v
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Re-customize IP"); // m
+selectCodeEditor("RV32I_SoC.v", 267, 274); // ac
+selectCodeEditor("RV32I_SoC.v", 258, 105); // ac
+selectCodeEditor("RV32I_SoC.v", 237, 134); // ac
+selectCodeEditor("RV32I_SoC.v", 211, 155); // ac
+selectCodeEditor("RV32I_SoC.v", 210, 134); // ac
+selectCodeEditor("RV32I_SoC.v", 212, 152); // ac
+// Elapsed time: 20 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton("CANCEL", "Cancel"); // JButton
+// 'f' command handler elapsed time: 11 seconds
+dismissDialog("Add Sources"); // c
+selectCodeEditor("RV32I_SoC.v", 116, 295); // ac
+selectCodeEditor("RV32I_SoC.v", 116, 295, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("RV32I_SoC.v", 398, 354); // ac
+// Elapsed time: 37 seconds
+selectCodeEditor("RV32I_SoC.v", 336, 270); // ac
+selectCodeEditor("RV32I_SoC.v", 144, 262); // ac
+selectCodeEditor("RV32I_SoC.v", 144, 262, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 65 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iSeg7 : seg7 (seg7.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iSeg7 : seg7 (seg7.v)]", 7, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("seg7.v", 479, 180); // ac
+selectCodeEditor("seg7.v", 365, 166); // ac
+selectCodeEditor("seg7.v", 96, 181); // ac
+selectCodeEditor("seg7.v", 178, 173); // ac
+selectCodeEditor("seg7.v", 279, 170); // ac
+selectCodeEditor("seg7.v", 444, 167); // ac
+selectCodeEditor("seg7.v", 478, 164); // ac
+selectCodeEditor("seg7.v", 467, 168); // ac
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_RV32I_SoC.v", 1); // o
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 14, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_RV32I_SoC (tb_RV32I_SoC.v)]", 14, true, false, false, false, false, true); // D - Double Click - Node
+// [GUI Memory]: 169 MB (+788kb) [00:55:47]
+selectCodeEditor("tb_RV32I_SoC.v", 195, 184); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iSeg7 : seg7 (seg7.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iSeg7 : seg7 (seg7.v)]", 7, false, false, false, false, false, true); // D - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectCodeEditor("RV32I_SoC.v", 455, 113); // ac
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "GPIO"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 6 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/GPIO.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/GPIO.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // p
+// HMemoryUtils.trashcanNow. Engine heap size: 2,287 MB. GUI used memory: 111 MB. Current time: 6/13/24, 1:08:22 PM KST
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("RV32I_SoC.v", 290, 275); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iGPIO : GPIO (GPIO.v)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iGPIO : GPIO (GPIO.v)]", 6, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("GPIO.v", 89, 385); // ac
+typeControlKey((HResource) null, "GPIO.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("GPIO.v", 157, 36); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("GPIO.v", 351, 104); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,320 MB. GUI used memory: 111 MB. Current time: 6/13/24, 1:08:52 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectCodeEditor("GPIO.v", 180, 123); // ac
+selectCodeEditor("GPIO.v", 161, 138); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("GPIO.v", 144, 165); // ac
+selectCodeEditor("GPIO.v", 159, 159); // ac
+// [Engine Memory]: 2,344 MB (+651kb) [00:57:24]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,352 MB. GUI used memory: 111 MB. Current time: 6/13/24, 1:09:27 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("GPIO.v", 486, 232); // ac
+selectCodeEditor("GPIO.v", 262, 172); // ac
+// Elapsed time: 32 seconds
+selectCodeEditor("GPIO.v", 311, 82); // ac
+selectCodeEditor("GPIO.v", 472, 78); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,384 MB. GUI used memory: 111 MB. Current time: 6/13/24, 1:10:12 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("GPIO.v", 226, 111); // ac
+selectCodeEditor("GPIO.v", 155, 98); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 1); // o
+selectCodeEditor("RV32I_SoC.v", 61, 128); // ac
+selectCodeEditor("RV32I_SoC.v", 143, 335, true, false, false, false, false); // ac - Shift Key
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "GPIO.v", 2); // o
+selectCodeEditor("GPIO.v", 173, 109); // ac
+selectCodeEditor("GPIO.v", 173, 109, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 21 seconds
+selectCodeEditor("GPIO.v", 153, 46); // ac
+typeControlKey((HResource) null, "GPIO.v", 'v'); // ac
+selectCodeEditor("GPIO.v", 202, 53); // ac
+selectCodeEditor("GPIO.v", 202, 53, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 56, 69); // ac
+selectCodeEditor("GPIO.v", 135, 263, true, false, false, false, false); // ac - Shift Key
+typeControlKey((HResource) null, "GPIO.v", 'c'); // ac
+// Elapsed time: 84 seconds
+selectCodeEditor("GPIO.v", 247, 45); // ac
+typeControlKey((HResource) null, "GPIO.v", 'v'); // ac
+selectCodeEditor("GPIO.v", 137, 454, true, false, false, false, false); // ac - Shift Key
+selectCodeEditor("GPIO.v", 147, 64); // ac
+selectCodeEditor("GPIO.v", 352, 53); // ac
+selectCodeEditor("GPIO.v", 352, 53, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 66, 66); // ac
+selectCodeEditor("GPIO.v", 66, 66, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 63, 82); // ac
+selectCodeEditor("GPIO.v", 63, 81, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 76, 94); // ac
+selectCodeEditor("GPIO.v", 76, 94, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 106, 114); // ac
+selectCodeEditor("GPIO.v", 106, 114, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 121, 124); // ac
+selectCodeEditor("GPIO.v", 121, 124, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 60, 149); // ac
+selectCodeEditor("GPIO.v", 60, 149, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 61, 154); // ac
+selectCodeEditor("GPIO.v", 61, 154, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 64, 169); // ac
+selectCodeEditor("GPIO.v", 64, 169, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 62, 189); // ac
+selectCodeEditor("GPIO.v", 62, 189, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 62, 203); // ac
+selectCodeEditor("GPIO.v", 62, 203, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 62, 212); // ac
+selectCodeEditor("GPIO.v", 62, 212, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 58, 228); // ac
+selectCodeEditor("GPIO.v", 58, 228, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("GPIO.v", 77, 76); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("GPIO.v", 256, 51); // ac
+selectCodeEditor("GPIO.v", 312, 47); // ac
+selectCodeEditor("GPIO.v", 369, 52); // ac
+selectCodeEditor("GPIO.v", 441, 52); // ac
+selectCodeEditor("GPIO.v", 505, 50); // ac
+selectCodeEditor("GPIO.v", 591, 51); // ac
+selectCodeEditor("GPIO.v", 654, 52); // ac
+selectCodeEditor("GPIO.v", 775, 52); // ac
+selectCodeEditor("GPIO.v", 781, 45); // ac
+selectCodeEditor("GPIO.v", 901, 52); // ac
+selectCodeEditor("GPIO.v", 896, 49); // ac
+selectCodeEditor("GPIO.v", 906, 52); // ac
+selectCodeEditor("GPIO.v", 972, 54); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("GPIO.v", 392, 203); // ac
+selectCodeEditor("GPIO.v", 392, 203); // ac
+selectCodeEditor("GPIO.v", 392, 203); // ac
+selectCodeEditor("GPIO.v", 392, 203); // ac
+selectCodeEditor("GPIO.v", 392, 203); // ac
+selectCodeEditor("GPIO.v", 392, 203); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,416 MB. GUI used memory: 110 MB. Current time: 6/13/24, 1:13:32 PM KST
+selectCodeEditor("GPIO.v", 208, 52); // ac
+selectCodeEditor("GPIO.v", 394, 347); // ac
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectCodeEditor("RV32I_SoC.v", 286, 193); // ac
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 17 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Addr_"); // Q
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Addr_Decoder"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 28 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/Addr_Decoder.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/Addr_Decoder.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // p
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("RV32I_SoC.v", 363, 253); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iDec : Addr_Decoder (Addr_Decoder.v)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iDec : Addr_Decoder (Addr_Decoder.v)]", 5, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("Addr_Decoder.v", 99, 396); // ac
+typeControlKey((HResource) null, "Addr_Decoder.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Addr_Decoder.v", 130, 41); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,449 MB. GUI used memory: 110 MB. Current time: 6/13/24, 1:14:42 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("Addr_Decoder.v", 121, 96); // ac
+selectCodeEditor("Addr_Decoder.v", 22, 103, true, false, false, false, false); // ac - Shift Key
+// [Engine Memory]: 2,465 MB (+3433kb) [01:02:53]
+selectCodeEditor("Addr_Decoder.v", 155, 132); // ac
+selectCodeEditor("Addr_Decoder.v", 183, 146); // ac
+selectCodeEditor("Addr_Decoder.v", 265, 161); // ac
+selectCodeEditor("Addr_Decoder.v", 302, 167); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,481 MB. GUI used memory: 110 MB. Current time: 6/13/24, 1:15:52 PM KST
+// Elapsed time: 43 seconds
+selectCodeEditor("Addr_Decoder.v", 338, 505); // ac
+selectCodeEditor("Addr_Decoder.v", 2, 234, true, false, false, false, false); // ac - Shift Key
+selectCodeEditor("Addr_Decoder.v", 436, 148); // ac
+typeControlKey((HResource) null, "Addr_Decoder.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Addr_Decoder.v", 131, 286); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Addr_Decoder.v", 261, 48); // ac
+selectCodeEditor("Addr_Decoder.v", 289, 82); // ac
+selectCodeEditor("Addr_Decoder.v", 287, 97); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,513 MB. GUI used memory: 110 MB. Current time: 6/13/24, 1:16:12 PM KST
+selectCodeEditor("Addr_Decoder.v", 101, 308); // ac
+selectCodeEditor("Addr_Decoder.v", 101, 308, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "Addr_Decoder.v", 'c'); // ac
+selectCodeEditor("Addr_Decoder.v", 130, 100); // ac
+typeControlKey((HResource) null, "Addr_Decoder.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 38 seconds
+selectCodeEditor("Addr_Decoder.v", 134, 441); // ac
+selectCodeEditor("Addr_Decoder.v", 61, 308); // ac
+selectCodeEditor("Addr_Decoder.v", 61, 308, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "Addr_Decoder.v", 'c'); // ac
+selectCodeEditor("Addr_Decoder.v", 107, 444); // ac
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "Addr_Decoder.v", 'v'); // ac
+// Elapsed time: 36 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Addr_Decoder.v", 199, 264); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 110 MB. Current time: 6/13/24, 1:18:12 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("Addr_Decoder.v", 207, 430); // ac
+selectCodeEditor("Addr_Decoder.v", 90, 444); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Addr_Decoder.v", 140, 434); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,578 MB. GUI used memory: 110 MB. Current time: 6/13/24, 1:18:32 PM KST
+// Elapsed time: 265 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "rv32i_cpu"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 10 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // p
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 2,593 MB (+5193kb) [01:11:14]
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iDec : Addr_Decoder (Addr_Decoder.v)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iGPIO : GPIO (GPIO.v)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iSeg7 : seg7 (seg7.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iDec : Addr_Decoder (Addr_Decoder.v)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, false); // D
+selectCodeEditor("rv32i_cpu.v", 94, 378); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,609 MB. GUI used memory: 111 MB. Current time: 6/13/24, 1:23:37 PM KST
+selectCodeEditor("rv32i_cpu.v", 141, 41); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 168, 94); // ac
+selectCodeEditor("rv32i_cpu.v", 54, 91); // ac
+selectCodeEditor("rv32i_cpu.v", 54, 91, false, false, false, false, true); // ac - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 143, 124); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectCodeEditor("rv32i_cpu.v", 50, 362); // ac
+selectCodeEditor("rv32i_cpu.v", 50, 362, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 182, 198); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+selectCodeEditor("rv32i_cpu.v", 40, 231); // ac
+selectCodeEditor("rv32i_cpu.v", 40, 231, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 253, 202); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 291, 94); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,673 MB. GUI used memory: 111 MB. Current time: 6/13/24, 1:24:42 PM KST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 1); // o
+selectCodeEditor("RV32I_SoC.v", 57, 320); // ac
+selectCodeEditor("RV32I_SoC.v", 57, 320, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "RV32I_SoC.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 55 seconds
+selectCodeEditor("rv32i_cpu.v", 190, 112); // ac
+selectCodeEditor("rv32i_cpu.v", 187, 131); // ac
+selectCodeEditor("rv32i_cpu.v", 199, 135); // ac
+selectCodeEditor("rv32i_cpu.v", 215, 140); // ac
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 306, 274); // ac
+selectCodeEditor("rv32i_cpu.v", 271, 315); // ac
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iDec : Addr_Decoder (Addr_Decoder.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iDec : Addr_Decoder (Addr_Decoder.v)]", 7, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("Addr_Decoder.v", 243, 354); // ac
+selectCodeEditor("Addr_Decoder.v", 287, 313); // ac
+selectCodeEditor("Addr_Decoder.v", 242, 324); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("Addr_Decoder.v", 15, 312); // ac
+selectCodeEditor("Addr_Decoder.v", 15, 323); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,721 MB. GUI used memory: 111 MB. Current time: 6/13/24, 1:27:02 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,729 MB (+7171kb) [01:15:04]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iGPIO : GPIO (GPIO.v)]", 8, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iGPIO : GPIO (GPIO.v)]", 8, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iDec : Addr_Decoder (Addr_Decoder.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iDec : Addr_Decoder (Addr_Decoder.v)]", 7, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("rv32i_cpu.v", 25, 323); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,759 MB. GUI used memory: 112 MB. Current time: 6/13/24, 1:27:27 PM KST
+selectCodeEditor("rv32i_cpu.v", 219, 291); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "regfile"); // Q
+// Elapsed time: 24 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 34 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/regfile.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/regfile.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // p
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), regfile_inst : regfile (regfile.v)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), regfile_inst : regfile (regfile.v)]", 5, false, false, false, false, false, true); // D - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,784 MB. GUI used memory: 112 MB. Current time: 6/13/24, 1:28:12 PM KST
+selectCodeEditor("regfile.v", 114, 390); // ac
+typeControlKey((HResource) null, "regfile.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("regfile.v", 100, 40); // ac
+selectCodeEditor("regfile.v", 197, 97); // ac
+selectCodeEditor("regfile.v", 32, 98); // ac
+selectCodeEditor("regfile.v", 32, 98, false, false, false, false, true); // ac - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("regfile.v", 157, 98); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,817 MB. GUI used memory: 112 MB. Current time: 6/13/24, 1:28:37 PM KST
+// Elapsed time: 33 seconds
+selectCodeEditor("regfile.v", 305, 99); // ac
+selectCodeEditor("regfile.v", 406, 94); // ac
+selectCodeEditor("regfile.v", 481, 95); // ac
+selectCodeEditor("regfile.v", 638, 97); // ac
+selectCodeEditor("regfile.v", 580, 96); // ac
+selectCodeEditor("regfile.v", 580, 96, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("regfile.v", 587, 100); // ac
+selectCodeEditor("regfile.v", 644, 99); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("regfile.v", 187, 332); // ac
+selectCodeEditor("regfile.v", 264, 338); // ac
+selectCodeEditor("regfile.v", 322, 341); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("regfile.v", 313, 366); // ac
+selectCodeEditor("regfile.v", 242, 357); // ac
+selectCodeEditor("regfile.v", 198, 366); // ac
+selectCodeEditor("regfile.v", 251, 376); // ac
+selectCodeEditor("regfile.v", 273, 367); // ac
+selectCodeEditor("regfile.v", 206, 368); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,848 MB. GUI used memory: 112 MB. Current time: 6/13/24, 1:30:02 PM KST
+selectCodeEditor("regfile.v", 194, 391); // ac
+// Elapsed time: 85 seconds
+selectCodeEditor("regfile.v", 321, 496); // ac
+// Elapsed time: 18 seconds
+selectCodeEditor("regfile.v", 241, 33); // ac
+selectCodeEditor("regfile.v", 311, 151); // ac
+selectCodeEditor("regfile.v", 315, 140); // ac
+selectCodeEditor("regfile.v", 294, 171); // ac
+selectCodeEditor("regfile.v", 275, 158); // ac
+selectCodeEditor("regfile.v", 276, 164); // ac
+selectCodeEditor("regfile.v", 278, 169); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,880 MB. GUI used memory: 119 MB. Current time: 6/13/24, 1:32:41 PM KST
+// [Engine Memory]: 2,880 MB (+14932kb) [01:20:44]
+// Elapsed time: 42 seconds
+selectCodeEditor("regfile.v", 195, 242); // ac
+selectCodeEditor("regfile.v", 195, 242, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "regfile.v", 'c'); // ac
+selectCodeEditor("regfile.v", 124, 427); // ac
+selectCodeEditor("regfile.v", 124, 427, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "regfile.v", 'v'); // ac
+selectCodeEditor("regfile.v", 141, 26); // ac
+selectCodeEditor("regfile.v", 174, 22, true, false, false, false, false); // ac - Shift Key
+typeControlKey((HResource) null, "regfile.v", 'c'); // ac
+selectCodeEditor("regfile.v", 128, 354); // ac
+typeControlKey((HResource) null, "regfile.v", 'v'); // ac
+selectCodeEditor("regfile.v", 114, 338); // ac
+typeControlKey((HResource) null, "regfile.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("regfile.v", 202, 400); // ac
+selectCodeEditor("regfile.v", 202, 400, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("regfile.v", 761, 99); // ac
+selectCodeEditor("regfile.v", 761, 99, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("regfile.v", 479, 94); // ac
+selectCodeEditor("regfile.v", 479, 94, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("regfile.v", 547, 95); // ac
+typeControlKey((HResource) null, "regfile.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,912 MB. GUI used memory: 112 MB. Current time: 6/13/24, 1:33:32 PM KST
+selectCodeEditor("rv32i_cpu.v", 153, 159); // ac
+selectCodeEditor("rv32i_cpu.v", 153, 159, false, false, false, false, true); // ac - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "GPIO.v", 4); // o
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 1); // o
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectCodeEditor("rv32i_cpu.v", 84, 228); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 185, 235); // ac
+selectCodeEditor("rv32i_cpu.v", 140, 231); // ac
+selectCodeEditor("rv32i_cpu.v", 140, 231, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 124, 308); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 197, 308); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 261, 306); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 139, 366); // ac
+selectCodeEditor("rv32i_cpu.v", 139, 366, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 151, 303); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 95, 425); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 147, 320); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 98, 444); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 137, 335); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 91, 460); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 257, 411); // ac
+selectCodeEditor("rv32i_cpu.v", 180, 368); // ac
+selectCodeEditor("rv32i_cpu.v", 180, 368, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 132, 202); // ac
+selectCodeEditor("rv32i_cpu.v", 132, 202, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 104, 298); // ac
+selectCodeEditor("rv32i_cpu.v", 104, 298, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 113, 355); // ac
+selectCodeEditor("rv32i_cpu.v", 113, 355, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 120, 309); // ac
+selectCodeEditor("rv32i_cpu.v", 120, 309, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 115, 323); // ac
+selectCodeEditor("rv32i_cpu.v", 115, 323, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 111, 385); // ac
+selectCodeEditor("rv32i_cpu.v", 111, 385, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 244, 373); // ac
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4); // D
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("CANCEL", "Cancel"); // JButton
+dismissDialog("Add Sources"); // c
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "alu"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; alu.v ; xil_defaultlib ; <Local to Project>", 0, "<Local to Project>", 4); // aM
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; alu.v ; xil_defaultlib ; <Local to Project>", 0, "xil_defaultlib", 3); // aM
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; alu.v ; xil_defaultlib ; <Local to Project>", 0, "alu.v", 2); // aM
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, null, -1, null, -1); // aM
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; alu.v ; xil_defaultlib ; <Local to Project>", 0, "alu.v", 2, false, false, false, false, true); // aM - Double Click
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; alu.v ; xil_defaultlib ; <Local to Project>", 0, "alu.v", 2); // aM
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; alu.v ; xil_defaultlib ; <Local to Project>", 0, "alu.v", 2, false, false, false, true, false); // aM - Popup Trigger
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; alu.v ; xil_defaultlib ; <Local to Project>", 0, "alu.v", 2, false, false, false, true, false); // aM - Popup Trigger
+selectMenu(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // al
+selectMenuItem(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // ao
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "ALU"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 19 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/ALU.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/ALU.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "No"); // JButton
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+selectButton("OptionPane.button", "Yes"); // JButton
+dismissDialog("Define Module"); // p
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,943 MB. GUI used memory: 115 MB. Current time: 6/13/24, 1:36:17 PM KST
+// Elapsed time: 12 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "alu"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 16 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/alu.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/alu.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // p
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), alu_inst : alu (alu.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), alu_inst : alu (alu.v)]", 7, false, false, false, false, false, true); // D - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,980 MB. GUI used memory: 113 MB. Current time: 6/13/24, 1:36:37 PM KST
+selectCodeEditor("alu.v", 333, 180); // ac
+selectCodeEditor("alu.v", 104, 382); // ac
+typeControlKey((HResource) null, "alu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 174, 42); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("alu.v", 160, 91); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Addr_Decoder.v", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 1); // o
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 2); // o
+selectCodeEditor("alu.v", 181, 172); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("alu.v", 344, 201); // ac
+selectCodeEditor("alu.v", 221, 249); // ac
+// [Engine Memory]: 3,028 MB (+4043kb) [01:25:47]
+selectCodeEditor("alu.v", 220, 239); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 3,028 MB. GUI used memory: 113 MB. Current time: 6/13/24, 1:37:47 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 235, 275); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 1); // o
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 314, 219); // ac
