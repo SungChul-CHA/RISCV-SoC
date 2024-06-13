@@ -24,10 +24,11 @@ module seg7(
     input clk, rst,
     input [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5,
     output reg [5:0] seg_com,
-    output reg [6:0] seg_data
+    output reg [7:0] seg_data
     );
     
-    reg [13:0] seg_cnt;
+//    reg [13:0] seg_cnt;
+    reg [1:0] seg_cnt; // for simulation
 
     always @ (posedge clk, posedge rst)
         begin  
@@ -36,7 +37,8 @@ module seg7(
                 seg_com <= 6'b100000;
             end 
             else begin
-                if (seg_cnt[13] == 1'b1) begin
+//                if (seg_cnt[13] == 1'b1) begin
+                if (seg_cnt[1] == 1'b1) begin  // for simulation
                     seg_com <= {seg_com[0], seg_com[5:1]};
                     seg_cnt <= 0; 
                 end

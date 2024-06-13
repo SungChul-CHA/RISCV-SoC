@@ -222,3 +222,847 @@ update_compile_order -fileset sources_1
 close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/alu.v w ]
 add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/alu.v
 update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 20
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Thu Jun 13 13:40:48 2024] Launched synth_1...
+Run output will be captured here: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Thu Jun 13 13:41:50 2024] Launched synth_1...
+Run output will be captured here: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 20
+[Thu Jun 13 13:42:21 2024] Launched impl_1...
+Run output will be captured here: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/impl_1/runme.log
+launch_simulation -mode post-implementation -type functional
+Command: launch_simulation  -mode post-implementation -type functional
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation functional simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/tony/tools/xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8467.977 ; gain = 0.000 ; free physical = 5372 ; free virtual = 63471
+INFO: [Netlist 29-17] Analyzing 305 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'RV32I_SoC' is not ideal for floorplanning, since the cellview 'regfile' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'iPLL/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 9054.082 ; gain = 0.000 ; free physical = 4857 ; free virtual = 62956
+Restored from archive | CPU: 0.090000 secs | Memory: 2.302536 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 9054.082 ; gain = 0.000 ; free physical = 4857 ; free virtual = 62956
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9054.082 ; gain = 0.000 ; free physical = 4857 ; free virtual = 62956
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 9304.258 ; gain = 1005.051 ; free physical = 4720 ; free virtual = 62823
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode funcsim -nolib -force -file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/tb_RV32I_SoC_func_impl.v"
+INFO: [SIM-utils-36] Netlist generated:/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/tb_RV32I_SoC_func_impl.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/home/tony/tools/xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_RV32I_SoC' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/insts_data.coe'
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/ram_2port_2048x32.mif'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/tb_RV32I_SoC_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_Decoder
+INFO: [VRFC 10-311] analyzing module GPIO
+INFO: [VRFC 10-311] analyzing module RV32I_SoC
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-311] analyzing module rv32i_cpu
+INFO: [VRFC 10-311] analyzing module seg7
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_v8_4_5
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_v8_4_5_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_RV32I_SoC
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_RV32I_SoC_func_impl xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_RV32I_SoC_func_impl xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.alu
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1(INIT=2'b01)
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.rv32i_cpu
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE
+Compiling module unisims_ver.latchsre_ldpe
+Compiling module unisims_ver.LDPE
+Compiling module xil_defaultlib.Addr_Decoder
+Compiling module xil_defaultlib.GPIO
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0101000000...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0111001110...
+Compiling module xil_defaultlib.ram_2port_2048x32
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.FDPE_default
+Compiling module xil_defaultlib.seg7
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.RV32I_SoC
+Compiling module xil_defaultlib.tb_RV32I_SoC
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_RV32I_SoC_func_impl
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_RV32I_SoC_func_impl -key {Post-Implementation:sim_1:Functional:tb_RV32I_SoC} -tclbatch {tb_RV32I_SoC.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_RV32I_SoC.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_RV32I_SoC_func_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:26 ; elapsed = 00:00:14 . Memory (MB): peak = 9304.258 ; gain = 1005.051 ; free physical = 4561 ; free virtual = 62811
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode post-implementation -type functional
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation functional simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/tony/tools/xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode funcsim -nolib -force -file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/tb_RV32I_SoC_func_impl.v"
+INFO: [SIM-utils-36] Netlist generated:/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/tb_RV32I_SoC_func_impl.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/home/tony/tools/xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_RV32I_SoC' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/insts_data.coe'
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/ram_2port_2048x32.mif'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim/tb_RV32I_SoC_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_Decoder
+INFO: [VRFC 10-311] analyzing module GPIO
+INFO: [VRFC 10-311] analyzing module RV32I_SoC
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-311] analyzing module rv32i_cpu
+INFO: [VRFC 10-311] analyzing module seg7
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_v8_4_5
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32_blk_mem_gen_v8_4_5_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_RV32I_SoC
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode post-implementation -type functional
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation functional simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/impl/func/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_RV32I_SoC_func_impl xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_RV32I_SoC_func_impl xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.alu
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1(INIT=2'b01)
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.rv32i_cpu
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE
+Compiling module unisims_ver.latchsre_ldpe
+Compiling module unisims_ver.LDPE
+Compiling module xil_defaultlib.Addr_Decoder
+Compiling module xil_defaultlib.GPIO
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0101000000...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0111001110...
+Compiling module xil_defaultlib.ram_2port_2048x32
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.FDPE_default
+Compiling module xil_defaultlib.seg7
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.RV32I_SoC
+Compiling module xil_defaultlib.tb_RV32I_SoC
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_RV32I_SoC_func_impl
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 9304.258 ; gain = 0.000 ; free physical = 4705 ; free virtual = 62947
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/tony/tools/xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/home/tony/tools/xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_RV32I_SoC' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim/insts_data.coe'
+INFO: [SIM-utils-43] Exported '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim/ram_2port_2048x32.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/ram_2port_2048x32/sim/ram_2port_2048x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/Addr_Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/GPIO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GPIO
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RV32I_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32i_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg7
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_RV32I_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:41]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'seg_data' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:117]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="zyn...
+Compiling module xil_defaultlib.ram_2port_2048x32
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.rv32i_cpu
+Compiling module xil_defaultlib.Addr_Decoder
+Compiling module xil_defaultlib.GPIO
+Compiling module xil_defaultlib.seg7
+Compiling module xil_defaultlib.RV32I_SoC
+Compiling module xil_defaultlib.tb_RV32I_SoC
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_RV32I_SoC_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_RV32I_SoC_behav -key {Behavioral:sim_1:Functional:tb_RV32I_SoC} -tclbatch {tb_RV32I_SoC.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_RV32I_SoC.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_RV32I_SoC_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 9344.270 ; gain = 40.012 ; free physical = 4650 ; free virtual = 62900
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:41]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'seg_data' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:117]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+export_ip_user_files -of_objects  [get_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/ALU.v] -no_script -reset -force -quiet
+remove_files  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/ALU.v
+file delete -force /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/ALU.v
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:41]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'seg_data' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:117]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run 10 s
+$stop called at time : 1 ms : File "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" Line 35
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/ram_2port_2048x32/sim/ram_2port_2048x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/Addr_Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/GPIO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GPIO
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RV32I_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32i_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg7
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_RV32I_SoC
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:41]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'seg_data' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:117]
+WARNING: [VRFC 10-3705] select index 13 into 'seg_cnt' is out of bounds [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v:40]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="zyn...
+Compiling module xil_defaultlib.ram_2port_2048x32
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.rv32i_cpu
+Compiling module xil_defaultlib.Addr_Decoder
+Compiling module xil_defaultlib.GPIO
+Compiling module xil_defaultlib.seg7
+Compiling module xil_defaultlib.RV32I_SoC
+Compiling module xil_defaultlib.tb_RV32I_SoC
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_RV32I_SoC_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run 10 s
+$stop called at time : 1 ms : File "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" Line 35
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:41]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'seg_data' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:117]
+WARNING: [VRFC 10-3705] select index 13 into 'seg_cnt' is out of bounds [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v:40]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/ram_2port_2048x32/sim/ram_2port_2048x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/Addr_Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/GPIO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GPIO
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RV32I_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32i_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg7
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_RV32I_SoC
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:41]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'seg_data' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:117]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="zyn...
+Compiling module xil_defaultlib.ram_2port_2048x32
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.rv32i_cpu
+Compiling module xil_defaultlib.Addr_Decoder
+Compiling module xil_defaultlib.GPIO
+Compiling module xil_defaultlib.seg7
+Compiling module xil_defaultlib.RV32I_SoC
+Compiling module xil_defaultlib.tb_RV32I_SoC
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_RV32I_SoC_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run 10 s
+$stop called at time : 1 ms : File "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" Line 35
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:41]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'seg_data' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:117]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+current_sim simulation_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+run 10 s
+$stop called at time : 1 ms : File "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" Line 35
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:41]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'seg_data' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:117]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run 10 s
+$stop called at time : 1 ms : File "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" Line 35
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/ram_2port_2048x32/sim/ram_2port_2048x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_2port_2048x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/Addr_Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/GPIO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GPIO
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RV32I_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32i_cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg7
+INFO: [VRFC 10-2263] Analyzing Verilog file "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_RV32I_SoC
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:41]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="zyn...
+Compiling module xil_defaultlib.ram_2port_2048x32
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.rv32i_cpu
+Compiling module xil_defaultlib.Addr_Decoder
+Compiling module xil_defaultlib.GPIO
+Compiling module xil_defaultlib.seg7
+Compiling module xil_defaultlib.RV32I_SoC
+Compiling module xil_defaultlib.tb_RV32I_SoC
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_RV32I_SoC_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run 10 s
+$stop called at time : 1 ms : File "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" Line 35
+save_wave_config {/mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg}
+add_files -fileset sim_1 -norecurse /mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg
+set_property xsim.view /mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed

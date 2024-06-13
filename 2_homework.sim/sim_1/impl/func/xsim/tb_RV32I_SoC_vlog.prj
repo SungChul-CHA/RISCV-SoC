@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../2_homework.gen/sources_1/ip/clk_wiz_0" \
+"tb_RV32I_SoC_func_impl.v" \
+"../../../../../2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" \
+
+# Do not sort compile order
+nosort

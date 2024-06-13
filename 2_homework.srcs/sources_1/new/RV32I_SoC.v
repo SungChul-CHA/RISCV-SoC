@@ -23,8 +23,8 @@ module RV32I_SoC(
     input   clk_125mhz, 
     input   btn,    // active high rst when button is pressed
     output [3:0] leds,  
-    output reg [7:0]   seg_data, 
-    output reg [5:0]   seg_com 
+    output [7:0]   seg_data, 
+    output [5:0]   seg_com 
     );
     
     wire clk_main, clk_text, clk_data;

@@ -1,0 +1,50 @@
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_RV32I_SoC_func_impl xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.alu
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1(INIT=2'b01)
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.rv32i_cpu
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE
+Compiling module unisims_ver.latchsre_ldpe
+Compiling module unisims_ver.LDPE
+Compiling module xil_defaultlib.Addr_Decoder
+Compiling module xil_defaultlib.GPIO
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0101000000...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0111001110...
+Compiling module xil_defaultlib.ram_2port_2048x32
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.FDPE_default
+Compiling module xil_defaultlib.seg7
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.RV32I_SoC
+Compiling module xil_defaultlib.tb_RV32I_SoC
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_RV32I_SoC_func_impl

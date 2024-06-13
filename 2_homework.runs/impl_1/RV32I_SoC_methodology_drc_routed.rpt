@@ -1,0 +1,75 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Thu Jun 13 13:42:56 2024
+| Host         : tony-ubuntu running 64-bit Ubuntu 22.04.4 LTS
+| Command      : report_methodology -file RV32I_SoC_methodology_drc_routed.rpt -pb RV32I_SoC_methodology_drc_routed.pb -rpx RV32I_SoC_methodology_drc_routed.rpx
+| Design       : RV32I_SoC
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 7
++-----------+------------------+------------------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                                      | Violations |
++-----------+------------------+------------------------------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 1          |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 1          |
+| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                                     | 1          |
+| TIMING-20 | Warning          | Non-clocked latch                                                | 2          |
+| LATCH-1   | Advisory         | Existing latches in the design                                   | 1          |
++-----------+------------------+------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin rst_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock iPLL/inst/clk_in1 is created on an inappropriate internal pin iPLL/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net clk_125mhz_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk_125mhz_IBUF_inst/O, iPLL/clk_in1, rst_reg/C
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell iCPU/alu_inst/cs_mem_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) iDec/cs_gpio_reg/CLR, iDec/cs_mem_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch iDec/cs_gpio_reg cannot be properly analyzed as its control pin iDec/cs_gpio_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch iDec/cs_mem_reg cannot be properly analyzed as its control pin iDec/cs_mem_reg/G is not reached by a timing clock
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 2 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+
