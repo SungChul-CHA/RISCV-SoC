@@ -42,7 +42,6 @@ module rv32i_cpu(
     );
 
     wire [6:0] opcode;
-    wire [8:0] inst_opcode;
     wire [4:0] rs1_addr, rs2_addr, rd_addr;
     wire [31:0] rs1_data, rs2_data, rd_data;     
     wire [6:0] funct7; 
@@ -52,29 +51,21 @@ module rv32i_cpu(
     
     reg [31:0] alusrc1, alusrc2;    
     wire [31:0] aluout; 
-    reg [4:0] alucontrol;   
+    reg [4:0] alu_control;   
     reg alusrc, regwrite, lui, memwrite;
 
     wire Nflag, Zflag, Cflag, Vflag; 
     
     // register for pc
-    wire [1:0] pc_sel;  // 00 : jal,  01 : jalr, 10 : branch, 11 : else 
-    reg [31:0] pc_next;
-    always @ (*) begin
-        case (pc_sel)
-            2'b00: pc_next = pc + {{12{inst[31]}}, inst[19:12], inst[20], inst[30:21], 1'b0};   // jal
-            2'b01: pc_next = (rs1_data + {{21{inst[31]}}, inst[30:20]}) & 32'hfffe;             // jalr
-            2'b10: pc_next = pc + {{20{inst[31]}}, inst[7], inst[30:25], inst[11:8], 1'b0};     // branch
-            default: pc_next = pc + 4;
-        endcase
-    end
-    
+    wire pc_sel;  // 1 : jump or branch, 0 : default 
     always @ (posedge clk, posedge rst)
     begin
         if (rst)
             pc <= 0;
-        else 
-            pc <= pc_next; 
+        else if (pc_sel)
+            pc <= aluout; 
+        else
+            pc <= pc + 4;
     end
 
            
@@ -97,26 +88,108 @@ module rv32i_cpu(
     assign opcode = inst[6:0];
     assign funct7 = inst[31:25];
     assign funct3 = inst[14:12];
-    assign inst_opcode = {inst[30], funct3, inst[6:2]};
      
     //generate constrol signal for alu 
-    always @* begin
+/*
+| func7   | func3 | inst_op | op       | inst  |
+| ------- | ----- | ------- | -------- | ----- |
+| x       | x     | 011     | 011_0111 | lui   |
+| ------- | ----- | ------- | -------- | ----- |
+| x       | x     | 001     | 001_0111 | auipc |
+| ------- | ----- | ------- | -------- | ----- |
+| x       | x     | 110     | 110_1111 | jal   |
+| ------- | ----- | ------- | -------- | ----- |
+| x       | 000   | 110     | 110_0111 | jalr  |
+| ------- | ----- | ------- | -------- | ----- |
+| x       | 000   | 110     | 110_0011 | beq   |
+| x       | 001   | 110     | 110_0011 | bne   |
+| x       | 100   | 110     | 110_0011 | blt   |
+| x       | 101   | 110     | 110_0011 | bge   |
+| x       | 110   | 110     | 110_0011 | bltu  |
+| x       | 111   | 110     | 110_0011 | bgeu  |
+| ------- | ----- | ------- | -------- | ----- |
+| x       | 000   | 000     | 000_0011 | lb    |
+| x       | 001   | 000     | 000_0011 | lh    |
+| x       | 010   | 000     | 000_0011 | lw    |
+| x       | 100   | 000     | 000_0011 | lbu   |
+| x       | 101   | 000     | 000_0011 | lhu   |
+| ------- | ----- | ------- | -------- | ----- |
+| x       | 000   | 010     | 010_0011 | sb    |
+| x       | 001   | 010     | 010_0011 | sh    |
+| x       | 010   | 010     | 010_0011 | sw    |
+| ------- | ----- | ------- | -------- | ----- |
+| x       | 000   | 001     | 001_0011 | addi  |
+| x       | 010   | 001     | 001_0011 | slti  |
+| x       | 011   | 001     | 001_0011 | sltiu |
+| x       | 100   | 001     | 001_0011 | xori  |
+| x       | 110   | 001     | 001_0011 | ori   |
+| x       | 111   | 001     | 001_0011 | andi  |
+| 0000000 | 001   | 001     | 001_0011 | slli  |
+| 0000000 | 101   | 001     | 001_0011 | srli  |
+| 0100000 | 101   | 001     | 001_0011 | srai  |
+| ------- | ----- | ------- | -------- | ----- |
+| 0000000 | 000   | 011     | 011_0011 | add   |
+| 0100000 | 000   | 011     | 011_0011 | sub   |
+| 0000000 | 001   | 011     | 011_0011 | sll   |
+| 0000000 | 010   | 011     | 011_0011 | slt   |
+| 0000000 | 011   | 011     | 011_0011 | sltu  |
+| 0000000 | 100   | 011     | 011_0011 | xor   |
+| 0000000 | 101   | 011     | 011_0011 | srl   |
+| 0100000 | 101   | 011     | 011_0011 | sra   |
+| 0000000 | 110   | 011     | 011_0011 | or    |
+| 0000000 | 111   | 011     | 011_0011 | and   |
+
+0_0000 : add, Load, jalr, jal, Store, lui, auipc
+0_0001 : and, andi
+0_0010 : or, ori
+0_0011 : xor, xori
+0_0100 : sll, slli
+0_0101 : srl, srli
+0_0110 : sra, srai
+1_0000 : sub, Branch 
+1_0111 : slt, slti
+1_1000 : sltu, sltui
+*/
+    always @ (*) begin
         case (opcode)
-            `OP_R: //R-type
-                case ({funct7,funct3}) 
-                    10'b0000000_000: alucontrol = 5'b0_0000; 
-                    default: alucontrol = 5'b0_0000;
+            `OP_R: 
+                case ({funct7[5], funct3})
+                    4'b0_000: alu_control = 5'b0_0000;  // add
+                    4'b1_000: alu_control = 5'b1_0000;  // sub
+                    4'b0_001: alu_control = 5'b0_0100;  // sll
+                    4'b0_010: alu_control = 5'b1_0111;  // slt
+                    4'b0_011: alu_control = 5'b1_1000;  // sltu
+                    4'b0_100: alu_control = 5'b0_0011;  // xor
+                    4'b0_101: alu_control = 5'b0_0101;  // srl
+                    4'b1_101: alu_control = 5'b0_0110;  // sra
+                    4'b0_110: alu_control = 5'b0_0010;  // or
+                    4'b0_111: alu_control = 5'b0_0001;  // and
+                    default: alu_control = 5'b0_0000;
                 endcase
-            `OP_I_ARITH: //I-Type Arithemtic
-                case (funct3)
-                    3'b000 : alucontrol = 5'b0_0000; 
-                    default: alucontrol = 5'b0; 
+            `OP_I_ARITH:
+                casex ({funct7[5], funct3})
+                    4'bx_000: alu_control = 5'b0_0000;  // addi
+                    4'b0_001: alu_control = 5'b0_0100;  // slli
+                    4'bx_010: alu_control = 5'b1_0111;  // slti
+                    4'bx_011: alu_control = 5'b1_1000;  // sltui
+                    4'bx_100: alu_control = 5'b0_0011;  // xori
+                    4'b0_101: alu_control = 5'b0_0101;  // srli
+                    4'b1_101: alu_control = 5'b0_0110;  // srai
+                    4'bx_110: alu_control = 5'b0_0010;  // ori
+                    4'bx_111: alu_control = 5'b0_0001;  // andi
+                    default: alu_control = 5'b0_0000;
                 endcase
-            `OP_LUI, //LUI
-            `OP_S: //S-type
-                alucontrol = 5'b0;
+            `OP_LUI,
+            `OP_AUIPC,
+            `OP_JAL,
+            `OP_JALR,
+            `OP_I_LOAD,
+            `OP_S:
+                alu_control = 5'b0_0000;
+            `OP_B:
+                alu_control = 5'b1_0000;
             default: 
-                alucontrol = 5'b0;
+                alu_control = 5'b0;
         endcase
     end
   
@@ -174,7 +247,7 @@ module rv32i_cpu(
     alu alu_inst(
           .a(alusrc1), 
           .b(alusrc2),
-          .control(alucontrol),
+          .control(alu_control),
           .result(aluout),
           .N(Nflag),
           .Z(Zflag),
@@ -190,34 +263,60 @@ module rv32i_cpu(
 
 endmodule
 
-module branch_resolution (
-    input [2:0] branches,
-    input N, Z, C, V,
-    output btaken, jal, jalr
+//    always @ (*) begin
+//        case (pc_sel)
+//            2'b00: pc_next = pc + {{12{inst[31]}}, inst[19:12], inst[20], inst[30:21], 1'b0};   // jal
+//            2'b01: pc_next = (rs1_data + {{21{inst[31]}}, inst[30:20]}) & 32'hfffe;             // jalr
+//            2'b10: pc_next = pc + {{20{inst[31]}}, inst[7], inst[30:25], inst[11:8], 1'b0};     // branch
+//            default: pc_next = pc + 4;
+//        endcase
+//    end
+
+module control_unit (
+    input [6:0] opcode,
+    input [6:0] funct7,
+    input [3:0] funct3,
+    input br_true,
+    output BrUnmod,   // 1 : B-Type Unsigned mode, 0 : B-Type Signed mode
+    output pc_sel    // 1 : J or B, 0 : no
+//    output lui, auipc,
+//    output jal, jalr,
+//    output beq, bne, blt, bge, bltu, bgeu,
+//    output lb, lh, lw, lbu, lhu,
+//    output sb, sh, sw,
+//    output alusrc, regwrite, memwrite, mem2reg,
+//    output [4:0] alucontrol
     );
     
-    always @ (*) begin
-        case (branches)
-            3'b000: btaken = ;   // beq
-            3'b000: btaken = ;   // beq
-            3'b000: btaken = ;   // beq
-            3'b000: btaken = ;   // beq
-            3'b000: btaken = ;   // beq
-            3'b000: btaken = ;   // beq
-            3'b000: btaken = ;   // beq
-            3'b000: btaken = ;   // beq
-            defualt: 0;
-        endcase
-    end
+    wire [2:0] inst_opcode = opcode[6:4];    
     
-    assign BrJal = (inst_opcode[4:2] == 3'b110);
-    assign JAL = BrJal & (inst_opcode[1:0] == 2'b11);
-    assign JALR = BrJal & (inst_opcode[1:0] == 2'b01);
-    assign BeQ = (inst_opcode[7:5] == 3'b000) & BrJal & (inst_opcode[1:0] == 2'b00);
-    assign BnE = (inst_opcode[7:5] == 3'b001) & BrJal & (inst_opcode[1:0] == 2'b00);
-    assign BLT = ({inst_opcode[7], inst_opcode[5]} == 2'b10) & BrJal;
-    assign BGE = ({inst_opcode[7], inst_opcode[5]} == 2'b11) & BrJal;
+    wire isBranch, isLoad, isStore, isData;    
+    assign isLoad = (inst_opcode == 3'b000) ? 1 : 0;
+    assign isStore = (inst_opcode == 3'b010) ? 1 : 0;
+    assign isBranch = (inst_opcode == 3'b110) ? 1 : 0;
+    assign isData = ~(isLoad | isStore | isBranch);
+
+    assign BrUnmod = (funct3[1] & isBranch) ? 1 : 0;
+    assign pc_sel =  (isBranch & br_true) ? 1 : 0;
     
 
 
+endmodule
+
+
+module alu_dec (
+    input [6:0] opcode,
+    input [3:0] funct3,
+    input [2:0] inst_opcode,
+    input funct7_5,
+    input isData,
+    output reg [4:0] alu_control
+    );
+
+
+    
+    
+    
+    
+    
 endmodule
