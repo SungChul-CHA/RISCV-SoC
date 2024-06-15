@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date             : Thu Jun 13 13:42:57 2024
+| Date             : Sat Jun 15 14:42:34 2024
 | Host             : tony-ubuntu running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file RV32I_SoC_power_routed.rpt -pb RV32I_SoC_power_summary_routed.pb -rpx RV32I_SoC_power_routed.rpx
 | Design           : RV32I_SoC
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.217        |
+| Total On-Chip Power (W)  | 0.219        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.110        |
+| Dynamic (W)              | 0.111        |
 | Device Static (W)        | 0.108        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 82.5         |
@@ -53,18 +53,19 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        7 |       --- |             --- |
-| Slice Logic    |    <0.001 |     2138 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      728 |     53200 |            1.37 |
-|   F7/F8 Muxes  |    <0.001 |      287 |     53200 |            0.54 |
-|   CARRY4       |    <0.001 |       15 |     13300 |            0.11 |
-|   Register     |    <0.001 |     1072 |    106400 |            1.01 |
-|   Others       |     0.000 |       18 |       --- |             --- |
-| Signals        |     0.001 |     1561 |       --- |             --- |
+| Slice Logic    |     0.001 |     2818 |       --- |             --- |
+|   LUT as Logic |     0.001 |     1302 |     53200 |            2.45 |
+|   F7/F8 Muxes  |    <0.001 |      223 |     53200 |            0.42 |
+|   CARRY4       |    <0.001 |       24 |     13300 |            0.18 |
+|   Register     |    <0.001 |     1120 |    106400 |            1.05 |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |       21 |       --- |             --- |
+| Signals        |     0.002 |     2448 |       --- |             --- |
 | Block RAM      |    <0.001 |        2 |       140 |            1.43 |
 | MMCM           |     0.106 |        1 |         4 |           25.00 |
 | I/O            |    <0.001 |       20 |       125 |           16.00 |
 | Static Power   |     0.108 |          |           |                 |
-| Total          |     0.217 |          |           |                 |
+| Total          |     0.219 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.012 |       0.004 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.014 |       0.006 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.069 |       0.059 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -151,14 +152,17 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------+-----------+
-| Name             | Power (W) |
-+------------------+-----------+
-| RV32I_SoC        |     0.110 |
-|   iCPU           |     0.002 |
-|     regfile_inst |     0.001 |
-|   iPLL           |     0.107 |
-|     inst         |     0.107 |
-+------------------+-----------+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| RV32I_SoC              |     0.111 |
+|   iCPU                 |     0.003 |
+|     regfile_inst       |     0.003 |
+|   iMEM                 |     0.001 |
+|     U0                 |     0.001 |
+|       inst_blk_mem_gen |     0.001 |
+|   iPLL                 |     0.107 |
+|     inst               |     0.107 |
++------------------------+-----------+
 
 

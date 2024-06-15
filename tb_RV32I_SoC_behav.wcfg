@@ -11,84 +11,106 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="247.934 ns"></ZoomStartTime>
-      <ZoomEndTime time="614.935 ns"></ZoomEndTime>
-      <Cursor1Time time="362.434 ns"></Cursor1Time>
+      <ZoomStartTime time="276.850 ns"></ZoomStartTime>
+      <ZoomEndTime time="538.251 ns"></ZoomEndTime>
+      <Cursor1Time time="309.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="199"></NameColumnWidth>
-      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <ValueColumnWidth column_width="85"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="19" />
    <wave_markers>
-      <marker label="" time="484000" />
       <marker label="" time="809000" />
+      <marker label="" time="484000" />
    </wave_markers>
-   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/rst">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/clk_main">
       <obj_property name="ElementShortName">clk_main</obj_property>
       <obj_property name="ObjectShortName">clk_main</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/pc">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/clk_text">
       <obj_property name="ElementShortName">clk_text</obj_property>
       <obj_property name="ObjectShortName">clk_text</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/fetch_addr">
-      <obj_property name="ElementShortName">fetch_addr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">fetch_addr[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/inst">
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/inst">
       <obj_property name="ElementShortName">inst[31:0]</obj_property>
       <obj_property name="ObjectShortName">inst[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rs2_data">
-      <obj_property name="ElementShortName">rs2_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">rs2_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rs1_data">
-      <obj_property name="ElementShortName">rs1_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">rs1_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rd_data">
-      <obj_property name="ElementShortName">rd_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/pc">
-      <obj_property name="ElementShortName">pc[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/clk_data">
       <obj_property name="ElementShortName">clk_data</obj_property>
       <obj_property name="ObjectShortName">clk_data</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/data_addr">
-      <obj_property name="ElementShortName">data_addr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_addr[31:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/MemAddr">
+      <obj_property name="ElementShortName">MemAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MemAddr[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/read_data">
-      <obj_property name="ElementShortName">read_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">read_data[31:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/MemWdata">
+      <obj_property name="ElementShortName">MemWdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MemWdata[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/write_data">
-      <obj_property name="ElementShortName">write_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">write_data[31:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rs1_addr">
+      <obj_property name="ElementShortName">rs1_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1_addr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/seg_com">
-      <obj_property name="ElementShortName">seg_com[5:0]</obj_property>
-      <obj_property name="ObjectShortName">seg_com[5:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/seg_data">
-      <obj_property name="ElementShortName">seg_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">seg_data[7:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rs1_data">
+      <obj_property name="ElementShortName">rs1_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1_data[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/leds">
-      <obj_property name="ElementShortName">leds[3:0]</obj_property>
-      <obj_property name="ObjectShortName">leds[3:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rs2_addr">
+      <obj_property name="ElementShortName">rs2_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_addr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rs2_data">
+      <obj_property name="ElementShortName">rs2_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/imm">
+      <obj_property name="ElementShortName">imm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rd_addr">
+      <obj_property name="ElementShortName">rd_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_addr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rd_data">
+      <obj_property name="ElementShortName">rd_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_data[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/regfile_inst/x14">
+      <obj_property name="ElementShortName">x14[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x14[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/regfile_inst/x15">
+      <obj_property name="ElementShortName">x15[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x15[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/alu_inst/a">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/alu_inst/b">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/alu_inst/result">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

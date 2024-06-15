@@ -31,8 +31,9 @@ module RV32I_SoC(
     reg rst;
     wire [31:0] fetch_addr, data_addr, inst, write_data;
     wire [31:0] read_data_mem, read_data_gpio;
-    reg [31:0] read_data;  
-    wire cs_mem, cs_gpio, data_we, locked; 
+    reg [31:0] read_data;
+    wire [3:0] data_we;  
+    wire cs_mem, cs_gpio, locked; 
     wire [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
     
     ram_2port_2048x32 iMEM (
@@ -44,7 +45,7 @@ module RV32I_SoC(
         .douta (inst), 
         .clkb (clk_data), 
         .enb (cs_mem), 
-        .web ({4{data_we}}),
+        .web (data_we),
         .addrb(data_addr[12:2]), 
         .dinb (write_data), 
         .doutb (read_data_mem)

@@ -92,6 +92,10 @@ read_verilog -library xil_defaultlib {
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/Addr_Decoder.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/GPIO.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/alu.v
+  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/branch_resolution.v
+  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/brent_kung_add_32bit.v
+  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/g_2bits.v
+  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/p_2bits.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/regfile.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v
@@ -118,6 +122,8 @@ read_xdc /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1/new/RV32I_S
 set_property used_in_implementation false [get_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1/new/RV32I_SoC.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/utils_1/imports/synth_1/RV32I_SoC.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

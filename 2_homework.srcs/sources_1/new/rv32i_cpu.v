@@ -35,25 +35,29 @@ module rv32i_cpu(
         input   rst,
         output reg [31:0]  pc, //program counter (address for instruction)
         input   [31:0]  inst, //instruction from memory
-        output  MemWen, 	
+        output  [3:0]   MemWen,
         output  [31:0]  MemAddr, 
-        output  [31:0]  MemWdata, 
+        output  [31:0]  MemWdata,   
         input   [31:0]  MemRdata 
     );
 
     wire [6:0] opcode;
     wire [4:0] rs1_addr, rs2_addr, rd_addr;
-    wire [31:0] rs1_data, rs2_data, rd_data;     
+    wire [31:0] rs1_data, rs2_data;
+    reg [31:0] rd_data;     
     wire [6:0] funct7; 
     wire [2:0] funct3;
-    
     wire [2:0] inst_opcode;
     
-    wire [31:0] alu_src1, alu_src2;    
+    reg [31:0] alu_src1, alu_src2;    
     wire [31:0] alu_out; 
-    reg [4:0] alu_control;   
-    reg regwrite, src1_sel, src2_sel;
-    wire lui, aluipc, jal, branch, load, store;
+    reg [4:0] alu_control;
+    
+    wire lui, branch, load, store, arithm_i;
+    
+    reg src1_sel, src2_sel;   
+    reg regwrite;
+    
     wire Nflag, Zflag, Cflag, Vflag; 
     
     wire BrJal, isJal;
@@ -257,8 +261,6 @@ module rv32i_cpu(
     
     // operation
     assign lui = (opcode == `OP_LUI) ? 1'b1 : 1'b0;
-    assign aluipc = (opcode == `OP_AUIPC) ? 1'b1 : 1'b0;
-    assign jal = (opcode == `OP_JAL) ? 1'b1 : 1'b0;
     assign branch = (opcode == `OP_B) ? 1'b1 : 1'b0;
     assign load = (opcode == `OP_I_LOAD) ? 1'b1 : 1'b0;
     assign store = (opcode == `OP_S) ? 1'b1 : 1'b0;
@@ -274,7 +276,7 @@ module rv32i_cpu(
     assign LdUnmod = (funct3[2] & load) ? 1 : 0;
     
     assign IUnmod = ((funct3 == 3'b011) & arithm_i)  ? 1 : 0;
-    
+        
     // lui : rs1 = 0, rs2 = imm
     // auipc : rs1 = pc, rs2 = imm
     // jal : rs1 = pc, rs2 = imm
@@ -340,7 +342,7 @@ module rv32i_cpu(
             end
             default: begin
                 src1_sel = 1'b0;
-                src2_sel = 1'b1;
+                src2_sel = 1'b0;
                 regwrite = 1'b0;
 
             end
@@ -348,8 +350,16 @@ module rv32i_cpu(
     end 
     
     //always for alusrc1, alusrc2
-    assign alu_src1 = (lui) ? 0 : (src1_sel) ? pc : rs1_data;
-    assign alu_src2 = (src2_sel) ? imm : rs2_data;
+    always @* begin
+        if (lui) alu_src1 = 0;
+        else if (src1_sel) alu_src1 = pc;
+        else alu_src1 = rs1_data; 
+    end
+
+    always @* begin
+        if (src2_sel) alu_src2 = imm;
+        else alu_src2 = rs2_data;
+    end
 
     alu alu_inst(
           .a(alu_src1), 
@@ -362,11 +372,29 @@ module rv32i_cpu(
           .V(Vflag)
     );   
     
-    assign rd_data = alu_out;
+    
+    always @* begin
+        case (opcode)
+            `OP_LUI: rd_data = imm;
+            `OP_JAL,
+            `OP_JALR: rd_data = pc+4;
+            `OP_I_LOAD: 
+                if (LdUnmod) rd_data = {{24{1'b0}}, MemRdata};
+                else if(funct3 == 3'b000) rd_data = {{25{MemRdata[7]}}, MemRdata[6:0]};
+                else if(funct3 == 3'b001) rd_data = {{17{MemRdata[15]}}, MemRdata[14:0]};
+                else rd_data = MemRdata;
+            `OP_AUIPC,
+            `OP_I_ARITH,
+            `OP_R: rd_data = alu_out;
+            default: rd_data = 0;
+        endcase
+    end
+    
     assign MemAddr = alu_out;  
     assign MemWdata = rs2_data; 
-    assign MemWen = store; 
-
+    assign MemWen = (store & funct3[1:0] == 2'b00) ? 4'b0001 : 
+                    (store & funct3[1:0] == 2'b01) ? 4'b0011 :
+                    (store) ? 4'b1111 : 4'd0; 
 
 endmodule
 

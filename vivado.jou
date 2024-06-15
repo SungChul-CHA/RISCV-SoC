@@ -17,3 +17,30 @@ close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/bra
 add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/branch_resolution.v
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_RV32I_SoC [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config /mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg
+source tb_RV32I_SoC.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+add_bp {/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v} 378
+remove_bps -file {/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v} -line 378
+save_wave_config {/mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg}
+launch_simulation -mode post-implementation -type functional
+open_wave_config /mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg
+source tb_RV32I_SoC.tcl
+close_sim
+save_wave_config {/mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg}
+close_sim
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
