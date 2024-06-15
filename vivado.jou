@@ -100,3 +100,7 @@ current_sim simulation_3
 close_sim
 relaunch_sim
 run 10 s
+relaunch_sim
+run 10 s
+save_wave_config {/mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg}
+close_sim

@@ -1467,3 +1467,51 @@ Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_
 relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 13061.863 ; gain = 0.000 ; free physical = 16164 ; free virtual = 62231
 run 10 s
 $stop called at time : 1 ms : File "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" Line 35
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_RV32I_SoC_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_RV32I_SoC'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/mnt/Shared/SoC/Vivado/2_homework/2_homework.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RV32I_SoC_behav xil_defaultlib.tb_RV32I_SoC xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'wea' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:42]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'REN' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:94]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'WEN' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:95]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 12 for port 'Addr' [/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v:96]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_RV32I_SoC.DUT.iMEM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run 10 s
+$stop called at time : 1 ms : File "/mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sim_1/new/tb_RV32I_SoC.v" Line 35
+save_wave_config {/mnt/Shared/SoC/Vivado/2_homework/tb_RV32I_SoC_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 15 16:55:43 2024...
