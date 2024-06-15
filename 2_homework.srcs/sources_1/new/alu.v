@@ -41,17 +41,25 @@ module alu(
     
     brent_kung_add_32bit inst0 (.a(a), .b(bxor), .cin(sign), .sum(sum), .cout(cout), .c(c));
 
-
     always @* begin
         case (control) 
-            5'b0_0000: result = a+b; 
+            5'b0_0000,
+            5'b1_0000: result = sum;
+            5'b0_0100: result = a << b[4:0];
+            5'b1_0111: result = N != V;
+            5'b1_1000: result = ~C;
+            5'b0_0011: result = a ^ b;
+            5'b0_0101: result = a >> b[4:0];
+            5'b0_0110: result = a >>> b[4:0];
+            5'b0_0010: result = a | b;
+            5'b0_0001: result = a & b; 
             default: result = 0;
         endcase
     end
 
-//assign N = sum[31];
-//assign Z = (sum == 32'b0);
-//assign C = c[32]; // c[32]= cout
-//assign V = c[31] ^ c[32];
+    assign N = sum[31];
+    assign Z = (sum == 32'b0);
+    assign C = cout;
+    assign V = c[31] ^ cout;
     
 endmodule

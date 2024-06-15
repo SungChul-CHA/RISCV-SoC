@@ -1,0 +1,2721 @@
+/*
+
+Xilinx Vivado v2022.2.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3788238 on Tue Feb 21 19:59:23 MST 2023
+IP Build: 3783773 on Tue Feb 21 23:41:56 MST 2023
+
+Process ID (PID): 39181
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sat Jun 15 10:33:46 KST 2024
+Time zone: 	Korean Standard Time (Asia/Seoul)
+
+OS: Ubuntu
+OS Version: 6.5.0-35-generic
+OS Architecture: amd64
+Available processors (cores): 20
+
+Display: 0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/home/tony/tools/xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/home/tony/tools/xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	tony
+User home directory: /home/tony
+User working directory: /mnt/Shared/SoC/Vivado/2_homework
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/tony/tools/xilinx/Vivado
+HDI_APPROOT: /home/tony/tools/xilinx/Vivado/2022.2
+RDI_DATADIR: /home/tony/tools/xilinx/Vivado/2022.2/data
+RDI_BINDIR: /home/tony/tools/xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: /home/tony/.Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: /home/tony/.Xilinx/Vivado/2022.2/
+Vivado layouts directory: /home/tony/.Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	/home/tony/tools/xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	/mnt/Shared/SoC/Vivado/2_homework/vivado.log
+Vivado journal file: 	/mnt/Shared/SoC/Vivado/2_homework/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-39181-tony-ubuntu
+
+Xilinx Environment Variables
+----------------------------
+RDI_APPROOT: /home/tony/tools/xilinx/Vivado/2022.2
+RDI_BASEROOT: /home/tony/tools/xilinx/Vivado
+RDI_BINROOT: /home/tony/tools/xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/tony/tools/xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: /home/tony/tools/xilinx
+RDI_INSTALLVER: 2022.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: /home/tony/tools/xilinx/Vivado/2022.2/lib/lnx64.o/Ubuntu:/home/tony/tools/xilinx/Vivado/2022.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/tony/tools/xilinx/Vitis/2022.2/bin:/home/tony/tools/xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/tony/tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/vivado
+RDI_TPS_ROOT: /home/tony/tools/xilinx/Vivado/2022.2/tps/lnx64
+RDI_USE_JDK11: True
+XILINX: /home/tony/tools/xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: /home/tony/tools/xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: /home/tony/tools/xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: /home/tony/tools/xilinx/Vivado/2022.2
+XILINX_SDK: /home/tony/tools/xilinx/Vitis/2022.2
+XILINX_VITIS: /home/tony/tools/xilinx/Vitis/2022.2
+XILINX_VIVADO: /home/tony/tools/xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: /home/tony/tools/xilinx/Vivado/2022.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,229 MB
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/mnt/Shared/SoC/Vivado/2_homework/2_homework.xpr", 0); // b.a
+// Opening Vivado Project: /mnt/Shared/SoC/Vivado/2_homework/2_homework.xpr. Version: Vivado v2022.2.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 108 MB (+111038kb) [00:00:06]
+// [Engine Memory]: 1,198 MB (+1104407kb) [00:00:06]
+// WARNING: HEventQueue.dispatchEvent() is taking  1476 ms.
+// Tcl Message: open_project /mnt/Shared/SoC/Vivado/2_homework/2_homework.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/tony/tools/xilinx/Vivado/2022.2/data/ip'. 
+// [GUI Memory]: 117 MB (+3906kb) [00:00:07]
+// Project name: 2_homework; location: /mnt/Shared/SoC/Vivado/2_homework; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bq
+// HMemoryUtils.trashcanNow. Engine heap size: 1,248 MB. GUI used memory: 65 MB. Current time: 6/15/24, 10:33:46 AM KST
+// [Engine Memory]: 1,282 MB (+26046kb) [00:00:10]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), alu_inst : alu (alu.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), alu_inst : alu (alu.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+// Elapsed time: 122 seconds
+selectCodeEditor("rv32i_cpu.v", 88, 156); // ac
+selectCodeEditor("rv32i_cpu.v", 88, 156, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 108, 172); // ac
+selectCodeEditor("rv32i_cpu.v", 108, 172, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 135, 248); // ac
+selectCodeEditor("rv32i_cpu.v", 135, 248, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 133, 297); // ac
+selectCodeEditor("rv32i_cpu.v", 133, 297, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 171, 291); // ac
+selectCodeEditor("rv32i_cpu.v", 171, 291, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 180, 262); // ac
+selectCodeEditor("rv32i_cpu.v", 152, 243); // ac
+selectCodeEditor("rv32i_cpu.v", 152, 243, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 160, 267); // ac
+selectCodeEditor("rv32i_cpu.v", 160, 267, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 196, 167); // ac
+selectCodeEditor("rv32i_cpu.v", 196, 167, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 255, 166); // ac
+selectCodeEditor("rv32i_cpu.v", 255, 166, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 255, 167); // ac
+selectCodeEditor("rv32i_cpu.v", 279, 184); // ac
+selectCodeEditor("rv32i_cpu.v", 260, 163); // ac
+selectCodeEditor("rv32i_cpu.v", 260, 163, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 255, 176); // ac
+selectCodeEditor("rv32i_cpu.v", 255, 176, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 332, 173); // ac
+selectCodeEditor("rv32i_cpu.v", 332, 173, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 182, 173); // ac
+selectCodeEditor("rv32i_cpu.v", 182, 173, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 326, 345); // ac
+selectCodeEditor("rv32i_cpu.v", 326, 345, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 36 seconds
+selectCodeEditor("rv32i_cpu.v", 391, 220); // ac
+selectCodeEditor("rv32i_cpu.v", 375, 245); // ac
+selectCodeEditor("rv32i_cpu.v", 254, 305); // ac
+selectCodeEditor("rv32i_cpu.v", 254, 305, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 194, 308); // ac
+selectCodeEditor("rv32i_cpu.v", 194, 308, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 311, 305); // ac
+selectCodeEditor("rv32i_cpu.v", 312, 305, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 264, 306); // ac
+selectCodeEditor("rv32i_cpu.v", 264, 306, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 193, 312); // ac
+selectCodeEditor("rv32i_cpu.v", 193, 312, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 254, 307); // ac
+selectCodeEditor("rv32i_cpu.v", 254, 307, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 322, 305); // ac
+selectCodeEditor("rv32i_cpu.v", 322, 305, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 418, 300); // ac
+selectCodeEditor("rv32i_cpu.v", 124, 498); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 202, 457); // ac
+// [GUI Memory]: 126 MB (+2764kb) [00:04:04]
+selectCodeEditor("rv32i_cpu.v", 180, 456); // ac
+// Elapsed time: 50 seconds
+selectCodeEditor("rv32i_cpu.v", 160, 477); // ac
+selectCodeEditor("rv32i_cpu.v", 166, 494); // ac
+selectCodeEditor("rv32i_cpu.v", 133, 512); // ac
+selectCodeEditor("rv32i_cpu.v", 128, 458); // ac
+// Elapsed time: 25 seconds
+selectCodeEditor("rv32i_cpu.v", 276, 238); // ac
+selectCodeEditor("rv32i_cpu.v", 271, 245); // ac
+selectCodeEditor("rv32i_cpu.v", 271, 245, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 270, 333); // ac
+selectCodeEditor("rv32i_cpu.v", 257, 296); // ac
+selectCodeEditor("rv32i_cpu.v", 257, 296, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 205, 307); // ac
+selectCodeEditor("rv32i_cpu.v", 205, 307, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 593, 332); // ac
+selectCodeEditor("rv32i_cpu.v", 613, 304); // ac
+selectCodeEditor("rv32i_cpu.v", 611, 293); // ac
+selectCodeEditor("rv32i_cpu.v", 355, 298); // ac
+selectCodeEditor("rv32i_cpu.v", 355, 298, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 299, 312); // ac
+selectCodeEditor("rv32i_cpu.v", 299, 312, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 344, 250); // ac
+selectCodeEditor("rv32i_cpu.v", 344, 250, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 289, 260); // ac
+selectCodeEditor("rv32i_cpu.v", 289, 260, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 349, 239); // ac
+selectCodeEditor("rv32i_cpu.v", 349, 239, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 98 seconds
+selectCodeEditor("rv32i_cpu.v", 385, 340); // ac
+selectCodeEditor("rv32i_cpu.v", 416, 353); // ac
+selectCodeEditor("rv32i_cpu.v", 101, 361); // ac
+selectCodeEditor("rv32i_cpu.v", 101, 361, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 281, 211); // ac
+selectCodeEditor("rv32i_cpu.v", 281, 211, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 185, 142); // ac
+selectCodeEditor("rv32i_cpu.v", 185, 141, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 106, 365); // ac
+selectCodeEditor("rv32i_cpu.v", 106, 365, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,345 MB. GUI used memory: 69 MB. Current time: 6/15/24, 10:41:36 AM KST
+// Elapsed time: 31 seconds
+selectCodeEditor("rv32i_cpu.v", 258, 277); // ac
+selectCodeEditor("rv32i_cpu.v", 258, 277, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 335, 165); // ac
+selectCodeEditor("rv32i_cpu.v", 335, 165, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 298, 187); // ac
+selectCodeEditor("rv32i_cpu.v", 298, 187, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 331, 172); // ac
+selectCodeEditor("rv32i_cpu.v", 331, 171, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 304, 187); // ac
+selectCodeEditor("rv32i_cpu.v", 304, 187, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 331, 176); // ac
+selectCodeEditor("rv32i_cpu.v", 331, 176, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 301, 192); // ac
+selectCodeEditor("rv32i_cpu.v", 301, 192, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 338, 180); // ac
+selectCodeEditor("rv32i_cpu.v", 338, 180, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 344, 168); // ac
+selectCodeEditor("rv32i_cpu.v", 344, 168, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 286, 191); // ac
+selectCodeEditor("rv32i_cpu.v", 286, 191, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 135, 113); // ac
+selectCodeEditor("rv32i_cpu.v", 135, 113, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("rv32i_cpu.v", 140, 369); // ac
+selectCodeEditor("rv32i_cpu.v", 140, 368, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 61, 371); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 92, 386); // ac
+selectCodeEditor("rv32i_cpu.v", 92, 386, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 204, 382); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 145, 367); // ac
+selectCodeEditor("rv32i_cpu.v", 145, 367, false, false, false, false, true); // ac - Double Click
+// [Engine Memory]: 1,363 MB (+17326kb) [00:09:48]
+selectCodeEditor("rv32i_cpu.v", 98, 381); // ac
+selectCodeEditor("rv32i_cpu.v", 98, 381, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 72, 452); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 25 seconds
+selectCodeEditor("rv32i_cpu.v", 198, 466); // ac
+selectCodeEditor("rv32i_cpu.v", 237, 436); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,380 MB. GUI used memory: 69 MB. Current time: 6/15/24, 10:43:56 AM KST
+selectCodeEditor("rv32i_cpu.v", 328, 454); // ac
+selectCodeEditor("rv32i_cpu.v", 107, 462); // ac
+selectCodeEditor("rv32i_cpu.v", 107, 462, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 346, 484); // ac
+selectCodeEditor("rv32i_cpu.v", 347, 466); // ac
+selectCodeEditor("rv32i_cpu.v", 343, 459); // ac
+// Elapsed time: 20 seconds
+selectCodeEditor("rv32i_cpu.v", 99, 450); // ac
+selectCodeEditor("rv32i_cpu.v", 114, 439); // ac
+selectCodeEditor("rv32i_cpu.v", 94, 458); // ac
+selectCodeEditor("rv32i_cpu.v", 94, 458, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 99, 470); // ac
+selectCodeEditor("rv32i_cpu.v", 99, 470, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 176, 452); // ac
+selectCodeEditor("rv32i_cpu.v", 290, 479); // ac
+// Elapsed time: 94 seconds
+selectCodeEditor("rv32i_cpu.v", 82, 403); // ac
+selectCodeEditor("rv32i_cpu.v", 82, 403, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 81, 411); // ac
+selectCodeEditor("rv32i_cpu.v", 81, 411, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 239, 448); // ac
+selectCodeEditor("rv32i_cpu.v", 156, 459); // ac
+selectCodeEditor("rv32i_cpu.v", 156, 458, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 267, 437); // ac
+selectCodeEditor("rv32i_cpu.v", 236, 451); // ac
+// Elapsed time: 256 seconds
+selectCodeEditor("rv32i_cpu.v", 271, 487); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 508, 510); // ac
+selectCodeEditor("rv32i_cpu.v", 101, 399); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 273, 247); // ac
+selectCodeEditor("rv32i_cpu.v", 73, 278); // ac
+selectCodeEditor("rv32i_cpu.v", 73, 278, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 127, 284); // ac
+selectCodeEditor("rv32i_cpu.v", 87, 277); // ac
+selectCodeEditor("rv32i_cpu.v", 87, 277, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 152, 324); // ac
+selectCodeEditor("rv32i_cpu.v", 152, 324, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 151, 343); // ac
+selectCodeEditor("rv32i_cpu.v", 151, 343, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 150, 350); // ac
+selectCodeEditor("rv32i_cpu.v", 150, 350, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 149, 372); // ac
+selectCodeEditor("rv32i_cpu.v", 149, 372, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 149, 383); // ac
+selectCodeEditor("rv32i_cpu.v", 149, 383, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 150, 402); // ac
+selectCodeEditor("rv32i_cpu.v", 150, 402, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 430, 291); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,415 MB. GUI used memory: 69 MB. Current time: 6/15/24, 10:51:16 AM KST
+selectCodeEditor("rv32i_cpu.v", 274, 387); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 469, 358); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 194, 488); // ac
+selectCodeEditor("rv32i_cpu.v", 114, 311); // ac
+// [Engine Memory]: 1,432 MB (+436kb) [00:17:57]
+selectCodeEditor("rv32i_cpu.v", 277, 278); // ac
+selectCodeEditor("rv32i_cpu.v", 138, 475); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 109, 472); // ac
+typeControlKey(null, null, 'z');
+selectCodeEditor("rv32i_cpu.v", 57, 247); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// HMemoryUtils.trashcanNow. Engine heap size: 1,449 MB. GUI used memory: 72 MB. Current time: 6/15/24, 10:51:51 AM KST
+selectButton("CANCEL", "Cancel"); // JButton
+dismissDialog("Add Sources"); // c
+selectCodeEditor("rv32i_cpu.v", 180, 460); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "branch_resolution"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // m
+selectButton("FINISH", "Finish"); // JButton
+// 'f' command handler elapsed time: 10 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/branch_resolution.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/branch_resolution.v 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+selectButton("OptionPane.button", "Yes"); // JButton
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // p
+selectCodeEditor("rv32i_cpu.v", 115, 460); // ac
+selectCodeEditor("rv32i_cpu.v", 119, 443); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, branch_resolution (branch_resolution.v)]", 11, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, branch_resolution (branch_resolution.v)]", 11, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("branch_resolution.v", 140, 384); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,503 MB. GUI used memory: 70 MB. Current time: 6/15/24, 10:52:21 AM KST
+typeControlKey((HResource) null, "branch_resolution.v", 'v'); // ac
+selectCodeEditor("branch_resolution.v", 123, 491); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("branch_resolution.v", 162, 201); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+// [Engine Memory]: 1,518 MB (+15628kb) [00:18:48]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 410, 203); // ac
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "branch_resolution.v", 4); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+selectCodeEditor("rv32i_cpu.v", 193, 236); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "branch_resolution.v", 4); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "branch_resolution.v", 4); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "branch_resolution.v", 4); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 481, 246); // ac
+selectCodeEditor("rv32i_cpu.v", 249, 264); // ac
+selectCodeEditor("rv32i_cpu.v", 249, 264, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 99, 145); // ac
+selectCodeEditor("rv32i_cpu.v", 99, 145, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 131, 147); // ac
+selectCodeEditor("rv32i_cpu.v", 236, 144, true, false, false, false, false); // ac - Shift Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 453, 200); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,569 MB. GUI used memory: 70 MB. Current time: 6/15/24, 10:53:31 AM KST
+selectCodeEditor("branch_resolution.v", 151, 173); // ac
+selectCodeEditor("branch_resolution.v", 151, 173, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "branch_resolution.v", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+selectCodeEditor("rv32i_cpu.v", 98, 233); // ac
+selectCodeEditor("rv32i_cpu.v", 98, 233, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("rv32i_cpu.v", 448, 292); // ac
+// [Engine Memory]: 1,600 MB (+6234kb) [00:20:07]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,600 MB. GUI used memory: 71 MB. Current time: 6/15/24, 10:53:46 AM KST
+selectCodeEditor("rv32i_cpu.v", 413, 350); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 315, 306); // ac
+selectCodeEditor("rv32i_cpu.v", 315, 306, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 250, 306); // ac
+selectCodeEditor("rv32i_cpu.v", 250, 306, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 206, 302); // ac
+selectCodeEditor("rv32i_cpu.v", 206, 302, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 103, 309); // ac
+selectCodeEditor("rv32i_cpu.v", 103, 309, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 150, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 150, 395, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 75 seconds
+selectCodeEditor("rv32i_cpu.v", 242, 308); // ac
+selectCodeEditor("rv32i_cpu.v", 242, 308, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 193, 305); // ac
+selectCodeEditor("rv32i_cpu.v", 193, 305, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 434, 308); // ac
+// Elapsed time: 19 seconds
+selectCodeEditor("rv32i_cpu.v", 151, 396); // ac
+selectCodeEditor("rv32i_cpu.v", 151, 396, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 167, 356); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 140, 214); // ac
+selectCodeEditor("rv32i_cpu.v", 140, 214, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 142, 357); // ac
+selectCodeEditor("rv32i_cpu.v", 142, 357, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 202, 353); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 52, 216); // ac
+selectCodeEditor("rv32i_cpu.v", 52, 216, false, false, false, false, true); // ac - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,632 MB. GUI used memory: 70 MB. Current time: 6/15/24, 10:56:16 AM KST
+selectCodeEditor("rv32i_cpu.v", 137, 214); // ac
+selectCodeEditor("rv32i_cpu.v", 136, 214, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 487, 189); // ac
+selectCodeEditor("rv32i_cpu.v", 493, 174); // ac
+// Elapsed time: 42 seconds
+selectCodeEditor("rv32i_cpu.v", 73, 352); // ac
+selectCodeEditor("rv32i_cpu.v", 73, 352, false, false, false, false, true); // ac - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 248, 359); // ac
+selectCodeEditor("rv32i_cpu.v", 86, 418); // ac
+selectCodeEditor("rv32i_cpu.v", 174, 350); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 196, 476); // ac
+selectCodeEditor("rv32i_cpu.v", 180, 347); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 211, 461); // ac
+selectCodeEditor("rv32i_cpu.v", 149, 294); // ac
+selectCodeEditor("rv32i_cpu.v", 176, 292); // ac
+selectCodeEditor("rv32i_cpu.v", 147, 321); // ac
+selectCodeEditor("rv32i_cpu.v", 133, 218); // ac
+selectCodeEditor("rv32i_cpu.v", 132, 221); // ac
+selectCodeEditor("rv32i_cpu.v", 132, 221, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 151, 416); // ac
+selectCodeEditor("rv32i_cpu.v", 151, 416, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 148, 234); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 166, 365); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 44, 130); // ac
+selectCodeEditor("rv32i_cpu.v", 44, 130, false, false, false, false, true); // ac - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,663 MB. GUI used memory: 70 MB. Current time: 6/15/24, 10:58:11 AM KST
+// [Engine Memory]: 1,682 MB (+1646kb) [00:24:35]
+selectCodeEditor("rv32i_cpu.v", 765, 371); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 145, 222); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 274, 388); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 147, 207); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 574, 398); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 717, 404); // ac
+selectCodeEditor("rv32i_cpu.v", 144, 428); // ac
+selectCodeEditor("rv32i_cpu.v", 621, 403); // ac
+// Elapsed time: 35 seconds
+selectCodeEditor("rv32i_cpu.v", 366, 303); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("rv32i_cpu.v", 350, 235); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("rv32i_cpu.v", 89, 208); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,714 MB. GUI used memory: 71 MB. Current time: 6/15/24, 10:59:46 AM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 192, 200); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 237, 294); // ac
+selectCodeEditor("rv32i_cpu.v", 289, 245); // ac
+selectCodeEditor("rv32i_cpu.v", 289, 245, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 243, 273); // ac
+selectCodeEditor("rv32i_cpu.v", 242, 273, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 319, 276); // ac
+selectCodeEditor("rv32i_cpu.v", 319, 276, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 359, 220); // ac
+selectCodeEditor("rv32i_cpu.v", 371, 224); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 315, 320); // ac
+selectCodeEditor("rv32i_cpu.v", 315, 320, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 519, 324); // ac
+selectCodeEditor("rv32i_cpu.v", 460, 353); // ac
+selectCodeEditor("rv32i_cpu.v", 440, 394); // ac
+selectCodeEditor("rv32i_cpu.v", 420, 448); // ac
+selectCodeEditor("rv32i_cpu.v", 291, 470); // ac
+// Elapsed time: 16 seconds
+selectCodeEditor("rv32i_cpu.v", 288, 276); // ac
+selectCodeEditor("rv32i_cpu.v", 287, 276, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 299, 292); // ac
+selectCodeEditor("rv32i_cpu.v", 299, 292, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 326, 327); // ac
+selectCodeEditor("rv32i_cpu.v", 298, 273); // ac
+selectCodeEditor("rv32i_cpu.v", 298, 273, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 301, 291); // ac
+selectCodeEditor("rv32i_cpu.v", 301, 291, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 291, 279); // ac
+selectCodeEditor("rv32i_cpu.v", 291, 279, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 295, 291); // ac
+selectCodeEditor("rv32i_cpu.v", 295, 291, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 58 seconds
+selectCodeEditor("rv32i_cpu.v", 189, 169); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 308, 317); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 333, 360); // ac
+selectCodeEditor("rv32i_cpu.v", 332, 346); // ac
+// [Engine Memory]: 1,777 MB (+11655kb) [00:28:51]
+selectCodeEditor("rv32i_cpu.v", 334, 337); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,777 MB. GUI used memory: 70 MB. Current time: 6/15/24, 11:02:31 AM KST
+selectCodeEditor("rv32i_cpu.v", 609, 191); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 3); // o
+selectCodeEditor("alu.v", 335, 387); // ac
+typeControlKey((HResource) null, "alu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RV32I_SoC.v", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "rv32i_cpu.v", 2); // o
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,809 MB. GUI used memory: 71 MB. Current time: 6/15/24, 11:02:56 AM KST
+selectCodeEditor("rv32i_cpu.v", 164, 174); // ac
+selectCodeEditor("rv32i_cpu.v", 164, 174, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 215, 167); // ac
+selectCodeEditor("rv32i_cpu.v", 215, 167, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 283, 164); // ac
+selectCodeEditor("rv32i_cpu.v", 283, 164, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 287, 171); // ac
+selectCodeEditor("rv32i_cpu.v", 287, 171, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 409, 173); // ac
+selectCodeEditor("rv32i_cpu.v", 409, 173, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 481, 171); // ac
+selectCodeEditor("rv32i_cpu.v", 481, 171, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 550, 171); // ac
+selectCodeEditor("rv32i_cpu.v", 550, 171, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 602, 173); // ac
+selectCodeEditor("rv32i_cpu.v", 602, 173, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 617, 175); // ac
+selectCodeEditor("rv32i_cpu.v", 629, 175); // ac
+selectCodeEditor("rv32i_cpu.v", 656, 174); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 277, 169); // ac
+selectCodeEditor("rv32i_cpu.v", 277, 169, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 367, 165); // ac
+selectCodeEditor("rv32i_cpu.v", 367, 165, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 429, 172); // ac
+selectCodeEditor("rv32i_cpu.v", 429, 172, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 536, 178); // ac
+selectCodeEditor("rv32i_cpu.v", 536, 178, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 622, 171); // ac
+selectCodeEditor("rv32i_cpu.v", 650, 170); // ac
+// Elapsed time: 39 seconds
+selectCodeEditor("rv32i_cpu.v", 215, 202); // ac
+// Elapsed time: 93 seconds
+selectCodeEditor("rv32i_cpu.v", 128, 353); // ac
+selectCodeEditor("rv32i_cpu.v", 128, 353, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 115, 343); // ac
+selectCodeEditor("rv32i_cpu.v", 115, 343, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 137, 326); // ac
+selectCodeEditor("rv32i_cpu.v", 137, 326, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 116, 309); // ac
+selectCodeEditor("rv32i_cpu.v", 116, 309, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 121, 320); // ac
+selectCodeEditor("rv32i_cpu.v", 121, 320, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 18 seconds
+selectCodeEditor("rv32i_cpu.v", 72, 231); // ac
+selectCodeEditor("rv32i_cpu.v", 72, 231, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 74, 249); // ac
+selectCodeEditor("rv32i_cpu.v", 74, 249, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 74, 261); // ac
+selectCodeEditor("rv32i_cpu.v", 74, 261, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("rv32i_cpu.v", 322, 306); // ac
+selectCodeEditor("rv32i_cpu.v", 321, 315); // ac
+// Elapsed time: 47 seconds
+selectCodeEditor("rv32i_cpu.v", 253, 186); // ac
+selectCodeEditor("rv32i_cpu.v", 334, 188); // ac
+selectCodeEditor("rv32i_cpu.v", 665, 186, true, false, false, false, false); // ac - Shift Key
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 283, 261); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("rv32i_cpu.v", 506, 229); // ac
+selectCodeEditor("rv32i_cpu.v", 411, 248); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,846 MB. GUI used memory: 71 MB. Current time: 6/15/24, 11:07:31 AM KST
+selectCodeEditor("rv32i_cpu.v", 494, 266); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 462, 299); // ac
+selectCodeEditor("rv32i_cpu.v", 472, 250); // ac
+selectCodeEditor("rv32i_cpu.v", 183, 249); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,876 MB (+10865kb) [00:34:47]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,876 MB. GUI used memory: 70 MB. Current time: 6/15/24, 11:08:26 AM KST
+// Elapsed time: 55 seconds
+selectCodeEditor("rv32i_cpu.v", 203, 247); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectCodeEditor("rv32i_cpu.v", 191, 351); // ac
+// Elapsed time: 81 seconds
+selectCodeEditor("rv32i_cpu.v", 308, 342); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,909 MB. GUI used memory: 70 MB. Current time: 6/15/24, 11:10:46 AM KST
+// Elapsed time: 83 seconds
+selectCodeEditor("rv32i_cpu.v", 182, 338); // ac
+selectCodeEditor("rv32i_cpu.v", 257, 341); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 534, 336); // ac
+selectCodeEditor("rv32i_cpu.v", 604, 344); // ac
+selectCodeEditor("rv32i_cpu.v", 570, 359); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 194, 352); // ac
+selectCodeEditor("rv32i_cpu.v", 359, 370); // ac
+selectCodeEditor("rv32i_cpu.v", 359, 370, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 359, 396); // ac
+selectCodeEditor("rv32i_cpu.v", 357, 368); // ac
+selectCodeEditor("rv32i_cpu.v", 357, 368, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("rv32i_cpu.v", 197, 265); // ac
+// Elapsed time: 19 seconds
+selectCodeEditor("rv32i_cpu.v", 507, 263); // ac
+selectCodeEditor("rv32i_cpu.v", 196, 264); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 393, 314); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 409, 255); // ac
+selectCodeEditor("rv32i_cpu.v", 243, 264); // ac
+selectCodeEditor("rv32i_cpu.v", 243, 264, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 243, 287); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,941 MB. GUI used memory: 70 MB. Current time: 6/15/24, 11:13:46 AM KST
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 476, 264); // ac
+selectCodeEditor("rv32i_cpu.v", 529, 264); // ac
+selectCodeEditor("rv32i_cpu.v", 406, 266); // ac
+selectCodeEditor("rv32i_cpu.v", 555, 262); // ac
+selectCodeEditor("rv32i_cpu.v", 586, 260); // ac
+selectCodeEditor("rv32i_cpu.v", 218, 263); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 272, 290); // ac
+selectCodeEditor("rv32i_cpu.v", 611, 263); // ac
+// Elapsed time: 19 seconds
+selectCodeEditor("rv32i_cpu.v", 140, 277); // ac
+// Elapsed time: 24 seconds
+selectCodeEditor("rv32i_cpu.v", 100, 369); // ac
+selectCodeEditor("rv32i_cpu.v", 100, 369, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 87, 333); // ac
+selectCodeEditor("rv32i_cpu.v", 87, 333, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 92, 140); // ac
+selectCodeEditor("rv32i_cpu.v", 92, 140, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 100, 152); // ac
+selectCodeEditor("rv32i_cpu.v", 100, 152, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 109, 172); // ac
+selectCodeEditor("rv32i_cpu.v", 109, 172, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 154, 202); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 202, 189); // ac
+selectCodeEditor("rv32i_cpu.v", 271, 211); // ac
+selectCodeEditor("rv32i_cpu.v", 219, 220); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,973 MB. GUI used memory: 71 MB. Current time: 6/15/24, 11:17:26 AM KST
+// [Engine Memory]: 1,973 MB (+3098kb) [00:43:49]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 118 seconds
+selectCodeEditor("rv32i_cpu.v", 471, 353); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 243, 360); // ac
+selectCodeEditor("rv32i_cpu.v", 628, 352); // ac
+selectCodeEditor("rv32i_cpu.v", 185, 188); // ac
+selectCodeEditor("rv32i_cpu.v", 240, 351); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 406, 195); // ac
+selectCodeEditor("rv32i_cpu.v", 399, 183); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// Elapsed time: 49 seconds
+selectCodeEditor("rv32i_cpu.v", 337, 160); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 194, 205); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 181, 207); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,007 MB. GUI used memory: 71 MB. Current time: 6/15/24, 11:20:06 AM KST
+// Elapsed time: 120 seconds
+selectCodeEditor("rv32i_cpu.v", 137, 166); // ac
+selectCodeEditor("rv32i_cpu.v", 137, 166, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 451, 178); // ac
+selectCodeEditor("rv32i_cpu.v", 458, 201); // ac
+selectCodeEditor("rv32i_cpu.v", 486, 205); // ac
+// Elapsed time: 25 seconds
+selectCodeEditor("rv32i_cpu.v", 199, 364); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 322, 398); // ac
+selectCodeEditor("rv32i_cpu.v", 293, 415); // ac
+selectCodeEditor("rv32i_cpu.v", 325, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 275, 416); // ac
+selectCodeEditor("rv32i_cpu.v", 77, 389); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 594, 418); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,038 MB. GUI used memory: 70 MB. Current time: 6/15/24, 11:22:11 AM KST
+selectCodeEditor("rv32i_cpu.v", 224, 307); // ac
+selectCodeEditor("rv32i_cpu.v", 250, 245); // ac
+selectCodeEditor("rv32i_cpu.v", 250, 245, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 187, 248); // ac
+selectCodeEditor("rv32i_cpu.v", 187, 248, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 236, 251); // ac
+selectCodeEditor("rv32i_cpu.v", 236, 251, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 282, 236); // ac
+selectCodeEditor("rv32i_cpu.v", 263, 213); // ac
+selectCodeEditor("rv32i_cpu.v", 248, 218); // ac
+selectCodeEditor("rv32i_cpu.v", 248, 218, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 327, 231); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 250, 413); // ac
+selectCodeEditor("rv32i_cpu.v", 53, 208); // ac
+selectCodeEditor("rv32i_cpu.v", 318, 307); // ac
+selectCodeEditor("rv32i_cpu.v", 318, 307, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 169, 435); // ac
+selectCodeEditor("rv32i_cpu.v", 169, 435, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 254, 436); // ac
+selectCodeEditor("rv32i_cpu.v", 254, 436, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 321, 407); // ac
+selectCodeEditor("rv32i_cpu.v", 321, 407, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 290, 408); // ac
+selectCodeEditor("rv32i_cpu.v", 290, 408, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 236, 417); // ac
+selectCodeEditor("rv32i_cpu.v", 236, 417, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 274, 417); // ac
+selectCodeEditor("rv32i_cpu.v", 274, 417, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 322, 411); // ac
+selectCodeEditor("rv32i_cpu.v", 322, 411, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 339, 413); // ac
+selectCodeEditor("rv32i_cpu.v", 339, 413, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 358, 411); // ac
+selectCodeEditor("rv32i_cpu.v", 358, 411, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 383, 412); // ac
+selectCodeEditor("rv32i_cpu.v", 383, 412, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 214, 416); // ac
+selectCodeEditor("rv32i_cpu.v", 157, 444); // ac
+selectCodeEditor("rv32i_cpu.v", 157, 444, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 243, 245); // ac
+selectCodeEditor("rv32i_cpu.v", 243, 245, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 299, 303); // ac
+// Elapsed time: 23 seconds
+selectCodeEditor("rv32i_cpu.v", 259, 281); // ac
+selectCodeEditor("rv32i_cpu.v", 259, 281, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 50 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 3); // o
+selectMenuItem((HResource) null, "New Vertical Group"); // JMenuItem
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // B
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+// Elapsed time: 26 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectCodeEditor("alu.v", 200, 462); // ac
+selectCodeEditor("alu.v", 360, 429); // ac
+selectCodeEditor("alu.v", 246, 457); // ac
+// Elapsed time: 10 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("alu.v", 121, 109); // ac
+selectCodeEditor("alu.v", 121, 109, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 569, 218); // ac
+selectCodeEditor("alu.v", 569, 218, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "alu.v", 'c'); // ac
+selectCodeEditor("alu.v", 140, 439); // ac
+typeControlKey((HResource) null, "alu.v", 'v'); // ac
+selectCodeEditor("alu.v", 198, 452); // ac
+typeControlKey((HResource) null, "alu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 340, 363); // ac
+selectCodeEditor("alu.v", 124, 217); // ac
+selectCodeEditor("alu.v", 124, 217, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 157, 217); // ac
+selectCodeEditor("alu.v", 162, 242); // ac
+selectCodeEditor("alu.v", 155, 231); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,065 MB. GUI used memory: 64 MB. Current time: 6/15/24, 11:25:26 AM KST
+selectCodeEditor("alu.v", 626, 214); // ac
+selectCodeEditor("alu.v", 626, 214, false, false, false, false, true); // ac - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // R
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), alu_inst : alu (alu.v), inst0 : brent_kung_add_32bit (brent_kung_add_32bit.v)]", 8, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), alu_inst : alu (alu.v), inst0 : brent_kung_add_32bit (brent_kung_add_32bit.v), division16[2].pa : p_2bits (p_2bits.v)]", 16, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("brent_kung_add_32bit.v", 130, 443); // ac
+selectCodeEditor("brent_kung_add_32bit.v", 130, 443, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), alu_inst : alu (alu.v)]", 7); // D
+selectCodeEditor("alu.v", 151, 296); // ac
+selectCodeEditor("alu.v", 257, 686); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 239, 666); // ac
+// [Engine Memory]: 2,081 MB (+9988kb) [00:52:47]
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 108, 356); // ac
+selectCodeEditor("rv32i_cpu.v", 108, 356, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 39 seconds
+selectCodeEditor("alu.v", 159, 405); // ac
+selectCodeEditor("alu.v", 157, 418); // ac
+selectCodeEditor("alu.v", 157, 418, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 149, 431); // ac
+selectCodeEditor("alu.v", 149, 431, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 179, 460); // ac
+selectCodeEditor("alu.v", 179, 460, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 149, 412); // ac
+selectCodeEditor("alu.v", 149, 412, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 206, 519); // ac
+selectCodeEditor("alu.v", 267, 530); // ac
+// Elapsed time: 18 seconds
+selectCodeEditor("rv32i_cpu.v", 432, 201); // ac
+selectCodeEditor("rv32i_cpu.v", 432, 201, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 366, 580); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 149, 541); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 272, 539); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,098 MB. GUI used memory: 64 MB. Current time: 6/15/24, 11:28:06 AM KST
+selectCodeEditor("alu.v", 271, 541); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 25 seconds
+selectCodeEditor("rv32i_cpu.v", 214, 592); // ac
+selectCodeEditor("rv32i_cpu.v", 214, 592, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 116, 590); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 210, 573); // ac
+selectCodeEditor("rv32i_cpu.v", 135, 594); // ac
+// Elapsed time: 37 seconds
+selectCodeEditor("rv32i_cpu.v", 162, 294); // ac
+selectCodeEditor("rv32i_cpu.v", 161, 294, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 139, 205); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 251, 203); // ac
+selectCodeEditor("rv32i_cpu.v", 200, 212); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 774, 234); // ac
+selectCodeEditor("rv32i_cpu.v", 691, 208); // ac
+selectCodeEditor("rv32i_cpu.v", 639, 218); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 355, 336); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectCodeEditor("rv32i_cpu.v", 637, 359); // ac
+selectCodeEditor("rv32i_cpu.v", 450, 396); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,162 MB. GUI used memory: 64 MB. Current time: 6/15/24, 11:30:31 AM KST
+selectCodeEditor("rv32i_cpu.v", 360, 334); // ac
+selectCodeEditor("rv32i_cpu.v", 420, 334); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 271, 337); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("rv32i_cpu.v", 409, 358); // ac
+// Elapsed time: 20 seconds
+selectCodeEditor("rv32i_cpu.v", 273, 333); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 514, 391); // ac
+// [Engine Memory]: 2,195 MB (+9902kb) [00:58:06]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,195 MB. GUI used memory: 64 MB. Current time: 6/15/24, 11:31:46 AM KST
+// Elapsed time: 26 seconds
+selectCodeEditor("rv32i_cpu.v", 658, 263); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectCodeEditor("rv32i_cpu.v", 445, 197); // ac
+selectCodeEditor("rv32i_cpu.v", 247, 200, true, false, false, false, false); // ac - Shift Key
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 253, 217); // ac
+selectCodeEditor("rv32i_cpu.v", 485, 213, true, false, false, false, false); // ac - Shift Key
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 638, 229); // ac
+// Elapsed time: 85 seconds
+selectCodeEditor("rv32i_cpu.v", 413, 250); // ac
+// Elapsed time: 18 seconds
+selectCodeEditor("rv32i_cpu.v", 616, 263, true, false, false, false, false); // ac - Shift Key
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 311, 264); // ac
+selectCodeEditor("rv32i_cpu.v", 375, 266); // ac
+selectCodeEditor("rv32i_cpu.v", 400, 267); // ac
+selectCodeEditor("rv32i_cpu.v", 438, 272); // ac
+selectCodeEditor("rv32i_cpu.v", 442, 266); // ac
+selectCodeEditor("rv32i_cpu.v", 499, 263); // ac
+selectCodeEditor("rv32i_cpu.v", 572, 268); // ac
+selectCodeEditor("rv32i_cpu.v", 614, 272); // ac
+// Elapsed time: 29 seconds
+selectCodeEditor("rv32i_cpu.v", 410, 321); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 427, 313); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,227 MB. GUI used memory: 64 MB. Current time: 6/15/24, 11:35:46 AM KST
+selectCodeEditor("rv32i_cpu.v", 656, 262); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 33 seconds
+selectCodeEditor("rv32i_cpu.v", 524, 318); // ac
+selectCodeEditor("rv32i_cpu.v", 503, 300); // ac
+// Elapsed time: 27 seconds
+selectCodeEditor("rv32i_cpu.v", 523, 299); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 530, 276); // ac
+selectCodeEditor("rv32i_cpu.v", 344, 202); // ac
+selectCodeEditor("rv32i_cpu.v", 408, 218); // ac
+selectCodeEditor("rv32i_cpu.v", 338, 231); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,259 MB. GUI used memory: 64 MB. Current time: 6/15/24, 11:36:56 AM KST
+selectCodeEditor("rv32i_cpu.v", 337, 242); // ac
+selectCodeEditor("rv32i_cpu.v", 338, 268); // ac
+selectCodeEditor("rv32i_cpu.v", 341, 293); // ac
+selectCodeEditor("rv32i_cpu.v", 492, 288); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 431, 213); // ac
+selectCodeEditor("rv32i_cpu.v", 244, 246); // ac
+selectCodeEditor("rv32i_cpu.v", 224, 228); // ac
+selectCodeEditor("rv32i_cpu.v", 241, 251); // ac
+selectCodeEditor("rv32i_cpu.v", 409, 247); // ac
+selectCodeEditor("rv32i_cpu.v", 413, 247); // ac
+// Elapsed time: 47 seconds
+selectCodeEditor("rv32i_cpu.v", 274, 102); // ac
+selectCodeEditor("rv32i_cpu.v", 440, 82); // ac
+selectCodeEditor("rv32i_cpu.v", 280, 69); // ac
+selectCodeEditor("rv32i_cpu.v", 226, 60); // ac
+selectCodeEditor("rv32i_cpu.v", 232, 63); // ac
+selectCodeEditor("rv32i_cpu.v", 108, 671); // ac
+selectCodeEditor("rv32i_cpu.v", 108, 671, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 252, 183); // ac
+// Elapsed time: 19 seconds
+selectCodeEditor("rv32i_cpu.v", 371, 141); // ac
+selectCodeEditor("rv32i_cpu.v", 371, 141, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 497, 222); // ac
+selectCodeEditor("rv32i_cpu.v", 278, 139); // ac
+selectCodeEditor("rv32i_cpu.v", 309, 141); // ac
+selectCodeEditor("rv32i_cpu.v", 306, 142); // ac
+selectCodeEditor("rv32i_cpu.v", 316, 142); // ac
+selectCodeEditor("rv32i_cpu.v", 309, 141); // ac
+selectCodeEditor("rv32i_cpu.v", 282, 142); // ac
+// Elapsed time: 16 seconds
+selectCodeEditor("rv32i_cpu.v", 215, 620); // ac
+// Elapsed time: 29 seconds
+selectCodeEditor("rv32i_cpu.v", 312, 188); // ac
+selectCodeEditor("rv32i_cpu.v", 250, 187); // ac
+selectCodeEditor("rv32i_cpu.v", 250, 187); // ac
+selectCodeEditor("rv32i_cpu.v", 271, 623); // ac
+selectCodeEditor("rv32i_cpu.v", 271, 623, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 355, 606); // ac
+selectCodeEditor("rv32i_cpu.v", 324, 637); // ac
+selectCodeEditor("rv32i_cpu.v", 324, 637, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 134, 632); // ac
+selectCodeEditor("rv32i_cpu.v", 134, 632, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 247, 112); // ac
+selectCodeEditor("rv32i_cpu.v", 252, 115); // ac
+selectCodeEditor("rv32i_cpu.v", 252, 115); // ac
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 176, 536); // ac
+selectCodeEditor("rv32i_cpu.v", 443, 528, true, false, false, false, false); // ac - Shift Key
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 214, 500); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 441, 511); // ac
+selectCodeEditor("rv32i_cpu.v", 439, 512); // ac
+selectCodeEditor("rv32i_cpu.v", 440, 509); // ac
+selectCodeEditor("rv32i_cpu.v", 244, 156); // ac
+selectCodeEditor("rv32i_cpu.v", 271, 158); // ac
+selectCodeEditor("rv32i_cpu.v", 252, 157); // ac
+// Elapsed time: 34 seconds
+selectCodeEditor("rv32i_cpu.v", 85, 683); // ac
+selectCodeEditor("rv32i_cpu.v", 427, 637); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 162, 576); // ac
+selectCodeEditor("rv32i_cpu.v", 162, 576, false, false, false, false, true); // ac - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,291 MB. GUI used memory: 64 MB. Current time: 6/15/24, 11:41:46 AM KST
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 260, 268); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 271, 624); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,307 MB (+2910kb) [01:08:50]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,323 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:42:31 AM KST
+// Elapsed time: 31 seconds
+selectCodeEditor("rv32i_cpu.v", 268, 518); // ac
+selectCodeEditor("rv32i_cpu.v", 173, 167); // ac
+selectCodeEditor("rv32i_cpu.v", 173, 167, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 183, 431); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 174, 456); // ac
+selectCodeEditor("rv32i_cpu.v", 245, 444); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 176, 523); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 242, 500); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 449, 527); // ac
+selectCodeEditor("rv32i_cpu.v", 472, 501); // ac
+selectCodeEditor("rv32i_cpu.v", 455, 515); // ac
+selectCodeEditor("rv32i_cpu.v", 404, 483); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 454, 486); // ac
+selectCodeEditor("rv32i_cpu.v", 376, 486); // ac
+selectCodeEditor("rv32i_cpu.v", 521, 492); // ac
+selectCodeEditor("rv32i_cpu.v", 479, 499); // ac
+selectCodeEditor("rv32i_cpu.v", 279, 492); // ac
+selectCodeEditor("rv32i_cpu.v", 465, 493); // ac
+selectCodeEditor("rv32i_cpu.v", 226, 498); // ac
+selectCodeEditor("rv32i_cpu.v", 531, 492); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 508, 492); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,356 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:43:56 AM KST
+// Elapsed time: 26 seconds
+selectCodeEditor("rv32i_cpu.v", 273, 666); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 490, 661); // ac
+// Elapsed time: 55 seconds
+selectCodeEditor("rv32i_cpu.v", 316, 493); // ac
+selectCodeEditor("rv32i_cpu.v", 305, 499); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,403 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:45:36 AM KST
+// Elapsed time: 40 seconds
+selectCodeEditor("rv32i_cpu.v", 41, 457); // ac
+selectCodeEditor("rv32i_cpu.v", 41, 457, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 249, 451); // ac
+// Elapsed time: 35 seconds
+selectCodeEditor("rv32i_cpu.v", 337, 190); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 166, 561); // ac
+selectCodeEditor("rv32i_cpu.v", 198, 564); // ac
+selectCodeEditor("rv32i_cpu.v", 166, 567); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 61 seconds
+selectCodeEditor("rv32i_cpu.v", 422, 518); // ac
+selectCodeEditor("rv32i_cpu.v", 443, 619); // ac
+selectCodeEditor("rv32i_cpu.v", 89, 620); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 139, 519); // ac
+selectCodeEditor("rv32i_cpu.v", 275, 642); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 463, 630); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,436 MB (+13783kb) [01:14:51]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,452 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:48:31 AM KST
+// Elapsed time: 16 seconds
+selectCodeEditor("rv32i_cpu.v", 149, 421); // ac
+selectCodeEditor("rv32i_cpu.v", 196, 411); // ac
+selectCodeEditor("rv32i_cpu.v", 236, 453); // ac
+selectCodeEditor("rv32i_cpu.v", 137, 413); // ac
+selectCodeEditor("rv32i_cpu.v", 137, 413, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 196, 461); // ac
+selectCodeEditor("rv32i_cpu.v", 145, 409); // ac
+selectCodeEditor("rv32i_cpu.v", 145, 409, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 443, 532); // ac
+selectCodeEditor("rv32i_cpu.v", 441, 539); // ac
+selectCodeEditor("rv32i_cpu.v", 438, 546); // ac
+selectCodeEditor("rv32i_cpu.v", 446, 533); // ac
+selectCodeEditor("rv32i_cpu.v", 457, 519); // ac
+selectCodeEditor("rv32i_cpu.v", 375, 479); // ac
+selectCodeEditor("rv32i_cpu.v", 641, 497); // ac
+selectCodeEditor("rv32i_cpu.v", 477, 537); // ac
+selectCodeEditor("rv32i_cpu.v", 705, 563); // ac
+selectCodeEditor("rv32i_cpu.v", 607, 577); // ac
+selectCodeEditor("rv32i_cpu.v", 451, 609); // ac
+selectCodeEditor("rv32i_cpu.v", 409, 620); // ac
+selectCodeEditor("rv32i_cpu.v", 501, 647); // ac
+selectCodeEditor("rv32i_cpu.v", 528, 625); // ac
+selectCodeEditor("rv32i_cpu.v", 519, 641); // ac
+selectCodeEditor("rv32i_cpu.v", 210, 415); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 332, 590); // ac
+selectCodeEditor("rv32i_cpu.v", 412, 599); // ac
+// Elapsed time: 37 seconds
+selectCodeEditor("rv32i_cpu.v", 437, 518); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 181, 499); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 453, 520); // ac
+selectCodeEditor("rv32i_cpu.v", 412, 622); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 262, 519); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,484 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:50:56 AM KST
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 477, 627); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 172, 371); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,516 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:51:41 AM KST
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 195, 368); // ac
+// Elapsed time: 29 seconds
+selectCodeEditor("rv32i_cpu.v", 176, 628); // ac
+selectCodeEditor("rv32i_cpu.v", 384, 635); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("rv32i_cpu.v", 467, 658); // ac
+selectCodeEditor("rv32i_cpu.v", 496, 688); // ac
+selectCodeEditor("rv32i_cpu.v", 525, 641); // ac
+selectCodeEditor("rv32i_cpu.v", 427, 662); // ac
+selectCodeEditor("rv32i_cpu.v", 422, 662); // ac
+selectCodeEditor("rv32i_cpu.v", 427, 651); // ac
+selectCodeEditor("rv32i_cpu.v", 109, 597); // ac
+selectCodeEditor("rv32i_cpu.v", 114, 593); // ac
+selectCodeEditor("rv32i_cpu.v", 446, 582); // ac
+selectCodeEditor("rv32i_cpu.v", 439, 580); // ac
+selectCodeEditor("rv32i_cpu.v", 421, 638); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 275, 621); // ac
+selectCodeEditor("rv32i_cpu.v", 400, 595); // ac
+selectCodeEditor("rv32i_cpu.v", 499, 580); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 185, 637); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 453, 601); // ac
+selectCodeEditor("rv32i_cpu.v", 449, 601); // ac
+selectCodeEditor("rv32i_cpu.v", 201, 605); // ac
+selectCodeEditor("rv32i_cpu.v", 458, 636); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 139, 597); // ac
+selectCodeEditor("rv32i_cpu.v", 139, 597, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 144, 610); // ac
+selectCodeEditor("rv32i_cpu.v", 144, 610, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 233, 625); // ac
+selectCodeEditor("rv32i_cpu.v", 233, 625, false, false, false, false, true); // ac - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,548 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:54:01 AM KST
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 494, 617); // ac
+// [Engine Memory]: 2,564 MB (+7048kb) [01:20:37]
+// Elapsed time: 19 seconds
+selectCodeEditor("rv32i_cpu.v", 209, 364); // ac
+selectCodeEditor("rv32i_cpu.v", 209, 364, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 375, 261); // ac
+// Elapsed time: 22 seconds
+selectCodeEditor("rv32i_cpu.v", 148, 296); // ac
+// Elapsed time: 32 seconds
+selectCodeEditor("rv32i_cpu.v", 430, 152); // ac
+selectCodeEditor("rv32i_cpu.v", 446, 138); // ac
+// Elapsed time: 17 seconds
+selectCodeEditor("rv32i_cpu.v", 94, 397); // ac
+selectCodeEditor("rv32i_cpu.v", 94, 397, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 255, 173); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 442, 218); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 126, 175); // ac
+selectCodeEditor("rv32i_cpu.v", 126, 175, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 278, 325); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 145, 327); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,580 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:56:21 AM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 509, 316); // ac
+selectCodeEditor("rv32i_cpu.v", 422, 397); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 546, 442); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 573, 421); // ac
+selectCodeEditor("rv32i_cpu.v", 575, 394); // ac
+selectCodeEditor("rv32i_cpu.v", 220, 386); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 512, 422); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,629 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:56:56 AM KST
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 473, 449); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 414, 440); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 430, 436); // ac
+selectCodeEditor("rv32i_cpu.v", 427, 436); // ac
+selectCodeEditor("rv32i_cpu.v", 230, 446); // ac
+selectCodeEditor("rv32i_cpu.v", 153, 442); // ac
+selectCodeEditor("rv32i_cpu.v", 122, 441); // ac
+selectCodeEditor("rv32i_cpu.v", 122, 441, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 87, 441); // ac
+selectCodeEditor("rv32i_cpu.v", 186, 508); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 151, 503, true, false, false, false, false); // ac - Shift Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 190, 521); // ac
+selectCodeEditor("rv32i_cpu.v", 177, 534); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,661 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:58:21 AM KST
+selectCodeEditor("rv32i_cpu.v", 354, 409); // ac
+selectCodeEditor("rv32i_cpu.v", 144, 426); // ac
+selectCodeEditor("rv32i_cpu.v", 693, 453); // ac
+selectCodeEditor("rv32i_cpu.v", 190, 475); // ac
+selectCodeEditor("rv32i_cpu.v", 478, 485); // ac
+selectCodeEditor("rv32i_cpu.v", 111, 546); // ac
+selectCodeEditor("rv32i_cpu.v", 411, 564); // ac
+selectCodeEditor("rv32i_cpu.v", 118, 559); // ac
+selectCodeEditor("rv32i_cpu.v", 413, 557); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 553, 594); // ac
+selectCodeEditor("rv32i_cpu.v", 580, 586); // ac
+selectCodeEditor("rv32i_cpu.v", 123, 577); // ac
+selectCodeEditor("rv32i_cpu.v", 123, 577, false, false, false, false, true); // ac - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 406, 585); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,693 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:59:01 AM KST
+// [Engine Memory]: 2,693 MB (+919kb) [01:25:24]
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 259, 335); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 60, 669); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 130, 363); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 370, 466); // ac
+typeControlKey(null, null, 'z');
+selectCodeEditor("rv32i_cpu.v", 51, 484); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 127, 183); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 266, 219); // ac
+selectCodeEditor("rv32i_cpu.v", 144, 213); // ac
+selectCodeEditor("rv32i_cpu.v", 144, 213, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 169, 274); // ac
+selectCodeEditor("rv32i_cpu.v", 169, 274, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 164, 291); // ac
+selectCodeEditor("rv32i_cpu.v", 164, 291, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 215, 323); // ac
+selectCodeEditor("rv32i_cpu.v", 215, 323, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 163, 339); // ac
+selectCodeEditor("rv32i_cpu.v", 163, 339, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 149, 352); // ac
+selectCodeEditor("rv32i_cpu.v", 149, 352, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 283, 411); // ac
+selectCodeEditor("rv32i_cpu.v", 283, 411, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 162, 432); // ac
+selectCodeEditor("rv32i_cpu.v", 162, 432, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 158, 443); // ac
+selectCodeEditor("rv32i_cpu.v", 158, 443, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 321, 440); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,726 MB. GUI used memory: 63 MB. Current time: 6/15/24, 11:59:56 AM KST
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 462, 426); // ac
+// Elapsed time: 23 seconds
+selectCodeEditor("rv32i_cpu.v", 280, 397); // ac
+selectCodeEditor("rv32i_cpu.v", 464, 404); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 399, 353); // ac
+selectCodeEditor("rv32i_cpu.v", 350, 354); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 352, 338); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,758 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:00:41 PM KST
+selectCodeEditor("rv32i_cpu.v", 281, 340); // ac
+selectCodeEditor("rv32i_cpu.v", 585, 335); // ac
+selectCodeEditor("rv32i_cpu.v", 590, 375); // ac
+selectCodeEditor("rv32i_cpu.v", 394, 321); // ac
+selectCodeEditor("rv32i_cpu.v", 363, 290); // ac
+selectCodeEditor("rv32i_cpu.v", 290, 298); // ac
+selectCodeEditor("rv32i_cpu.v", 282, 297); // ac
+selectCodeEditor("rv32i_cpu.v", 322, 291); // ac
+selectCodeEditor("rv32i_cpu.v", 425, 277); // ac
+selectCodeEditor("rv32i_cpu.v", 478, 372); // ac
+selectCodeEditor("rv32i_cpu.v", 379, 409); // ac
+selectCodeEditor("rv32i_cpu.v", 389, 397); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 612, 335); // ac
+selectCodeEditor("rv32i_cpu.v", 202, 321); // ac
+selectCodeEditor("rv32i_cpu.v", 105, 323); // ac
+selectCodeEditor("rv32i_cpu.v", 447, 334); // ac
+selectCodeEditor("rv32i_cpu.v", 291, 277); // ac
+selectCodeEditor("rv32i_cpu.v", 286, 292); // ac
+selectCodeEditor("rv32i_cpu.v", 280, 302); // ac
+selectCodeEditor("rv32i_cpu.v", 279, 316); // ac
+selectCodeEditor("rv32i_cpu.v", 267, 345); // ac
+selectCodeEditor("rv32i_cpu.v", 228, 364); // ac
+selectCodeEditor("rv32i_cpu.v", 278, 364); // ac
+selectCodeEditor("rv32i_cpu.v", 359, 374); // ac
+// Elapsed time: 18 seconds
+selectCodeEditor("rv32i_cpu.v", 226, 295); // ac
+selectCodeEditor("rv32i_cpu.v", 240, 281); // ac
+selectCodeEditor("rv32i_cpu.v", 442, 274); // ac
+selectCodeEditor("rv32i_cpu.v", 225, 298); // ac
+selectCodeEditor("rv32i_cpu.v", 652, 288); // ac
+selectCodeEditor("rv32i_cpu.v", 303, 307); // ac
+selectCodeEditor("rv32i_cpu.v", 263, 287); // ac
+selectCodeEditor("rv32i_cpu.v", 209, 309); // ac
+selectCodeEditor("rv32i_cpu.v", 617, 307); // ac
+selectCodeEditor("rv32i_cpu.v", 208, 327); // ac
+selectCodeEditor("rv32i_cpu.v", 449, 348); // ac
+selectCodeEditor("rv32i_cpu.v", 251, 364); // ac
+selectCodeEditor("rv32i_cpu.v", 397, 378); // ac
+selectCodeEditor("rv32i_cpu.v", 455, 349); // ac
+selectCodeEditor("rv32i_cpu.v", 474, 286); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 471, 279); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,790 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:03:06 PM KST
+selectCodeEditor("rv32i_cpu.v", 439, 364); // ac
+selectCodeEditor("rv32i_cpu.v", 427, 379); // ac
+selectCodeEditor("rv32i_cpu.v", 452, 359); // ac
+selectCodeEditor("rv32i_cpu.v", 449, 363); // ac
+selectCodeEditor("rv32i_cpu.v", 412, 384); // ac
+selectCodeEditor("rv32i_cpu.v", 420, 376); // ac
+selectCodeEditor("rv32i_cpu.v", 422, 372); // ac
+selectCodeEditor("rv32i_cpu.v", 413, 384); // ac
+selectCodeEditor("rv32i_cpu.v", 437, 273); // ac
+selectCodeEditor("rv32i_cpu.v", 556, 424); // ac
+selectCodeEditor("rv32i_cpu.v", 379, 418); // ac
+selectCodeEditor("rv32i_cpu.v", 386, 430); // ac
+selectCodeEditor("rv32i_cpu.v", 317, 353); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 323, 435); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("rv32i_cpu.v", 655, 253); // ac
+selectCodeEditor("rv32i_cpu.v", 655, 263); // ac
+selectCodeEditor("rv32i_cpu.v", 648, 279); // ac
+// Elapsed time: 18 seconds
+selectCodeEditor("rv32i_cpu.v", 290, 273); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 612, 286); // ac
+selectCodeEditor("rv32i_cpu.v", 269, 294); // ac
+selectCodeEditor("rv32i_cpu.v", 580, 308); // ac
+selectCodeEditor("rv32i_cpu.v", 250, 302); // ac
+selectCodeEditor("rv32i_cpu.v", 511, 326); // ac
+selectCodeEditor("rv32i_cpu.v", 516, 359); // ac
+selectCodeEditor("rv32i_cpu.v", 516, 368); // ac
+selectCodeEditor("rv32i_cpu.v", 513, 376); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 510, 403); // ac
+selectCodeEditor("rv32i_cpu.v", 563, 335); // ac
+selectCodeEditor("rv32i_cpu.v", 602, 290); // ac
+selectCodeEditor("rv32i_cpu.v", 604, 260); // ac
+selectCodeEditor("rv32i_cpu.v", 251, 322); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,823 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:04:56 PM KST
+selectCodeEditor("rv32i_cpu.v", 293, 363); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,839 MB (+11025kb) [01:31:28]
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 214, 292); // ac
+selectCodeEditor("rv32i_cpu.v", 214, 292, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 202, 311); // ac
+selectCodeEditor("rv32i_cpu.v", 202, 311, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 200, 320); // ac
+selectCodeEditor("rv32i_cpu.v", 200, 320, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 210, 370); // ac
+selectCodeEditor("rv32i_cpu.v", 210, 370, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 210, 382); // ac
+selectCodeEditor("rv32i_cpu.v", 210, 382, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 216, 404); // ac
+selectCodeEditor("rv32i_cpu.v", 229, 363); // ac
+selectCodeEditor("rv32i_cpu.v", 229, 363, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 205, 329); // ac
+selectCodeEditor("rv32i_cpu.v", 194, 321); // ac
+selectCodeEditor("rv32i_cpu.v", 194, 321, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 202, 306); // ac
+selectCodeEditor("rv32i_cpu.v", 202, 306, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 213, 287); // ac
+selectCodeEditor("rv32i_cpu.v", 213, 287, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 222, 277); // ac
+selectCodeEditor("rv32i_cpu.v", 222, 277, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 265, 336); // ac
+// Elapsed time: 77 seconds
+selectCodeEditor("rv32i_cpu.v", 45, 412); // ac
+selectCodeEditor("rv32i_cpu.v", 45, 412, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 156, 407); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 215, 471); // ac
+selectCodeEditor("rv32i_cpu.v", 176, 666); // ac
+selectCodeEditor("rv32i_cpu.v", 65, 685); // ac
+selectCodeEditor("rv32i_cpu.v", 223, 436); // ac
+selectCodeEditor("rv32i_cpu.v", 240, 421); // ac
+// Elapsed time: 58 seconds
+selectCodeEditor("rv32i_cpu.v", 127, 428); // ac
+selectCodeEditor("rv32i_cpu.v", 298, 422); // ac
+selectCodeEditor("rv32i_cpu.v", 196, 428); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 572, 264); // ac
+selectCodeEditor("rv32i_cpu.v", 96, 427); // ac
+// Elapsed time: 21 seconds
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 374, 226); // ac
+selectCodeEditor("rv32i_cpu.v", 599, 247); // ac
+selectCodeEditor("rv32i_cpu.v", 574, 264); // ac
+selectCodeEditor("rv32i_cpu.v", 519, 329); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 426, 396); // ac
+selectCodeEditor("rv32i_cpu.v", 405, 419); // ac
+selectCodeEditor("rv32i_cpu.v", 292, 410); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,856 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:09:41 PM KST
+// Elapsed time: 27 seconds
+selectCodeEditor("rv32i_cpu.v", 432, 412); // ac
+selectCodeEditor("rv32i_cpu.v", 315, 207); // ac
+selectCodeEditor("rv32i_cpu.v", 187, 259); // ac
+selectCodeEditor("rv32i_cpu.v", 250, 501); // ac
+// Elapsed time: 18 seconds
+selectCodeEditor("rv32i_cpu.v", 447, 530); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 221, 534); // ac
+selectCodeEditor("rv32i_cpu.v", 386, 533); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 237, 337); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 387, 526); // ac
+// Elapsed time: 38 seconds
+selectCodeEditor("rv32i_cpu.v", 696, 526); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,887 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:12:06 PM KST
+// Elapsed time: 27 seconds
+selectCodeEditor("rv32i_cpu.v", 116, 367); // ac
+selectCodeEditor("rv32i_cpu.v", 116, 367, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 18 seconds
+selectCodeEditor("rv32i_cpu.v", 356, 369); // ac
+selectCodeEditor("rv32i_cpu.v", 307, 362); // ac
+selectCodeEditor("rv32i_cpu.v", 307, 362); // ac
+selectCodeEditor("rv32i_cpu.v", 357, 364); // ac
+selectCodeEditor("rv32i_cpu.v", 298, 361); // ac
+selectCodeEditor("rv32i_cpu.v", 240, 373); // ac
+selectCodeEditor("rv32i_cpu.v", 240, 373, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 284, 374); // ac
+selectCodeEditor("rv32i_cpu.v", 298, 374); // ac
+selectCodeEditor("rv32i_cpu.v", 237, 368); // ac
+selectCodeEditor("rv32i_cpu.v", 237, 368, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 289, 370); // ac
+selectCodeEditor("rv32i_cpu.v", 298, 369); // ac
+selectCodeEditor("rv32i_cpu.v", 236, 366); // ac
+selectCodeEditor("rv32i_cpu.v", 236, 366, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 302, 368); // ac
+selectCodeEditor("rv32i_cpu.v", 301, 368, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 238, 372); // ac
+selectCodeEditor("rv32i_cpu.v", 238, 372, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 292, 373); // ac
+selectCodeEditor("rv32i_cpu.v", 297, 370); // ac
+selectCodeEditor("rv32i_cpu.v", 238, 374); // ac
+selectCodeEditor("rv32i_cpu.v", 239, 380); // ac
+selectCodeEditor("rv32i_cpu.v", 317, 384); // ac
+// Elapsed time: 68 seconds
+selectCodeEditor("rv32i_cpu.v", 133, 546); // ac
+// Elapsed time: 27 seconds
+selectCodeEditor("rv32i_cpu.v", 63, 726); // ac
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 275, 536); // ac
+selectCodeEditor("rv32i_cpu.v", 140, 519); // ac
+selectCodeEditor("rv32i_cpu.v", 145, 526); // ac
+selectCodeEditor("rv32i_cpu.v", 204, 531); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 385, 540); // ac
+selectCodeEditor("rv32i_cpu.v", 86, 542); // ac
+// Elapsed time: 29 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("rv32i_cpu.v", 661, 439); // ac
+selectCodeEditor("rv32i_cpu.v", 614, 473); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 281, 217); // ac
+selectCodeEditor("rv32i_cpu.v", 106, 124); // ac
+// Elapsed time: 61 seconds
+selectCodeEditor("rv32i_cpu.v", 212, 351); // ac
+selectCodeEditor("rv32i_cpu.v", 212, 351, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 252, 355); // ac
+selectCodeEditor("rv32i_cpu.v", 252, 355, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 195, 473); // ac
+selectCodeEditor("rv32i_cpu.v", 195, 473, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 258, 474); // ac
+selectCodeEditor("rv32i_cpu.v", 258, 474, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 277, 469); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 120, 460); // ac
+selectCodeEditor("rv32i_cpu.v", 120, 460, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 118, 596); // ac
+selectCodeEditor("rv32i_cpu.v", 118, 596, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 129, 610); // ac
+selectCodeEditor("rv32i_cpu.v", 129, 610, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 254, 643); // ac
+selectCodeEditor("rv32i_cpu.v", 254, 642, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 239, 515); // ac
+selectCodeEditor("alu.v", 239, 515, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 247, 519); // ac
+selectCodeEditor("alu.v", 369, 515); // ac
+// Elapsed time: 214 seconds
+selectCodeEditor("rv32i_cpu.v", 175, 336); // ac
+// Elapsed time: 44 seconds
+selectCodeEditor("rv32i_cpu.v", 138, 429); // ac
+selectCodeEditor("rv32i_cpu.v", 138, 429, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 116, 470); // ac
+selectCodeEditor("rv32i_cpu.v", 116, 470, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 552, 489); // ac
+// Elapsed time: 16 seconds
+selectCodeEditor("alu.v", 148, 515); // ac
+selectCodeEditor("alu.v", 365, 531); // ac
+selectCodeEditor("rv32i_cpu.v", 636, 476); // ac
+selectCodeEditor("rv32i_cpu.v", 585, 485); // ac
+selectCodeEditor("rv32i_cpu.v", 371, 486); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 355, 525); // ac
+selectCodeEditor("rv32i_cpu.v", 309, 473); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,919 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:23:01 PM KST
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 436, 584); // ac
+selectCodeEditor("alu.v", 412, 534); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 322, 539); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 2,952 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:23:21 PM KST
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 124, 520); // ac
+selectCodeEditor("rv32i_cpu.v", 124, 520, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 695, 586); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 265, 600); // ac
+selectCodeEditor("alu.v", 246, 638); // ac
+selectCodeEditor("alu.v", 232, 659); // ac
+selectCodeEditor("rv32i_cpu.v", 196, 535); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 86, 312); // ac
+selectCodeEditor("rv32i_cpu.v", 86, 312, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 86, 321); // ac
+selectCodeEditor("rv32i_cpu.v", 86, 321, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 190, 386); // ac
+selectCodeEditor("rv32i_cpu.v", 164, 352); // ac
+selectCodeEditor("rv32i_cpu.v", 164, 352, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 162, 466); // ac
+selectCodeEditor("rv32i_cpu.v", 151, 485); // ac
+selectCodeEditor("rv32i_cpu.v", 151, 485, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 137, 522); // ac
+selectCodeEditor("rv32i_cpu.v", 137, 522, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 156, 484); // ac
+selectCodeEditor("rv32i_cpu.v", 156, 484, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 152, 470); // ac
+selectCodeEditor("rv32i_cpu.v", 152, 470, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 157, 488); // ac
+selectCodeEditor("rv32i_cpu.v", 157, 488, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 155, 478); // ac
+selectCodeEditor("rv32i_cpu.v", 155, 478, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 156, 488); // ac
+selectCodeEditor("rv32i_cpu.v", 156, 488, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 150, 469); // ac
+selectCodeEditor("rv32i_cpu.v", 150, 469, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 98, 401); // ac
+selectCodeEditor("rv32i_cpu.v", 98, 401, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 183, 404); // ac
+selectCodeEditor("rv32i_cpu.v", 183, 404, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 247, 400); // ac
+selectCodeEditor("rv32i_cpu.v", 247, 400, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 320, 400); // ac
+selectCodeEditor("rv32i_cpu.v", 320, 400, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 182, 397); // ac
+selectCodeEditor("rv32i_cpu.v", 182, 397, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 98, 294); // ac
+selectCodeEditor("rv32i_cpu.v", 98, 294, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 147, 295); // ac
+selectCodeEditor("rv32i_cpu.v", 147, 295, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 391, 308); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 88, 297); // ac
+selectCodeEditor("rv32i_cpu.v", 88, 297, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 165, 298); // ac
+selectCodeEditor("rv32i_cpu.v", 165, 298, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 197, 386); // ac
+selectCodeEditor("rv32i_cpu.v", 197, 386, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 130, 385); // ac
+selectCodeEditor("rv32i_cpu.v", 130, 385, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 95, 207); // ac
+selectCodeEditor("rv32i_cpu.v", 95, 207, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 148, 217); // ac
+selectCodeEditor("rv32i_cpu.v", 148, 217, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 219, 217); // ac
+selectCodeEditor("rv32i_cpu.v", 219, 217, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 103, 221); // ac
+selectCodeEditor("rv32i_cpu.v", 103, 221, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 239, 573); // ac
+selectCodeEditor("rv32i_cpu.v", 239, 573, false, false, false, false, true); // ac - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // R
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), inst0 : branch_resolution (branch_resolution.v)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32I_SoC (RV32I_SoC.v), iCPU : rv32i_cpu (rv32i_cpu.v), inst0 : branch_resolution (branch_resolution.v)]", 5, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("branch_resolution.v", 134, 342); // ac
+selectCodeEditor("branch_resolution.v", 134, 342, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 108, 398); // ac
+selectCodeEditor("branch_resolution.v", 108, 398, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 150, 619); // ac
+selectCodeEditor("branch_resolution.v", 150, 619, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 215, 623); // ac
+selectCodeEditor("branch_resolution.v", 215, 623, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 100, 359); // ac
+selectCodeEditor("branch_resolution.v", 100, 359, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 87, 437); // ac
+selectCodeEditor("branch_resolution.v", 87, 437, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 208, 485); // ac
+selectCodeEditor("branch_resolution.v", 208, 485, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 177, 488); // ac
+selectCodeEditor("branch_resolution.v", 177, 488, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 171, 500); // ac
+selectCodeEditor("branch_resolution.v", 171, 500, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 165, 515); // ac
+selectCodeEditor("branch_resolution.v", 165, 515, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 165, 528); // ac
+selectCodeEditor("branch_resolution.v", 165, 528, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 165, 545); // ac
+selectCodeEditor("branch_resolution.v", 165, 545, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 166, 564); // ac
+selectCodeEditor("branch_resolution.v", 166, 564, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 209, 485); // ac
+selectCodeEditor("branch_resolution.v", 209, 485, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 214, 498); // ac
+selectCodeEditor("branch_resolution.v", 214, 498, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 211, 522); // ac
+selectCodeEditor("branch_resolution.v", 211, 522, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 220, 532); // ac
+selectCodeEditor("branch_resolution.v", 220, 532, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 212, 547); // ac
+selectCodeEditor("branch_resolution.v", 212, 547, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 208, 566); // ac
+selectCodeEditor("branch_resolution.v", 208, 566, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 236, 565); // ac
+selectCodeEditor("branch_resolution.v", 236, 565, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("branch_resolution.v", 276, 564); // ac
+selectCodeEditor("branch_resolution.v", 183, 568); // ac
+selectCodeEditor("branch_resolution.v", 171, 589); // ac
+selectCodeEditor("branch_resolution.v", 157, 603); // ac
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectCodeEditor("rv32i_cpu.v", 299, 590); // ac
+selectCodeEditor("rv32i_cpu.v", 238, 576); // ac
+selectCodeEditor("rv32i_cpu.v", 238, 576, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 172, 574); // ac
+selectCodeEditor("rv32i_cpu.v", 172, 574, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 289, 575); // ac
+selectCodeEditor("rv32i_cpu.v", 289, 575, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 310, 578); // ac
+selectCodeEditor("rv32i_cpu.v", 310, 578, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 225, 597); // ac
+selectCodeEditor("rv32i_cpu.v", 150, 574); // ac
+selectCodeEditor("rv32i_cpu.v", 150, 574, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 193, 587); // ac
+selectCodeEditor("rv32i_cpu.v", 156, 582); // ac
+selectCodeEditor("rv32i_cpu.v", 156, 582, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 210, 443); // ac
+selectCodeEditor("rv32i_cpu.v", 208, 443, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 243, 448); // ac
+selectCodeEditor("rv32i_cpu.v", 243, 448, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 311, 423); // ac
+selectCodeEditor("rv32i_cpu.v", 311, 423); // ac
+selectCodeEditor("rv32i_cpu.v", 311, 423); // ac
+selectCodeEditor("rv32i_cpu.v", 311, 423); // ac
+selectCodeEditor("rv32i_cpu.v", 311, 423); // ac
+selectCodeEditor("rv32i_cpu.v", 311, 423); // ac
+selectCodeEditor("rv32i_cpu.v", 311, 423); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 208, 259); // ac
+selectCodeEditor("rv32i_cpu.v", 208, 259, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 165, 276); // ac
+selectCodeEditor("rv32i_cpu.v", 165, 276, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 239, 532); // ac
+selectCodeEditor("rv32i_cpu.v", 239, 532, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 264, 533); // ac
+selectCodeEditor("rv32i_cpu.v", 264, 533, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 236, 533); // ac
+selectCodeEditor("rv32i_cpu.v", 216, 535); // ac
+selectCodeEditor("rv32i_cpu.v", 216, 535, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 176, 538); // ac
+selectCodeEditor("rv32i_cpu.v", 176, 538, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 231, 538); // ac
+selectCodeEditor("rv32i_cpu.v", 231, 538, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 253, 532); // ac
+selectCodeEditor("rv32i_cpu.v", 253, 532, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 176, 566); // ac
+selectCodeEditor("rv32i_cpu.v", 176, 566, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 242, 562); // ac
+selectCodeEditor("rv32i_cpu.v", 242, 562, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 161, 243); // ac
+selectCodeEditor("rv32i_cpu.v", 135, 241); // ac
+selectCodeEditor("rv32i_cpu.v", 152, 253); // ac
+selectCodeEditor("rv32i_cpu.v", 152, 253, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 242, 385); // ac
+selectCodeEditor("rv32i_cpu.v", 242, 385, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 142, 485); // ac
+selectCodeEditor("rv32i_cpu.v", 142, 485, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 174, 593); // ac
+selectCodeEditor("rv32i_cpu.v", 174, 593, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 174, 611); // ac
+selectCodeEditor("rv32i_cpu.v", 174, 611, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 306, 608); // ac
+selectCodeEditor("rv32i_cpu.v", 309, 636); // ac
+selectCodeEditor("rv32i_cpu.v", 309, 602); // ac
+selectCodeEditor("rv32i_cpu.v", 239, 588); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,984 MB (+3826kb) [01:53:17]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,984 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:26:56 PM KST
+selectCodeEditor("rv32i_cpu.v", 189, 471); // ac
+selectCodeEditor("rv32i_cpu.v", 189, 471, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 156, 493); // ac
+selectCodeEditor("rv32i_cpu.v", 156, 493, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 144, 183); // ac
+selectCodeEditor("alu.v", 144, 183, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 167, 186); // ac
+selectCodeEditor("alu.v", 167, 186, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 166, 202); // ac
+selectCodeEditor("alu.v", 166, 202, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 184, 222); // ac
+selectCodeEditor("alu.v", 184, 222, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 187, 543); // ac
+selectCodeEditor("alu.v", 187, 543, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 186, 565); // ac
+selectCodeEditor("alu.v", 186, 565, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 191, 550); // ac
+selectCodeEditor("alu.v", 191, 550, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 181, 559); // ac
+selectCodeEditor("alu.v", 181, 559, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 194, 549); // ac
+selectCodeEditor("alu.v", 194, 549, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 121, 594); // ac
+selectCodeEditor("rv32i_cpu.v", 121, 594, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 124, 602); // ac
+selectCodeEditor("rv32i_cpu.v", 124, 602, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 122, 500); // ac
+selectCodeEditor("rv32i_cpu.v", 122, 500, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 124, 516); // ac
+selectCodeEditor("rv32i_cpu.v", 124, 516, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 274, 548); // ac
+selectCodeEditor("rv32i_cpu.v", 274, 548, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 265, 563); // ac
+selectCodeEditor("rv32i_cpu.v", 265, 563, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 135, 535); // ac
+selectCodeEditor("alu.v", 135, 535, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 131, 548); // ac
+selectCodeEditor("alu.v", 131, 548, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 179, 549); // ac
+selectCodeEditor("alu.v", 179, 549, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 236, 546); // ac
+selectCodeEditor("alu.v", 236, 546, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 101, 337); // ac
+selectCodeEditor("alu.v", 122, 339); // ac
+selectCodeEditor("alu.v", 122, 339, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 153, 427); // ac
+selectCodeEditor("alu.v", 153, 427, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 395, 458); // ac
+selectCodeEditor("alu.v", 395, 458, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 518, 455); // ac
+selectCodeEditor("rv32i_cpu.v", 139, 439); // ac
+selectCodeEditor("rv32i_cpu.v", 139, 439, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 89, 413); // ac
+selectCodeEditor("rv32i_cpu.v", 89, 413, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 146, 425); // ac
+selectCodeEditor("rv32i_cpu.v", 146, 425, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 129, 438); // ac
+selectCodeEditor("rv32i_cpu.v", 129, 438, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 199, 448); // ac
+selectCodeEditor("rv32i_cpu.v", 199, 448, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 25 seconds
+selectCodeEditor("rv32i_cpu.v", 309, 434); // ac
+// Elapsed time: 18 seconds
+selectCodeEditor("rv32i_cpu.v", 163, 605); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 426, 335); // ac
+// Elapsed time: 27 seconds
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 84, 293); // ac
+selectCodeEditor("rv32i_cpu.v", 84, 293, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 344, 377); // ac
+selectCodeEditor("rv32i_cpu.v", 158, 383); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 300, 380); // ac
+selectCodeEditor("rv32i_cpu.v", 300, 380, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 191, 381); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 310, 378); // ac
+selectCodeEditor("rv32i_cpu.v", 310, 378, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 245, 383); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 348, 388); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,016 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:30:11 PM KST
+selectCodeEditor("rv32i_cpu.v", 167, 386); // ac
+selectCodeEditor("rv32i_cpu.v", 167, 386, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 396, 195); // ac
+selectCodeEditor("rv32i_cpu.v", 390, 219); // ac
+selectCodeEditor("rv32i_cpu.v", 416, 234); // ac
+selectCodeEditor("rv32i_cpu.v", 413, 245); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 417, 307); // ac
+selectCodeEditor("rv32i_cpu.v", 154, 249); // ac
+selectCodeEditor("rv32i_cpu.v", 154, 249, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 166, 248); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,048 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:30:46 PM KST
+// Elapsed time: 29 seconds
+selectCodeEditor("rv32i_cpu.v", 284, 267); // ac
+selectCodeEditor("rv32i_cpu.v", 171, 326); // ac
+selectCodeEditor("rv32i_cpu.v", 171, 326, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("rv32i_cpu.v", 134, 330); // ac
+selectCodeEditor("rv32i_cpu.v", 134, 330, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 114, 319); // ac
+selectCodeEditor("rv32i_cpu.v", 114, 319, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 93 seconds
+selectCodeEditor("rv32i_cpu.v", 129, 369); // ac
+selectCodeEditor("rv32i_cpu.v", 129, 369, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 142, 289); // ac
+selectCodeEditor("rv32i_cpu.v", 142, 289, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 29 seconds
+selectCodeEditor("rv32i_cpu.v", 319, 221); // ac
+selectCodeEditor("rv32i_cpu.v", 294, 235); // ac
+// Elapsed time: 53 seconds
+selectCodeEditor("rv32i_cpu.v", 346, 210); // ac
+selectCodeEditor("rv32i_cpu.v", 436, 181); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("rv32i_cpu.v", 442, 353); // ac
+// Elapsed time: 25 seconds
+selectCodeEditor("rv32i_cpu.v", 163, 401); // ac
+selectCodeEditor("rv32i_cpu.v", 370, 475); // ac
+selectCodeEditor("rv32i_cpu.v", 425, 451); // ac
+selectCodeEditor("rv32i_cpu.v", 235, 373); // ac
+selectCodeEditor("rv32i_cpu.v", 223, 384); // ac
+// Elapsed time: 21 seconds
+selectCodeEditor("rv32i_cpu.v", 385, 341); // ac
+// Elapsed time: 99 seconds
+selectCodeEditor("rv32i_cpu.v", 676, 226); // ac
+// Elapsed time: 64 seconds
+selectCodeEditor("rv32i_cpu.v", 204, 499); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 292, 610); // ac
+selectCodeEditor("rv32i_cpu.v", 400, 622); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,080 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:39:11 PM KST
+// Elapsed time: 24 seconds
+selectCodeEditor("rv32i_cpu.v", 807, 320); // ac
+// Elapsed time: 30 seconds
+selectCodeEditor("rv32i_cpu.v", 620, 332); // ac
+selectCodeEditor("rv32i_cpu.v", 643, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 642, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 642, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 642, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 642, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 642, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 642, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 642, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 642, 395); // ac
+selectCodeEditor("rv32i_cpu.v", 639, 400); // ac
+selectCodeEditor("rv32i_cpu.v", 636, 405); // ac
+selectCodeEditor("rv32i_cpu.v", 631, 410); // ac
+selectCodeEditor("rv32i_cpu.v", 628, 417); // ac
+selectCodeEditor("rv32i_cpu.v", 621, 428); // ac
+selectCodeEditor("rv32i_cpu.v", 576, 563); // ac
+selectCodeEditor("rv32i_cpu.v", 735, 338); // ac
+// Elapsed time: 127 seconds
+selectCodeEditor("rv32i_cpu.v", 290, 294); // ac
+selectCodeEditor("rv32i_cpu.v", 462, 306); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("rv32i_cpu.v", 453, 201); // ac
+selectCodeEditor("rv32i_cpu.v", 232, 202, true, false, false, false, false); // ac - Shift Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 27 seconds
+selectCodeEditor("rv32i_cpu.v", 578, 316); // ac
+selectCodeEditor("rv32i_cpu.v", 561, 305); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 3,112 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:43:31 PM KST
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 221, 430); // ac
+selectCodeEditor("rv32i_cpu.v", 217, 439); // ac
+selectCodeEditor("rv32i_cpu.v", 372, 149); // ac
+// Elapsed time: 149 seconds
+selectCodeEditor("rv32i_cpu.v", 194, 115); // ac
+selectCodeEditor("rv32i_cpu.v", 87, 109, true, false, false, false, false); // ac - Shift Key
+// Elapsed time: 187 seconds
+selectCodeEditor("rv32i_cpu.v", 107, 270); // ac
+selectCodeEditor("rv32i_cpu.v", 107, 270, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 144, 221); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 34 seconds
+selectCodeEditor("rv32i_cpu.v", 102, 247); // ac
+selectCodeEditor("rv32i_cpu.v", 102, 247, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 141, 263); // ac
+selectCodeEditor("rv32i_cpu.v", 141, 263, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 199, 258); // ac
+selectCodeEditor("rv32i_cpu.v", 198, 258, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 293, 260); // ac
+selectCodeEditor("rv32i_cpu.v", 293, 260, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 141, 282); // ac
+selectCodeEditor("rv32i_cpu.v", 141, 282, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 190, 278); // ac
+selectCodeEditor("rv32i_cpu.v", 190, 278, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 223, 291); // ac
+selectCodeEditor("rv32i_cpu.v", 61, 66); // ac
+selectCodeEditor("rv32i_cpu.v", 61, 66, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 154, 69); // ac
+selectCodeEditor("rv32i_cpu.v", 154, 69, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 206, 126); // ac
+selectCodeEditor("rv32i_cpu.v", 206, 126, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 273, 147); // ac
+selectCodeEditor("rv32i_cpu.v", 252, 127); // ac
+selectCodeEditor("rv32i_cpu.v", 252, 127, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 261, 188); // ac
+selectCodeEditor("rv32i_cpu.v", 261, 188, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 27 seconds
+selectCodeEditor("rv32i_cpu.v", 203, 424); // ac
+selectCodeEditor("rv32i_cpu.v", 299, 440); // ac
+selectCodeEditor("rv32i_cpu.v", 203, 457); // ac
+selectCodeEditor("rv32i_cpu.v", 81, 429); // ac
+selectCodeEditor("rv32i_cpu.v", 99, 429); // ac
+selectCodeEditor("rv32i_cpu.v", 99, 429, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 202, 439); // ac
+selectCodeEditor("rv32i_cpu.v", 314, 445); // ac
+selectCodeEditor("rv32i_cpu.v", 297, 454); // ac
+selectCodeEditor("rv32i_cpu.v", 547, 606); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 203, 549); // ac
+selectCodeEditor("rv32i_cpu.v", 285, 526); // ac
+selectCodeEditor("rv32i_cpu.v", 310, 516); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 3,144 MB (+11437kb) [02:17:57]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,144 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:51:36 PM KST
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 80, 120); // ac
+selectCodeEditor("rv32i_cpu.v", 80, 120, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 96, 146); // ac
+selectCodeEditor("rv32i_cpu.v", 96, 146, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 93, 128); // ac
+selectCodeEditor("rv32i_cpu.v", 93, 128, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 236, 119); // ac
+selectCodeEditor("rv32i_cpu.v", 239, 132); // ac
+selectCodeEditor("rv32i_cpu.v", 225, 130); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 291, 553); // ac
+selectCodeEditor("rv32i_cpu.v", 380, 541); // ac
+selectCodeEditor("rv32i_cpu.v", 321, 539); // ac
+typeControlKey(null, null, 'z');
+selectCodeEditor("rv32i_cpu.v", 285, 548); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 121, 192); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 3,176 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:52:11 PM KST
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 249, 226); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 216, 385); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 264, 592); // ac
+selectCodeEditor("rv32i_cpu.v", 245, 606); // ac
+selectCodeEditor("rv32i_cpu.v", 101, 459); // ac
+selectCodeEditor("rv32i_cpu.v", 101, 459, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 142, 537); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 440, 515); // ac
+selectCodeEditor("rv32i_cpu.v", 276, 545); // ac
+selectCodeEditor("rv32i_cpu.v", 96, 384); // ac
+selectCodeEditor("rv32i_cpu.v", 96, 384, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 134, 546); // ac
+selectCodeEditor("rv32i_cpu.v", 134, 546, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 80, 636); // ac
+selectCodeEditor("rv32i_cpu.v", 80, 636, false, false, false, false, true); // ac - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 142, 459); // ac
+selectCodeEditor("rv32i_cpu.v", 142, 459, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 130, 551); // ac
+selectCodeEditor("rv32i_cpu.v", 130, 551, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 133, 485); // ac
+selectCodeEditor("rv32i_cpu.v", 133, 485, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 126, 560); // ac
+selectCodeEditor("rv32i_cpu.v", 126, 560, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 139, 638); // ac
+selectCodeEditor("rv32i_cpu.v", 139, 638, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 129, 714); // ac
+selectCodeEditor("rv32i_cpu.v", 129, 714, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 136, 654); // ac
+selectCodeEditor("rv32i_cpu.v", 136, 654, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 138, 462); // ac
+selectCodeEditor("rv32i_cpu.v", 138, 462, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 130, 518); // ac
+selectCodeEditor("rv32i_cpu.v", 130, 518, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 130, 518); // ac
+selectCodeEditor("rv32i_cpu.v", 145, 519); // ac
+selectCodeEditor("rv32i_cpu.v", 128, 528); // ac
+selectCodeEditor("rv32i_cpu.v", 138, 515); // ac
+selectCodeEditor("rv32i_cpu.v", 138, 515, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 134, 577); // ac
+selectCodeEditor("rv32i_cpu.v", 134, 577, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 413, 501); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 288, 567); // ac
+selectCodeEditor("rv32i_cpu.v", 287, 509); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 3,240 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:53:36 PM KST
+selectCodeEditor("rv32i_cpu.v", 295, 560); // ac
+selectCodeEditor("rv32i_cpu.v", 306, 575); // ac
+// Elapsed time: 20 seconds
+selectCodeEditor("rv32i_cpu.v", 148, 146); // ac
+selectCodeEditor("rv32i_cpu.v", 148, 146, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 70, 250); // ac
+selectCodeEditor("rv32i_cpu.v", 70, 250, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 219, 540); // ac
+selectCodeEditor("rv32i_cpu.v", 221, 623); // ac
+selectCodeEditor("rv32i_cpu.v", 217, 602); // ac
+selectCodeEditor("rv32i_cpu.v", 219, 577); // ac
+selectCodeEditor("rv32i_cpu.v", 220, 537); // ac
+selectCodeEditor("rv32i_cpu.v", 220, 547); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 210, 189); // ac
+selectCodeEditor("rv32i_cpu.v", 210, 189, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 227, 198); // ac
+selectCodeEditor("rv32i_cpu.v", 227, 198, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 214, 217); // ac
+selectCodeEditor("rv32i_cpu.v", 214, 217, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 224, 235); // ac
+selectCodeEditor("rv32i_cpu.v", 224, 235, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 188, 185); // ac
+selectCodeEditor("rv32i_cpu.v", 173, 182); // ac
+selectCodeEditor("rv32i_cpu.v", 173, 182, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 105, 352); // ac
+selectCodeEditor("rv32i_cpu.v", 105, 352, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 226, 207); // ac
+selectCodeEditor("rv32i_cpu.v", 226, 207, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 223, 210); // ac
+selectCodeEditor("rv32i_cpu.v", 223, 210, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 239, 232); // ac
+selectCodeEditor("rv32i_cpu.v", 239, 232, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 247, 248); // ac
+selectCodeEditor("rv32i_cpu.v", 247, 248, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 143, 159); // ac
+selectCodeEditor("rv32i_cpu.v", 143, 159, false, false, false, false, true); // ac - Double Click
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 231, 455); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 523, 470); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 132, 473); // ac
+selectCodeEditor("rv32i_cpu.v", 132, 473, false, false, false, false, true); // ac - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,272 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:55:11 PM KST
+// Elapsed time: 10 seconds
+selectCodeEditor("rv32i_cpu.v", 256, 493); // ac
+selectCodeEditor("rv32i_cpu.v", 256, 493, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 241, 309); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 238, 377); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 245, 290); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 3,304 MB (+2988kb) [02:22:01]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,304 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:55:41 PM KST
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 251, 290); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+selectCodeEditor("rv32i_cpu.v", 250, 365); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "rv32i_cpu.v", 'c'); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 245, 458); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 244, 452); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 242, 552); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 235, 549); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 232, 588); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,337 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:56:16 PM KST
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 154, 488); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 134, 455); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("rv32i_cpu.v", 356, 457); // ac
+selectCodeEditor("rv32i_cpu.v", 73, 473); // ac
+selectCodeEditor("rv32i_cpu.v", 73, 473, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 132, 468); // ac
+selectCodeEditor("rv32i_cpu.v", 132, 468, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 166, 475); // ac
+selectCodeEditor("rv32i_cpu.v", 166, 475, false, false, false, false, true); // ac - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 3,370 MB. GUI used memory: 63 MB. Current time: 6/15/24, 12:56:51 PM KST
+selectCodeEditor("rv32i_cpu.v", 197, 475); // ac
+selectCodeEditor("rv32i_cpu.v", 197, 475, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 266, 474); // ac
+selectCodeEditor("rv32i_cpu.v", 266, 474, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 302, 475); // ac
+selectCodeEditor("rv32i_cpu.v", 302, 475, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 343, 478); // ac
+selectCodeEditor("rv32i_cpu.v", 129, 486); // ac
+selectCodeEditor("rv32i_cpu.v", 129, 486, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 276, 322); // ac
+selectCodeEditor("rv32i_cpu.v", 276, 322, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 214, 334); // ac
+selectCodeEditor("rv32i_cpu.v", 214, 334, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 187, 400); // ac
+selectCodeEditor("rv32i_cpu.v", 187, 400, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 229, 403); // ac
+selectCodeEditor("rv32i_cpu.v", 233, 403); // ac
+selectCodeEditor("rv32i_cpu.v", 242, 403); // ac
+selectCodeEditor("rv32i_cpu.v", 242, 403, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 203, 413); // ac
+selectCodeEditor("rv32i_cpu.v", 203, 413, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 246, 450); // ac
+selectCodeEditor("rv32i_cpu.v", 235, 486); // ac
+selectCodeEditor("rv32i_cpu.v", 125, 492); // ac
+selectCodeEditor("rv32i_cpu.v", 125, 492, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 122, 505); // ac
+selectCodeEditor("rv32i_cpu.v", 122, 505, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 171, 510); // ac
+selectCodeEditor("rv32i_cpu.v", 171, 510, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 149, 536); // ac
+selectCodeEditor("rv32i_cpu.v", 149, 536, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 109, 552); // ac
+selectCodeEditor("rv32i_cpu.v", 109, 552, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 109, 565); // ac
+selectCodeEditor("rv32i_cpu.v", 109, 565, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 108, 580); // ac
+selectCodeEditor("rv32i_cpu.v", 108, 580, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 108, 593); // ac
+selectCodeEditor("rv32i_cpu.v", 108, 593, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 181, 528); // ac
+selectCodeEditor("rv32i_cpu.v", 190, 520); // ac
+selectCodeEditor("rv32i_cpu.v", 190, 520, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 162, 521); // ac
+selectCodeEditor("rv32i_cpu.v", 159, 530); // ac
+selectCodeEditor("rv32i_cpu.v", 159, 530, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 171, 519); // ac
+selectCodeEditor("rv32i_cpu.v", 171, 519, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 137, 489); // ac
+selectCodeEditor("rv32i_cpu.v", 137, 489, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 138, 500); // ac
+selectCodeEditor("rv32i_cpu.v", 138, 500, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 176, 516); // ac
+selectCodeEditor("rv32i_cpu.v", 176, 516, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 160, 528); // ac
+selectCodeEditor("rv32i_cpu.v", 160, 528, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 197, 519); // ac
+selectCodeEditor("rv32i_cpu.v", 197, 519, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 265, 453); // ac
+selectCodeEditor("alu.v", 209, 530); // ac
+selectCodeEditor("alu.v", 271, 554); // ac
+selectCodeEditor("rv32i_cpu.v", 287, 532); // ac
+selectCodeEditor("rv32i_cpu.v", 260, 464); // ac
+selectCodeEditor("alu.v", 290, 550); // ac
+// Elapsed time: 76 seconds
+selectCodeEditor("alu.v", 373, 565); // ac
+// Elapsed time: 47 seconds
+selectCodeEditor("rv32i_cpu.v", 186, 502); // ac
+selectCodeEditor("rv32i_cpu.v", 186, 502, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("alu.v", 273, 579); // ac
+selectCodeEditor("rv32i_cpu.v", 355, 322); // ac
+selectCodeEditor("rv32i_cpu.v", 355, 322, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 243, 577); // ac
+// Elapsed time: 204 seconds
+selectCodeEditor("rv32i_cpu.v", 361, 204); // ac
+selectCodeEditor("rv32i_cpu.v", 361, 204, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("alu.v", 299, 594); // ac
+selectCodeEditor("alu.v", 407, 591); // ac
+// Elapsed time: 89 seconds
+selectCodeEditor("alu.v", 300, 554); // ac
+selectCodeEditor("alu.v", 303, 561); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 509, 579); // ac
+selectCodeEditor("alu.v", 125, 562); // ac
+selectCodeEditor("alu.v", 125, 562, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 354, 174); // ac
+selectCodeEditor("rv32i_cpu.v", 354, 174, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("alu.v", 268, 568); // ac
+// Elapsed time: 32 seconds
+selectCodeEditor("alu.v", 304, 599); // ac
+selectCodeEditor("alu.v", 290, 619); // ac
+// Elapsed time: 34 seconds
+selectCodeEditor("rv32i_cpu.v", 348, 237); // ac
+selectCodeEditor("rv32i_cpu.v", 348, 237, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 135, 635); // ac
+// Elapsed time: 26 seconds
+selectCodeEditor("rv32i_cpu.v", 353, 260); // ac
+selectCodeEditor("rv32i_cpu.v", 353, 260, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("alu.v", 132, 650); // ac
+selectCodeEditor("alu.v", 230, 624); // ac
+selectCodeEditor("alu.v", 156, 649); // ac
+// Elapsed time: 18 seconds
+selectCodeEditor("alu.v", 280, 679); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 156, 616); // ac
+selectCodeEditor("alu.v", 189, 612); // ac
+selectCodeEditor("alu.v", 595, 620); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 3,401 MB. GUI used memory: 63 MB. Current time: 6/15/24, 1:07:51 PM KST
+// Elapsed time: 13 seconds
+selectCodeEditor("rv32i_cpu.v", 360, 354); // ac
+selectCodeEditor("rv32i_cpu.v", 360, 354, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 362, 368); // ac
+selectCodeEditor("rv32i_cpu.v", 362, 368, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 359, 381); // ac
+selectCodeEditor("rv32i_cpu.v", 359, 381, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 23 seconds
+selectCodeEditor("alu.v", 266, 499); // ac
+// Elapsed time: 12 seconds
+selectCodeEditor("alu.v", 344, 508); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 348, 512); // ac
+selectCodeEditor("rv32i_cpu.v", 482, 418); // ac
+selectCodeEditor("rv32i_cpu.v", 479, 470); // ac
+selectCodeEditor("rv32i_cpu.v", 168, 509); // ac
+selectCodeEditor("rv32i_cpu.v", 358, 534); // ac
+selectCodeEditor("rv32i_cpu.v", 358, 534, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("rv32i_cpu.v", 322, 550); // ac
+selectCodeEditor("rv32i_cpu.v", 207, 526); // ac
+selectCodeEditor("rv32i_cpu.v", 195, 517); // ac
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,433 MB. GUI used memory: 63 MB. Current time: 6/15/24, 1:09:51 PM KST
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 573, 519); // ac
+// Elapsed time: 95 seconds
+selectCodeEditor("rv32i_cpu.v", 114, 544); // ac
+selectCodeEditor("rv32i_cpu.v", 114, 544, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 241, 473); // ac
+selectCodeEditor("rv32i_cpu.v", 241, 473, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 123, 416); // ac
+selectCodeEditor("rv32i_cpu.v", 123, 416, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 442, 413); // ac
+// Elapsed time: 17 seconds
+selectCodeEditor("rv32i_cpu.v", 527, 428); // ac
+// Elapsed time: 23 seconds
+selectCodeEditor("rv32i_cpu.v", 145, 439); // ac
+selectCodeEditor("rv32i_cpu.v", 145, 439, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("rv32i_cpu.v", 163, 354); // ac
+selectCodeEditor("rv32i_cpu.v", 163, 354, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("rv32i_cpu.v", 461, 200); // ac
+// Elapsed time: 23 seconds
+selectCodeEditor("rv32i_cpu.v", 109, 254); // ac
+selectCodeEditor("rv32i_cpu.v", 109, 254, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 252, 520); // ac
+selectCodeEditor("rv32i_cpu.v", 252, 520, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 300, 515); // ac
+selectCodeEditor("rv32i_cpu.v", 187, 513); // ac
+selectCodeEditor("rv32i_cpu.v", 172, 516); // ac
+selectCodeEditor("rv32i_cpu.v", 172, 516, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 209, 516); // ac
+selectCodeEditor("rv32i_cpu.v", 209, 516, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 254, 516); // ac
+selectCodeEditor("rv32i_cpu.v", 254, 516, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 478, 422); // ac
+selectCodeEditor("rv32i_cpu.v", 467, 453); // ac
+selectCodeEditor("rv32i_cpu.v", 364, 434); // ac
+selectCodeEditor("rv32i_cpu.v", 363, 440); // ac
+selectCodeEditor("rv32i_cpu.v", 363, 460); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 379, 492); // ac
+selectCodeEditor("alu.v", 349, 472); // ac
+selectCodeEditor("alu.v", 314, 536); // ac
+selectCodeEditor("alu.v", 293, 579); // ac
+selectCodeEditor("alu.v", 581, 612); // ac
+selectCodeEditor("alu.v", 583, 617); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 527, 615); // ac
+selectCodeEditor("alu.v", 69, 360); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 3,465 MB. GUI used memory: 63 MB. Current time: 6/15/24, 1:14:11 PM KST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 3,481 MB (+11818kb) [02:40:37]
+selectCodeEditor("rv32i_cpu.v", 343, 313); // ac
+selectCodeEditor("rv32i_cpu.v", 332, 326); // ac
+selectCodeEditor("rv32i_cpu.v", 320, 332); // ac
+typeControlKey((HResource) null, "rv32i_cpu.v", 'v'); // ac
+selectCodeEditor("rv32i_cpu.v", 232, 257); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("rv32i_cpu.v", 274, 279); // ac
+selectCodeEditor("rv32i_cpu.v", 615, 337); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 671, 337); // ac
+selectCodeEditor("rv32i_cpu.v", 642, 353); // ac
+selectCodeEditor("rv32i_cpu.v", 638, 357); // ac
+selectCodeEditor("rv32i_cpu.v", 633, 363); // ac
+selectCodeEditor("rv32i_cpu.v", 573, 392); // ac
+selectCodeEditor("rv32i_cpu.v", 370, 476); // ac
+selectCodeEditor("rv32i_cpu.v", 338, 551); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 3,497 MB. GUI used memory: 63 MB. Current time: 6/15/24, 1:14:51 PM KST
+selectCodeEditor("rv32i_cpu.v", 314, 545); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("rv32i_cpu.v", 346, 550); // ac
+selectCodeEditor("rv32i_cpu.v", 339, 603); // ac
+selectCodeEditor("rv32i_cpu.v", 119, 437); // ac
+selectCodeEditor("rv32i_cpu.v", 119, 437, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 113, 456); // ac
+selectCodeEditor("rv32i_cpu.v", 113, 456, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 122, 443); // ac
+selectCodeEditor("rv32i_cpu.v", 122, 443, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 225, 366); // ac
+selectCodeEditor("rv32i_cpu.v", 225, 366, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("rv32i_cpu.v", 206, 294); // ac
+selectCodeEditor("rv32i_cpu.v", 206, 294, false, false, false, false, true); // ac - Double Click
+// PAResourceOtoP.PAViews_CODE: Code: close view
+// Elapsed time: 12 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // R

@@ -2,13 +2,13 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Sat Jun 15 10:33:35 2024
-# Process ID: 39181
+# Start of session at: Fri Jun 14 17:37:43 2024
+# Process ID: 47550
 # Current directory: /mnt/Shared/SoC/Vivado/2_homework
 # Command line: vivado
 # Log file: /mnt/Shared/SoC/Vivado/2_homework/vivado.log
 # Journal file: /mnt/Shared/SoC/Vivado/2_homework/vivado.jou
-# Running On: tony-ubuntu, OS: Linux, CPU Frequency: 3258.910 MHz, CPU Physical cores: 14, Host memory: 33372 MB
+# Running On: tony-ubuntu, OS: Linux, CPU Frequency: 572.107 MHz, CPU Physical cores: 14, Host memory: 33372 MB
 #-----------------------------------------------------------
 start_gui
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at /home/tony/tools/xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
@@ -82,7 +82,5 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/tony/tools/xilinx/Vivado/2022.2/data/ip'.
 update_compile_order -fileset sources_1
-close [ open /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/branch_resolution.v w ]
-add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/branch_resolution.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 14 18:17:52 2024...

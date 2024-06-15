@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 //! Need to Edit!!!!
-`define OP_LUI      7'b01101_11  // rd = {imm[31:12], 12'b0}
-`define OP_AUIPC    7'b00101_11  // rd = pc + {imm[31:12], 12'b0}
-`define OP_JAL      7'b11011_11  // imm[20:1] = {inst[31], inst[19:12], inst[20], inst[21, 30]} / pc = pc + {imm[20:1], 1'b0} / rd = pc + 4
+`define OP_LUI      7'b01101_11  // imm[31:12] = inst[31:12]
+`define OP_AUIPC    7'b00101_11  // imm[31:12] = inst[31:12]
+`define OP_JAL      7'b11011_11  // imm[20:1] = {inst[31], inst[19:12], inst[20], inst[30:21]}
 `define OP_JALR     7'b11001_11  // imm[11:0] = inst[31:20] / pc = (rs1 + imm[11:0]) & 32'xFFFE
-`define OP_B        7'b11000_11  // imm[12:1] = {inst[31], inst[7], inst[30:25], inst[11:8]} / pc = pc + {imm[12,1], 1'b0}
-`define OP_I_LOAD   7'b00000_11  // imm[11:0] = inst[31:20] / rd = 
+`define OP_B        7'b11000_11  // imm[12:1] = {inst[31], inst[7], inst[30:25], inst[11:8]} (BrUnmod)
+`define OP_I_LOAD   7'b00000_11  // imm[11:0] = inst[31:20] (LdUnmod)
 `define OP_S        7'b01000_11  // imm[11:0] = inst[31:25], inst[11:7]
-`define OP_I_ARITH  7'b00100_11  // imm[11:0] = inst[31:20]
+`define OP_I_ARITH  7'b00100_11  // imm[11:0] = inst[31:20] (Unmod)
 `define OP_R        7'b01100_11
 
 module rv32i_cpu(
@@ -50,31 +50,82 @@ module rv32i_cpu(
     wire [2:0] inst_opcode;
     
     reg [31:0] alu_src1, alu_src2;    
-    wire [31:0] aluout; 
+    wire [31:0] alu_out; 
     reg [4:0] alu_control;   
-    reg src_i, regwrite;
-    wire lui, aluipc, store, load, branch;
+    reg regwrite, src1_sel, src2_sel;
+    wire lui, aluipc, jal, branch, load, store;
     wire Nflag, Zflag, Cflag, Vflag; 
     
     wire BrJal, isJal;
-    wire BrUnmod, LdUnmod;  // 1 : Unsigned mode, 0 : Signed mode
-    wire br_true;   // undefined
+    wire Unmod;
+    wire BrUnmod, LdUnmod, IUnmod;  // 1 : Unsigned mode, 0 : Signed mode
+    wire btaken;   
     
+//    reg [31:0] imm_parsing;
+//    always @ (*) begin
+//        case (opcode)
+//            `OP_LUI,
+//            `OP_AUIPC: imm_parsing = inst[31:12];
+//            `OP_JAL: imm_parsing = {inst[31], inst[19:12], inst[20], inst[30:21]};
+//            `OP_B: imm_parsing = {inst[31], inst[7], inst[30:25], inst[11:8]};
+//            `OP_S: imm_parsing = {inst[31:25], inst[11:7]};
+//            `OP_JALR,
+//            `OP_I_LOAD,
+//            `OP_I_ARITH: imm_parsing = inst[31:20];
+//            default: imm_parsing = 32'b0;
+//        endcase
+//    end
+    
+//    wire imm_ext;
+//    assign Unmod = BrUnmod | LdUnmod | IUnmod;
+//    assign imm_ext = (Unmod) ? {20'b0, imm_parsing} : {20{imm_parsing[11]}}, imm_parsing};
+    
+    reg [31:0] imm;
+    always @ (*) begin
+        case (opcode)
+            `OP_LUI,
+            `OP_AUIPC: imm = {inst[31:12], 12'b0};
+            `OP_JAL: imm = {{12{inst[31]}}, inst[19:12], inst[20], inst[30:21], 1'b0};
+            `OP_B: 
+                if (BrUnmod) imm = {{19{1'b0}}, inst[31], inst[7], inst[30:25], inst[11:8], 1'b0};
+                else imm = {{20{inst[31]}}, inst[7], inst[30:25], inst[11:8], 1'b0};
+            `OP_S: imm = {{21{inst[31]}}, inst[30:25], inst[11:7]};
+            `OP_JALR,
+            `OP_I_LOAD,
+            `OP_I_ARITH: 
+                if (IUnmod | LdUnmod) imm = {{20{1'b0}}, inst[31:20]};
+                else imm = {{21{inst[31]}}, inst[30:20]};
+            default: imm = 32'b0;
+        endcase
+    end
     
     // register for pc
     wire pc_sel;  // 1 : jump or branch, 0 : default 
-    assign pc_sel =  ((branch & br_true) | isJal) ? 1 : 0;
+    reg [31:0] pc_next;
+
+    always @ (*) begin
+        case (opcode)
+            `OP_B: pc_next = pc + imm;
+            `OP_JAL: pc_next = alu_out;
+            `OP_JALR: pc_next = alu_out & 32'hfffe;
+            default: pc_next = pc_next;
+        endcase
+    end
+
+    branch_resolution inst0 (funct3, branch, N, Z, C, V, btaken);
+    
+    assign pc_sel =  ((branch & btaken) | isJal) ? 1 : 0;
     always @ (posedge clk, posedge rst)
     begin
         if (rst)
             pc <= 0;
         else if (pc_sel)
-            pc <= aluout;
+            pc <= pc_next;
         else
             pc <= pc + 4;
     end
 
-           
+
     // register file
     regfile regfile_inst( 
         .clk(clk), 
@@ -188,18 +239,14 @@ module rv32i_cpu(
                     4'bx_111: alu_control = 5'b0_0001;  // andi
                     default: alu_control = 5'b0_0000;
                 endcase
-            `OP_I_LOAD:
-                if (LdUnmod) alu_control = 5'b0_1000;   // add unsigned
-                else alu_control = 5'b0_0000;
-            `OP_B:
-                if (BrUnmod) alu_control = 5'b1_1000;   // sub unsigned = sltu
-                else alu_control = 5'b1_0000;
-            `OP_LUI,
-            `OP_AUIPC,
-            `OP_JAL,
-            `OP_JALR,
-            `OP_S:
+//            `OP_LUI,                                    // nothing
+            `OP_AUIPC,                                  // sum
+            `OP_JAL,                                    // sum
+            `OP_JALR,                                   // sum
+            `OP_I_LOAD,                                 // sum
+            `OP_S:                                      // sum
                 alu_control = 5'b0_0000;
+            `OP_B: alu_control = 5'b1_0000;             // sub
             default: 
                 alu_control = 5'b0;
         endcase
@@ -211,83 +258,104 @@ module rv32i_cpu(
     // operation
     assign lui = (opcode == `OP_LUI) ? 1'b1 : 1'b0;
     assign aluipc = (opcode == `OP_AUIPC) ? 1'b1 : 1'b0;
-    assign store = (opcode == `OP_S) ? 1'b1 : 1'b0;
-    assign load = (opcode == `OP_I_LOAD) ? 1'b1 : 1'b0;
+    assign jal = (opcode == `OP_JAL) ? 1'b1 : 1'b0;
     assign branch = (opcode == `OP_B) ? 1'b1 : 1'b0;
+    assign load = (opcode == `OP_I_LOAD) ? 1'b1 : 1'b0;
+    assign store = (opcode == `OP_S) ? 1'b1 : 1'b0;
+    assign arithm_i = (opcode == `OP_I_ARITH) ? 1'b1: 1'b0;
+    
     
     // branch, jump control
-    assign isJal = BrJal & ~branch;
     assign BrJal = (inst_opcode == 3'b110) ? 1 : 0;
+    assign isJal = BrJal & ~branch;
     assign BrUnmod = (funct3[1] & branch) ? 1 : 0;
     
     // load control
     assign LdUnmod = (funct3[2] & load) ? 1 : 0;
-
+    
+    assign IUnmod = ((funct3 == 3'b011) & arithm_i)  ? 1 : 0;
+    
+    // lui : rs1 = 0, rs2 = imm
+    // auipc : rs1 = pc, rs2 = imm
+    // jal : rs1 = pc, rs2 = imm
+    // jalr : rs1 = rs1, rs2 = imm
+    // branch : rs1 = rs1, rs2 = rs2
+    // load : rs1 = rs1, rs2 = imm
+    // store : rs1 = rs1, rs2 = imm
+    // arithm_i : rs1 = rs1, rs2 = imm
+    // arithm_r : rs1 = rs1, rs2 = rs2
     always @* begin
         case (opcode)
             `OP_LUI: begin
-                src_i = 1'b0; // 1 : imm == inst[31:20] 
+                src1_sel = 1'b0;
+                src2_sel = 1'b1;
                 regwrite = 1'b1;
 
             end 
             `OP_AUIPC: begin
-                src_i = 1'b0;
+                src1_sel = 1'b1;
+                src2_sel = 1'b1;
                 regwrite = 1'b1;
 
             end
             `OP_JAL: begin
-                src_i = 1'b0;
+                src1_sel = 1'b1;
+                src2_sel = 1'b1;
                 regwrite = 1'b1;
 
             end
             `OP_JALR: begin
-                src_i = 1'b1;
+                src1_sel = 1'b0;
+                src2_sel = 1'b1;
                 regwrite = 1'b1;
 
             end
             `OP_B: begin
-                src_i = 1'b0;
+                src1_sel = 1'b0;
+                src2_sel = 1'b0;
                 regwrite = 1'b0;
             
             end
             `OP_I_LOAD: begin
-                src_i = 1'b1;
+                src1_sel = 1'b0;
+                src2_sel = 1'b1;
                 regwrite = 1'b1;
 
             end
             `OP_S: begin
-                src_i = 1'b0;
+                src1_sel = 1'b0;
+                src2_sel = 1'b1;
                 regwrite = 1'b0;
                 
             end
             `OP_I_ARITH: begin
-                src_i = 1'b1;
+                src1_sel = 1'b0;
+                src2_sel = 1'b1;
                 regwrite = 1'b1;
             end
             `OP_R: begin
-                src_i = 1'b0;
+                src1_sel = 1'b0;
+                src2_sel = 1'b0;
                 regwrite = 1'b1;
             end
             default: begin
-                src_i = 1'b0;
+                src1_sel = 1'b0;
+                src2_sel = 1'b1;
                 regwrite = 1'b0;
 
             end
         endcase
     end 
-
     
     //always for alusrc1, alusrc2
     always @* begin
         if (lui) alu_src1 = 0; 
-        else if (aluipc) alu_src1 = pc;
+        else if (src1_sel) alu_src1 = pc;
         else alu_src1 = rs1_data; 
     end
 
     always @* begin
-        if (src_i) alu_src2 = {{20{inst[31]}}, inst[31:20]};
-        else if (lui) alu_src2 = {inst[31:12], 12'b0};
-        else if (store) alu_src2 = {{20{inst[31]}}, inst[31:25], inst[11:7]};  
+        if (src2_sel) alu_src2 = imm; 
         else alu_src2 = rs2_data;
     end
     
@@ -296,26 +364,20 @@ module rv32i_cpu(
           .a(alu_src1), 
           .b(alu_src2),
           .control(alu_control),
-          .result(aluout),
+          .result(alu_out),
           .N(Nflag),
           .Z(Zflag),
           .C(Cflag),
           .V(Vflag)
     );   
     
-    assign rd_data = aluout;
-    assign MemAddr = aluout;  
+    assign rd_data = alu_out;
+    assign MemAddr = alu_out;  
     assign MemWdata = rs2_data; 
     assign MemWen = store; 
 
 
 endmodule
 
-//    always @ (*) begin
-//        case (pc_sel)
-//            2'b00: pc_next = pc + {{12{inst[31]}}, inst[19:12], inst[20], inst[30:21], 1'b0};   // jal
-//            2'b01: pc_next = (rs1_data + {{21{inst[31]}}, inst[30:20]}) & 32'hfffe;             // jalr
-//            2'b10: pc_next = pc + {{20{inst[31]}}, inst[7], inst[30:25], inst[11:8], 1'b0};     // branch
-//            default: pc_next = pc + 4;
-//        endcase
-//    end
+
+
