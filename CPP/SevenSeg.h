@@ -31,4 +31,8 @@
 #define SEG_BLANK 0x00 /* Display " " on 7 Segment */
 #define SEG_DOT 0x80   /* Display "." on 7 Segment */
 
+#define UART_BASE 0xFFFF1000
+#define UART_TX UART_BASE + 0
+#define UART_RX UART_BASE + 1
+
 #endif /* SEVENSEG_H_ */

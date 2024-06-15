@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 5
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
@@ -90,6 +91,9 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data.coe
 add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data_seg5.coe
+add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data_mile2.coe
+add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data_mile3.coe
+add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data_uart.coe
 read_verilog -library xil_defaultlib {
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/Addr_Decoder.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/GPIO.v
@@ -101,15 +105,18 @@ read_verilog -library xil_defaultlib {
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/regfile.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/rv32i_cpu.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/seg7.v
+  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/uart_rx.v
+  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/uart_top.v
+  /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/uart_tx.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/RV32I_SoC.v
 }
+read_ip -quiet /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32.xci
+set_property used_in_implementation false [get_files -all /mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32_ooc.xdc]
+
 read_ip -quiet /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all /mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all /mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all /mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
-
-read_ip -quiet /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32.xci
-set_property used_in_implementation false [get_files -all /mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -123,6 +130,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1/new/RV32I_SoC.xdc
 set_property used_in_implementation false [get_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1/new/RV32I_SoC.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/utils_1/imports/synth_1/RV32I_SoC.dcp

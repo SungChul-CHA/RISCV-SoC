@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2,945.167 ns"></ZoomStartTime>
-      <ZoomEndTime time="3,207.368 ns"></ZoomEndTime>
-      <Cursor1Time time="1,520.367 ns"></Cursor1Time>
+      <ZoomStartTime time="998,508.868 ns"></ZoomStartTime>
+      <ZoomEndTime time="998,853.992 ns"></ZoomEndTime>
+      <Cursor1Time time="998,709.100 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="177"></NameColumnWidth>
-      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+      <ValueColumnWidth column_width="77"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="28" />
    <wave_markers>
       <marker label="" time="284000" />
       <marker label="" time="1484000" />
@@ -53,6 +53,7 @@
    <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rs2_addr">
       <obj_property name="ElementShortName">rs2_addr[4:0]</obj_property>
       <obj_property name="ObjectShortName">rs2_addr[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/rs2_data">
       <obj_property name="ElementShortName">rs2_data[31:0]</obj_property>
@@ -61,7 +62,7 @@
    <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/imm">
       <obj_property name="ElementShortName">imm[31:0]</obj_property>
       <obj_property name="ObjectShortName">imm[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/alu_src1">
       <obj_property name="ElementShortName">alu_src1[31:0]</obj_property>
@@ -72,6 +73,22 @@
       <obj_property name="ElementShortName">alu_src2[31:0]</obj_property>
       <obj_property name="ObjectShortName">alu_src2[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iCPU/Nflag">
+      <obj_property name="ElementShortName">Nflag</obj_property>
+      <obj_property name="ObjectShortName">Nflag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iCPU/Zflag">
+      <obj_property name="ElementShortName">Zflag</obj_property>
+      <obj_property name="ObjectShortName">Zflag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iCPU/Cflag">
+      <obj_property name="ElementShortName">Cflag</obj_property>
+      <obj_property name="ObjectShortName">Cflag</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iCPU/Vflag">
+      <obj_property name="ElementShortName">Vflag</obj_property>
+      <obj_property name="ObjectShortName">Vflag</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/alu_out">
       <obj_property name="ElementShortName">alu_out[31:0]</obj_property>

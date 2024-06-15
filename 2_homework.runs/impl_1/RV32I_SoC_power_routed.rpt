@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date             : Sat Jun 15 15:35:38 2024
+| Date             : Sun Jun 16 00:42:37 2024
 | Host             : tony-ubuntu running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file RV32I_SoC_power_routed.rpt -pb RV32I_SoC_power_summary_routed.pb -rpx RV32I_SoC_power_routed.rpx
 | Design           : RV32I_SoC
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.219        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.111        |
+| Dynamic (W)              | 0.112        |
 | Device Static (W)        | 0.108        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 82.5         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        7 |       --- |             --- |
-| Slice Logic    |     0.001 |     2818 |       --- |             --- |
-|   LUT as Logic |     0.001 |     1302 |     53200 |            2.45 |
-|   F7/F8 Muxes  |    <0.001 |      223 |     53200 |            0.42 |
-|   CARRY4       |    <0.001 |       24 |     13300 |            0.18 |
-|   Register     |    <0.001 |     1120 |    106400 |            1.05 |
+| Slice Logic    |     0.002 |     3030 |       --- |             --- |
+|   LUT as Logic |     0.001 |     1377 |     53200 |            2.59 |
+|   F7/F8 Muxes  |    <0.001 |      232 |     53200 |            0.44 |
+|   CARRY4       |    <0.001 |       36 |     13300 |            0.27 |
+|   Register     |    <0.001 |     1201 |    106400 |            1.13 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       21 |       --- |             --- |
-| Signals        |     0.002 |     2448 |       --- |             --- |
+|   Others       |     0.000 |       33 |       --- |             --- |
+| Signals        |     0.002 |     2573 |       --- |             --- |
 | Block RAM      |    <0.001 |        2 |       140 |            1.43 |
 | MMCM           |     0.106 |        1 |         4 |           25.00 |
-| I/O            |    <0.001 |       20 |       125 |           16.00 |
+| I/O            |    <0.001 |       26 |       125 |           20.80 |
 | Static Power   |     0.108 |          |           |                 |
 | Total          |     0.219 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -155,7 +155,7 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| RV32I_SoC              |     0.111 |
+| RV32I_SoC              |     0.112 |
 |   iCPU                 |     0.003 |
 |     regfile_inst       |     0.003 |
 |   iMEM                 |     0.001 |

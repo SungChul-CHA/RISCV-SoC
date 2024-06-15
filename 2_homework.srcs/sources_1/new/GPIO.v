@@ -28,6 +28,8 @@ module GPIO(
     input   WEN,
     input   [11:0] Addr, 
     input   [31:0] DataIn,
+    input   uart_tx_en,
+    input   [3:0] sw,
     output  reg [31:0]  DataOut,
     output  reg [6:0] HEX0,
     output  reg [6:0] HEX1, 
@@ -37,6 +39,15 @@ module GPIO(
     output  reg [6:0] HEX5, 
     output  reg [3:0] LEDS
     );
+    
+    // Register Read
+    always @(posedge clk) begin
+        if (rst) DataOut <= 0;
+        else if (CS & REN) begin
+            if (Addr==12'h000) DataOut <= uart_tx_en;
+            else if (Addr==12'h004) DataOut <= sw;
+        end
+    end
     
     // Register Write
     always @(posedge clk) begin
@@ -58,6 +69,6 @@ module GPIO(
             else if (Addr==12'h020) HEX5 <= DataIn[6:0];
          end
      end
-  
+
     
 endmodule

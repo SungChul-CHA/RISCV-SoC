@@ -17,7 +17,7 @@
 // 0xFFFF_3000 -------------------------------
 //                           GPIO               4KB
 // 0xFFFF_2000 -------------------------------
-//               Reserved for Peripheral-2      4KB
+//                           UART               4KB
 // 0xFFFF_1000 -------------------------------
 //               Reserved for Peripheral-1      4KB
 // 0xFFFF_0000 -------------------------------
@@ -42,8 +42,8 @@
 module Addr_Decoder(
         input [31:0] addr,
         output reg cs_mem,
-        output reg cs_gpio
-//        output reg cs_uart
+        output reg cs_gpio,
+        output reg cs_uart
         );
         
 
@@ -51,15 +51,18 @@ module Addr_Decoder(
         if (addr[31:13] == 19'h0) begin // instruction & data
             cs_mem <= 1'b1; 
             cs_gpio <= 1'b0;
+            cs_uart <= 1'b0;
         end
         else if (addr[31:12] == 20'hFFFF2) begin // GPIO
             cs_mem <= 1'b0; 
             cs_gpio <= 1'b1;
+            cs_uart <= 1'b0;
         end 
-//        else if (addr[31:12] == 20'hFFFF_1) begin // UART
-//            cs_mem <= 1'b0;
-//            cs_uart <= 1'b1;
-//        end
+        else if (addr[31:12] == 20'hFFFF_1) begin // UART
+            cs_mem <= 1'b0;
+            cs_gpio <= 1'b0;
+            cs_uart <= 1'b1;
+        end
     end
          
 

@@ -11,7 +11,7 @@
 // Tool Versions: vivado 2022.2.2
 // Description: riscv 32bit integer cpu
 // 
-// Dependencies: regfile(), alu()
+// Dependencies: regfile(), alu(), branch_resolution()
 // 
 // Revision:
 // Revision 0.01 - File Created
@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//! Need to Edit!!!!
+
 `define OP_LUI      7'b01101_11  // imm[31:12] = inst[31:12]
 `define OP_AUIPC    7'b00101_11  // imm[31:12] = inst[31:12]
 `define OP_JAL      7'b11011_11  // imm[20:1] = {inst[31], inst[19:12], inst[20], inst[30:21]}
@@ -116,7 +116,7 @@ module rv32i_cpu(
         endcase
     end
 
-    branch_resolution inst0 (funct3, branch, N, Z, C, V, btaken);
+    branch_resolution inst0 (funct3, branch, Nflag, Zflag, Cflag, Vflag, btaken);
     
     assign pc_sel =  ((branch & btaken) | isJal) ? 1 : 0;
     always @ (posedge clk, posedge rst)

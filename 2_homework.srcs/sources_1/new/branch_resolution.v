@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Myongji Univ.
+// Engineer: Tony CHA
 // 
 // Create Date: 06/15/2024 10:52:11 AM
-// Design Name: 
+// Usage: branch_resolution inst0 (.funct3(), .branch(), .N(), .Z(), .C(), .V(), .btaken());
 // Module Name: branch_resolution
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
+// Project Name: RV32I_SoC
+// Target Devices: zybo Z7-20
+// Tool Versions: Vivado 2022.2.2
+// Description: check branch condition true
 // 
 // Dependencies: 
 // 

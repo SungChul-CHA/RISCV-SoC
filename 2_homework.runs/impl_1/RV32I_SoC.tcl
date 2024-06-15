@@ -122,6 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 5
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
@@ -138,8 +139,8 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/synth_1/RV32I_SoC.dcp
-  read_ip -quiet /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32.xci
+  read_ip -quiet /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/constrs_1/new/RV32I_SoC.xdc
 OPTRACE "read constraints: implementation" END { }

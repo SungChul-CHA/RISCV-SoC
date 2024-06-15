@@ -10,7 +10,8 @@
 // Tool Versions: vivado 2022.2.2
 // Description: Top module for rv32i_cpu
 // 
-// Dependencies: ram_2port_2048x32(), clk_wiz_0(), rv32i_cpu(), Addr_Decoder(), GPIO(), seg7()
+// Dependencies: ram_2port_2048x32(), clk_wiz_0(), rv32i_cpu(), Addr_Decoder(), 
+//               GPIO(), seg7(), uart_top()
 // 
 // Revision:
 // Revision 0.01 - File Created
@@ -22,7 +23,10 @@
 module RV32I_SoC(
     input   clk_125mhz, 
     input   btn,    // active high rst when button is pressed
-    output [3:0] leds,  
+    input   uart_tx_en,
+    input [3:0]    sw,
+    output         uart_txd,
+    output [3:0]   leds,  
     output [7:0]   seg_data, 
     output [5:0]   seg_com 
     );
@@ -31,9 +35,10 @@ module RV32I_SoC(
     reg rst;
     wire [31:0] fetch_addr, data_addr, inst, write_data;
     wire [31:0] read_data_mem, read_data_gpio;
+    wire [7:0] read_data_uart;
     reg [31:0] read_data;
     wire [3:0] data_we;  
-    wire cs_mem, cs_gpio, locked; 
+    wire cs_mem, cs_gpio, cs_uart, locked; 
     wire [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
     
     ram_2port_2048x32 iMEM (
@@ -78,13 +83,15 @@ module RV32I_SoC(
        
     always @* begin // more peripherals can be added
         if (cs_gpio) read_data = read_data_gpio;
+        else if (cs_uart) read_data = read_data_uart;
         else read_data = read_data_mem; 
     end
     
     Addr_Decoder iDec( //chip select
         .addr(data_addr), 
         .cs_mem(cs_mem),
-        .cs_gpio(cs_gpio)
+        .cs_gpio(cs_gpio),
+        .cs_uart(cs_uart)
     );
     
     GPIO iGPIO(
@@ -95,6 +102,8 @@ module RV32I_SoC(
         .WEN(data_we),
         .Addr(data_addr),  
         .DataIn(write_data),
+        .uart_tx_en(uart_tx_en),
+        .sw(sw),
         .DataOut(read_data_gpio),
         .HEX0(HEX0),
         .HEX1(HEX1),        
@@ -103,6 +112,20 @@ module RV32I_SoC(
         .HEX4(HEX4),
         .HEX5(HEX5),
         .LEDS(leds)        
+        );
+        
+    uart_top iUART(
+        .clk(clk_main),
+        .rst(rst),
+        .CS(cs_uart),
+        .REN(~data_we),
+        .WEN(data_we),
+        .Addr(data_addr),
+        .uart_tx_en(1'b1),
+        .uart_tx_data(write_data),
+        .uart_txd(uart_txd),
+        .uart_rxd(uart_txd),
+        .uart_rx_reg(read_data_uart)
         );
         
     seg7 iSeg7(
