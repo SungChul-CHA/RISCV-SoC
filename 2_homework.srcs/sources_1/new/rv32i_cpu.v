@@ -49,7 +49,7 @@ module rv32i_cpu(
     
     wire [2:0] inst_opcode;
     
-    reg [31:0] alu_src1, alu_src2;    
+    wire [31:0] alu_src1, alu_src2;    
     wire [31:0] alu_out; 
     reg [4:0] alu_control;   
     reg regwrite, src1_sel, src2_sel;
@@ -348,18 +348,9 @@ module rv32i_cpu(
     end 
     
     //always for alusrc1, alusrc2
-    always @* begin
-        if (lui) alu_src1 = 0; 
-        else if (src1_sel) alu_src1 = pc;
-        else alu_src1 = rs1_data; 
-    end
+    assign alu_src1 = (lui) ? 0 : (src1_sel) ? pc : rs1_data;
+    assign alu_src2 = (src2_sel) ? imm : rs2_data;
 
-    always @* begin
-        if (src2_sel) alu_src2 = imm; 
-        else alu_src2 = rs2_data;
-    end
-    
-      
     alu alu_inst(
           .a(alu_src1), 
           .b(alu_src2),
