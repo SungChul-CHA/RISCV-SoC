@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_RV32I_SoC_func_impl/xsimk -simmode gui -wdb tb_RV32I_SoC_func_impl.wdb -simrunnum 0 -socket 50635
+Running: xsim.dir/tb_RV32I_SoC_func_impl/xsimk -simmode gui -wdb tb_RV32I_SoC_func_impl.wdb -simrunnum 0 -socket 41271
 Design successfully loaded
-Design Loading Memory Usage: 38124 KB (Peak: 38124 KB)
-Design Loading CPU Usage: 30 ms
+Design Loading Memory Usage: 40748 KB (Peak: 40748 KB)
+Design Loading CPU Usage: 40 ms
 Simulation completed
-Simulation Memory Usage: 124608 KB (Peak: 177392 KB)
-Simulation CPU Usage: 40 ms
+Simulation Memory Usage: 127300 KB (Peak: 180016 KB)
+Simulation CPU Usage: 380 ms

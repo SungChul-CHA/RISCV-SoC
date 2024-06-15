@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Thu Jun 13 12:19:14 2024
+| Date         : Sat Jun 15 15:33:32 2024
 | Host         : tony-ubuntu running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file ram_2port_2048x32_utilization_synth.rpt -pb ram_2port_2048x32_utilization_synth.pb
 | Design       : ram_2port_2048x32

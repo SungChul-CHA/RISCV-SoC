@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -88,6 +89,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data.coe
+add_files /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/insts_data_seg5.coe
 read_verilog -library xil_defaultlib {
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/Addr_Decoder.v
   /mnt/Shared/SoC/Vivado/2_homework/2_homework.srcs/sources_1/new/GPIO.v

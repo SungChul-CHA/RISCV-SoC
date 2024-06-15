@@ -2,12 +2,12 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Thu Jun 13 12:18:48 2024
-# Process ID: 20616
+# Start of session at: Sat Jun 15 15:33:06 2024
+# Process ID: 116717
 # Current directory: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/ram_2port_2048x32_synth_1
 # Command line: vivado -log ram_2port_2048x32.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ram_2port_2048x32.tcl
 # Log file: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/ram_2port_2048x32_synth_1/ram_2port_2048x32.vds
 # Journal file: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/ram_2port_2048x32_synth_1/vivado.jou
-# Running On: tony-ubuntu, OS: Linux, CPU Frequency: 2403.486 MHz, CPU Physical cores: 14, Host memory: 33372 MB
+# Running On: tony-ubuntu, OS: Linux, CPU Frequency: 1490.003 MHz, CPU Physical cores: 14, Host memory: 33372 MB
 #-----------------------------------------------------------
 source ram_2port_2048x32.tcl -notrace
