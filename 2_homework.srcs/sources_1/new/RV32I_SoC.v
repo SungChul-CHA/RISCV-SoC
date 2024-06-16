@@ -24,6 +24,7 @@ module RV32I_SoC(
     input   clk_125mhz, 
     input   btn,    // active high rst when button is pressed
     input   btn2,
+//    input   uart_rxd,
     input [3:0]    sw,
     output         uart_txd,
     output [3:0]   leds,  
@@ -121,11 +122,10 @@ module RV32I_SoC(
         .REN(~data_we),
         .WEN(data_we),
         .Addr(data_addr),
-        .uart_tx_en(1'b1),
-        .uart_tx_data(write_data),
+        .DataIn(write_data),
         .uart_txd(uart_txd),
         .uart_rxd(uart_txd),
-        .uart_rx_reg(read_data_uart)
+        .DataOut(read_data_uart)
         );
         
     seg7 iSeg7(

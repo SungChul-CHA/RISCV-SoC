@@ -58,7 +58,7 @@ module Addr_Decoder(
             cs_gpio <= 1'b1;
             cs_uart <= 1'b0;
         end 
-        else if (addr[31:12] == 20'hFFFF_1) begin // UART
+        else if (addr[31:12] == 20'hFFFF1) begin // UART
             cs_mem <= 1'b0;
             cs_gpio <= 1'b0;
             cs_uart <= 1'b1;

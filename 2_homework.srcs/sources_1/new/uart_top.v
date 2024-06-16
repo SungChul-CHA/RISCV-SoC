@@ -29,41 +29,45 @@ module uart_top(
     input [11:0] Addr,
 
     // tx
-    input uart_tx_en,
-    input [7:0] uart_tx_data, 
-//    output tx_busy, 
+    input [7:0] DataIn, 
     output uart_txd,
 
     // rx
 	input uart_rxd, 
-//    output rx_busy,
-    output reg [7:0] uart_rx_reg 
+    output reg [7:0] DataOut 
     );
+    
+    // register
+    reg [7:0] uart_rx_reg;
+    always @ (posedge clk) begin
+        if (rst) uart_rx_reg <= 0;
+        else uart_rx_reg <= uart_rx_data;
+    end
     
     // Read
     always @ (posedge clk) begin
-        if (rst) uart_rx_reg <= 0;
+        if (rst) DataOut <= 0;
         else if (CS & REN) begin
-            if (Addr == 12'h008) uart_rx_reg <= uart_rx_data;
+            if (Addr == 12'h00C) DataOut <= uart_rx_reg;
         end
     end
     
     // Write
+    reg uart_en_reg;
     reg [7:0] uart_tx_reg;
     always @ (posedge clk) begin
-        if (rst) uart_tx_reg <= 0;
+        if (rst) begin
+            uart_en_reg <= 0;
+            uart_tx_reg <= 0;
+        end
         else if (CS & WEN) begin 
-            if (Addr == 12'h004) uart_tx_reg <= uart_tx_data;
+            if (Addr == 12'h004) uart_en_reg <= DataIn;
+            else if (Addr == 12'h008) uart_tx_reg <= DataIn;
         end
     end
+
     
-    // Register
-//    always @ (posedge clk) begin
-//        if (rst) uart_rx_reg <= 0;
-//        else uart_rx_reg <= uart_rx_data;
-//    end
-    
-    uart_tx utx (.clk(clk), .rst(rst), .uart_tx_en(uart_tx_en), .uart_tx_data(uart_tx_reg), .tx_busy(), .uart_txd(uart_txd)); 
+    uart_tx utx (.clk(clk), .rst(rst), .uart_tx_en(uart_en_reg), .uart_tx_data(uart_tx_reg), .tx_busy(), .uart_txd(uart_txd)); 
     uart_rx urx (.clk(clk), .rst(rst), .uart_rxd(uart_rxd), .rx_busy(), .uart_rx_data(uart_rx_data)); 
     
 endmodule

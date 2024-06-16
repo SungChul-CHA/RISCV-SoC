@@ -41,25 +41,25 @@ module GPIO(
     );
     
     // Register
-    reg button_reg;
-    reg [3:0] sw_reg;
-    always @ (posedge clk) begin
-        if (rst) begin
-            button_reg <= 0;
-            sw_reg <= 0;
-        end
-        else begin
-            button_reg <= btn2;
-            sw_reg <= sw;
-        end
-    end
+//    reg button_reg;
+//    reg [3:0] sw_reg;
+//    always @ (posedge clk) begin
+//        if (rst) begin
+//            button_reg <= 0;
+//            sw_reg <= 0;
+//        end
+//        else begin
+//            button_reg <= btn2;
+//            sw_reg <= sw;
+//        end
+//    end
 
     // Register Read
     always @(posedge clk) begin
         if (rst) DataOut <= 0;
         else if (CS & REN) begin
-            if (Addr==12'h024) DataOut <= button_reg;
-            else if (Addr==12'h004) DataOut <= sw_reg;
+            if (Addr==12'h004) DataOut <= btn2;
+            else if (Addr==12'h024) DataOut <= sw;
         end
     end
     
