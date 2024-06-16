@@ -44,7 +44,7 @@ module uart_top(
     always @ (posedge clk) begin
         if (rst) uart_rx_reg <= 0;
         else if (CS & REN) begin
-            if (Addr == 12'h004) uart_rx_reg <= uart_rx_data;
+            if (Addr == 12'h008) uart_rx_reg <= uart_rx_data;
         end
     end
     
@@ -53,11 +53,11 @@ module uart_top(
     always @ (posedge clk) begin
         if (rst) uart_tx_reg <= 0;
         else if (CS & WEN) begin 
-            if (Addr == 12'h000) uart_tx_reg <= uart_tx_data;
+            if (Addr == 12'h004) uart_tx_reg <= uart_tx_data;
         end
     end
     
-//    // Register
+    // Register
 //    always @ (posedge clk) begin
 //        if (rst) uart_rx_reg <= 0;
 //        else uart_rx_reg <= uart_rx_data;

@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Sun Jun 16 12:03:02 2024
+| Date         : Sun Jun 16 12:22:57 2024
 | Host         : tony-ubuntu running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_control_sets -verbose -file RV32I_SoC_control_sets_placed.rpt
 | Design       : RV32I_SoC
@@ -58,71 +58,71 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              41 |           23 |
-| No           | No                    | Yes                    |              85 |           24 |
+| No           | No                    | No                     |              41 |           24 |
+| No           | No                    | Yes                    |              85 |           23 |
 | No           | Yes                   | No                     |               6 |            3 |
-| Yes          | No                    | No                     |             996 |          461 |
-| Yes          | No                    | Yes                    |              28 |            7 |
-| Yes          | Yes                   | No                     |              50 |           14 |
+| Yes          | No                    | No                     |             996 |          548 |
+| Yes          | No                    | Yes                    |              28 |            8 |
+| Yes          | Yes                   | No                     |              50 |           15 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------+-------------------------------------------+------------------------------------+------------------+----------------+--------------+
-|             Clock Signal            |               Enable Signal               |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
-+-------------------------------------+-------------------------------------------+------------------------------------+------------------+----------------+--------------+
-|  iDec/cs_mem_reg/G0                 |                                           |                                    |                1 |              1 |         1.00 |
-|  iDec/cs_gpio_reg/G0                |                                           |                                    |                1 |              1 |         1.00 |
-|  iCPU/regfile_inst/cs_mem_reg_i_6_1 |                                           | iCPU/regfile_inst/cs_mem_reg_i_4_0 |                1 |              1 |         1.00 |
-|  clk_125mhz_IBUF                    |                                           |                                    |                1 |              1 |         1.00 |
-|  iCPU/inst0/b_true_reg_i_2_n_1      |                                           |                                    |                1 |              1 |         1.00 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/rst_reg_0[0]            |                                    |                1 |              4 |         4.00 |
-|  iPLL/inst/clk0                     |                                           |                                    |                4 |              5 |         1.25 |
-|  iPLL/inst/clk0                     | iUART/urx/FSM_onehot_state[9]_i_1_n_1     | rst                                |                3 |              7 |         2.33 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/iMEM_i_13_0[0]          | rst                                |                1 |              7 |         7.00 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/HEX5[6]_i_3_0[0]        | rst                                |                1 |              7 |         7.00 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/E[0]                    | rst                                |                2 |              7 |         3.50 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/HEX1[6]_i_2_0[0]        | rst                                |                2 |              7 |         3.50 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/LEDS[3]_i_2_0[0]        | rst                                |                2 |              7 |         3.50 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/iMEM_i_13_1[0]          | rst                                |                2 |              7 |         3.50 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/uart_tx_reg[7]_i_3_0[0] | rst                                |                4 |              8 |         2.00 |
-|  iPLL/inst/clk0                     | iUART/utx/FSM_onehot_state[10]_i_1__0_n_1 | rst                                |                2 |              9 |         4.50 |
-|  iPLL/inst/clk0                     | iSeg7/seg_cnt_reg[13]                     | rst                                |                2 |             12 |         6.00 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x10                     |                                    |               10 |             32 |         3.20 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x21                     |                                    |               10 |             32 |         3.20 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x13[31]_i_1_n_1         |                                    |               14 |             32 |         2.29 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x20                     |                                    |                7 |             32 |         4.57 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x1                      |                                    |               14 |             32 |         2.29 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x22                     |                                    |               13 |             32 |         2.46 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x23                     |                                    |               18 |             32 |         1.78 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x31                     |                                    |               24 |             32 |         1.33 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x26[31]_i_1_n_1         |                                    |               10 |             32 |         3.20 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x27                     |                                    |               17 |             32 |         1.88 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x15[31]_i_1_n_1         |                                    |               18 |             32 |         1.78 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x14                     |                                    |               16 |             32 |         2.00 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x16                     |                                    |               12 |             32 |         2.67 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x4[31]_i_1_n_1          |                                    |               17 |             32 |         1.88 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x18                     |                                    |                8 |             32 |         4.00 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x19                     |                                    |               12 |             32 |         2.67 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x12                     |                                    |               18 |             32 |         1.78 |
-|  n_0_1698_BUFG                      |                                           |                                    |               15 |             32 |         2.13 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x28[31]_i_1_n_1         |                                    |               18 |             32 |         1.78 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x29                     |                                    |               20 |             32 |         1.60 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x2[31]_i_1_n_1          |                                    |               12 |             32 |         2.67 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x3                      |                                    |               15 |             32 |         2.13 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x30                     |                                    |               23 |             32 |         1.39 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x11[31]_i_1_n_1         |                                    |               13 |             32 |         2.46 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x6                      |                                    |               19 |             32 |         1.68 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x25                     |                                    |               10 |             32 |         3.20 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x24                     |                                    |                9 |             32 |         3.56 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x17                     |                                    |                6 |             32 |         5.33 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x5                      |                                    |               11 |             32 |         2.91 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x7                      |                                    |               17 |             32 |         1.88 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x8                      |                                    |               23 |             32 |         1.39 |
-|  iPLL/inst/clk0                     | iCPU/regfile_inst/x9[31]_i_1_n_1          |                                    |               26 |             32 |         1.23 |
-|  iPLL/inst/clk0                     |                                           | rst                                |               26 |             90 |         3.46 |
-+-------------------------------------+-------------------------------------------+------------------------------------+------------------+----------------+--------------+
++-------------------------------------+-------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|             Clock Signal            |               Enable Signal               |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------+-------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  iDec/cs_mem_reg/G0                 |                                           |                                     |                1 |              1 |         1.00 |
+|  iDec/bbstub_douta[13]              |                                           |                                     |                1 |              1 |         1.00 |
+|  clk_125mhz_IBUF                    |                                           |                                     |                1 |              1 |         1.00 |
+|  iDec/cs_gpio_reg/G0                |                                           |                                     |                1 |              1 |         1.00 |
+|  iCPU/regfile_inst/cs_mem_reg_i_8_0 |                                           | iCPU/regfile_inst/cs_mem_reg_i_11_0 |                1 |              1 |         1.00 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/rst_reg[0]              |                                     |                3 |              4 |         1.33 |
+|  iPLL/inst/clk0                     |                                           |                                     |                3 |              5 |         1.67 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/HEX1[6]_i_2_0[0]        | rst                                 |                1 |              7 |         7.00 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/iMEM_i_13_1[0]          | rst                                 |                2 |              7 |         3.50 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/iMEM_i_13_0[0]          | rst                                 |                2 |              7 |         3.50 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/LEDS[3]_i_3_0[0]        | rst                                 |                2 |              7 |         3.50 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/HEX1[6]_i_2_1[0]        | rst                                 |                2 |              7 |         3.50 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/E[0]                    | rst                                 |                3 |              7 |         2.33 |
+|  iPLL/inst/clk0                     | iUART/urx/FSM_onehot_state[9]_i_1_n_1     | rst                                 |                3 |              7 |         2.33 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/uart_tx_reg[7]_i_2_0[0] | rst                                 |                3 |              8 |         2.67 |
+|  iPLL/inst/clk0                     | iUART/utx/FSM_onehot_state[10]_i_1__0_n_1 | rst                                 |                3 |              9 |         3.00 |
+|  iPLL/inst/clk0                     | iSeg7/seg_cnt_reg[13]                     | rst                                 |                2 |             12 |         6.00 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x22                     |                                     |               14 |             32 |         2.29 |
+|  n_0_28_BUFG                        |                                           |                                     |               17 |             32 |         1.88 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x2[31]_i_1_n_1          |                                     |               16 |             32 |         2.00 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x1                      |                                     |               18 |             32 |         1.78 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x10                     |                                     |               20 |             32 |         1.60 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x11[31]_i_1_n_1         |                                     |               15 |             32 |         2.13 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x14                     |                                     |               21 |             32 |         1.52 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x15[31]_i_1_n_1         |                                     |               19 |             32 |         1.68 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x28[31]_i_1_n_1         |                                     |               15 |             32 |         2.13 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x19                     |                                     |               16 |             32 |         2.00 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x23                     |                                     |               17 |             32 |         1.88 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x12                     |                                     |               15 |             32 |         2.13 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x17                     |                                     |               12 |             32 |         2.67 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x18                     |                                     |               13 |             32 |         2.46 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x21                     |                                     |               13 |             32 |         2.46 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x26[31]_i_1_n_1         |                                     |               19 |             32 |         1.68 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x16                     |                                     |               12 |             32 |         2.67 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x20                     |                                     |               17 |             32 |         1.88 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x3                      |                                     |               18 |             32 |         1.78 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x30                     |                                     |               22 |             32 |         1.45 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x31                     |                                     |               26 |             32 |         1.23 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x4[31]_i_1_n_1          |                                     |               18 |             32 |         1.78 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x6                      |                                     |               19 |             32 |         1.68 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x7                      |                                     |               18 |             32 |         1.78 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x8                      |                                     |               22 |             32 |         1.45 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x9[31]_i_1_n_1          |                                     |               26 |             32 |         1.23 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x5                      |                                     |               17 |             32 |         1.88 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x29                     |                                     |               20 |             32 |         1.60 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x13[31]_i_1_n_1         |                                     |               19 |             32 |         1.68 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x27                     |                                     |               19 |             32 |         1.68 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x25                     |                                     |               14 |             32 |         2.29 |
+|  iPLL/inst/clk0                     | iCPU/regfile_inst/x24                     |                                     |               15 |             32 |         2.13 |
+|  iPLL/inst/clk0                     |                                           | rst                                 |               25 |             90 |         3.60 |
++-------------------------------------+-------------------------------------------+-------------------------------------+------------------+----------------+--------------+
 
 
