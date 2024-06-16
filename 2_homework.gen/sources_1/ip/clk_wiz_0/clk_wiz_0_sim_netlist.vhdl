@@ -1,7 +1,7 @@
 -- Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
--- Date        : Thu Jun 13 12:14:45 2024
+-- Date        : Sun Jun 16 23:06:13 2024
 -- Host        : tony-ubuntu running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl

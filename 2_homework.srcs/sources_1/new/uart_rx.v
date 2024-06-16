@@ -44,19 +44,19 @@ module uart_rx (
     
     //baud rate: 115200bps (115200 bits / sec)
     //1bit transfer : 1/115200 sec = 8.68055us
-    //1clk period = 10ns (100 MHz clk)
-    //8.68055us / 10ns = 868 clock cycles
+    //1clk period = 100ns (10 MHz clk)
+    //8.68055us / 100ns = 87 clock cycles
     always @(posedge clk or posedge rst) begin 
         if (rst) count <= 0;
         else if (state == IDLE_ST) count <= 0; 
         else begin
-            if (count == 867) count <=0; 
+            if (count == 87) count <=0; 
             else count <= count + 1;
         end
     end
 
-    assign transit = (count == 867)? 1 : 0;    
-    assign rx_data_wen = (count == 867/2)? 1 : 0; 
+    assign transit = (count == 87)? 1 : 0;    
+    assign rx_data_wen = (count == 87/2)? 1 : 0; 
     
     always @(posedge clk or posedge rst) begin 
         if (rst) uart_rx_data <= 0; 

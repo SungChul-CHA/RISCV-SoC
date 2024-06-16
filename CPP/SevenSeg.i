@@ -11,10 +11,10 @@ void SevenSeg()
 {
  unsigned int *sw_addr = (unsigned int *)0xFFFF2000 + 1;
  unsigned int *led_addr = (unsigned int *)0xFFFF2000 + 2;
- unsigned int *button_addr = (unsigned int *)0xFFFF2000 + 9;
- unsigned int *uart_tx_addr = (unsigned int *)0xFFFF1000 + 2;
- unsigned int *uart_rx_addr = (unsigned int *)0xFFFF1000 + 3;
- unsigned int *uart_en_addr = (unsigned int *)0xFFFF1000 + 1;
+ unsigned int *button_addr = (unsigned int *)0xFFFF2000 + 0;
+ unsigned int *uart_tx_addr = (unsigned int *)0xFFFF1000 + 1;
+ unsigned int *uart_rx_addr = (unsigned int *)0xFFFF1000 + 2;
+ unsigned int *uart_en_addr = (unsigned int *)0xFFFF1000 + 0;
 
  unsigned int data, pose = 0;
  unsigned int button_status, old_status = 0;

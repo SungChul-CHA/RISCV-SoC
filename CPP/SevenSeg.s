@@ -19,16 +19,14 @@ SevenSeg:
 	addi	a5,a5,8
 	sw	a5,-32(s0)
 	li	a5,-57344
-	addi	a5,a5,36
 	sw	a5,-36(s0)
 	li	a5,-61440
-	addi	a5,a5,8
+	addi	a5,a5,4
 	sw	a5,-40(s0)
 	li	a5,-61440
-	addi	a5,a5,12
+	addi	a5,a5,8
 	sw	a5,-44(s0)
 	li	a5,-61440
-	addi	a5,a5,4
 	sw	a5,-48(s0)
 	sw	zero,-20(s0)
 	sw	zero,-24(s0)

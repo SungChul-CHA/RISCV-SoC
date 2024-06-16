@@ -100,7 +100,7 @@ wire clk_in2_clk_wiz_0;
   wire        clk0_clk_wiz_0;
   wire        clk90_clk_wiz_0;
   wire        clk180_clk_wiz_0;
-  wire        clk_out4_clk_wiz_0;
+  wire        clk_uart_clk_wiz_0;
   wire        clk_out5_clk_wiz_0;
   wire        clk_out6_clk_wiz_0;
   wire        clk_out7_clk_wiz_0;

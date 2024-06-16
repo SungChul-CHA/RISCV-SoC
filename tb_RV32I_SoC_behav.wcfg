@@ -11,18 +11,17 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="998,508.868 ns"></ZoomStartTime>
-      <ZoomEndTime time="998,853.992 ns"></ZoomEndTime>
-      <Cursor1Time time="998,709.100 ns"></Cursor1Time>
+      <ZoomStartTime time="950,466.800 ns"></ZoomStartTime>
+      <ZoomEndTime time="950,618.201 ns"></ZoomEndTime>
+      <Cursor1Time time="950,710.400 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="177"></NameColumnWidth>
-      <ValueColumnWidth column_width="77"></ValueColumnWidth>
+      <NameColumnWidth column_width="176"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="28" />
+   <WVObjectSize size="36" />
    <wave_markers>
-      <marker label="" time="284000" />
-      <marker label="" time="1484000" />
+      <marker label="" time="3209100" />
    </wave_markers>
    <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iCPU/clk">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -74,22 +73,6 @@
       <obj_property name="ObjectShortName">alu_src2[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iCPU/Nflag">
-      <obj_property name="ElementShortName">Nflag</obj_property>
-      <obj_property name="ObjectShortName">Nflag</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iCPU/Zflag">
-      <obj_property name="ElementShortName">Zflag</obj_property>
-      <obj_property name="ObjectShortName">Zflag</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iCPU/Cflag">
-      <obj_property name="ElementShortName">Cflag</obj_property>
-      <obj_property name="ObjectShortName">Cflag</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iCPU/Vflag">
-      <obj_property name="ElementShortName">Vflag</obj_property>
-      <obj_property name="ObjectShortName">Vflag</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/alu_out">
       <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
@@ -133,18 +116,66 @@
    <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/MemRdata">
       <obj_property name="ElementShortName">MemRdata[31:0]</obj_property>
       <obj_property name="ObjectShortName">MemRdata[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iGPIO/DataOut">
+      <obj_property name="ElementShortName">DataOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataOut[31:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iCPU/MemWdata">
       <obj_property name="ElementShortName">MemWdata[31:0]</obj_property>
       <obj_property name="ObjectShortName">MemWdata[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/seg_com">
-      <obj_property name="ElementShortName">seg_com[5:0]</obj_property>
-      <obj_property name="ObjectShortName">seg_com[5:0]</obj_property>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iGPIO/WEN">
+      <obj_property name="ElementShortName">WEN</obj_property>
+      <obj_property name="ObjectShortName">WEN</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_RV32I_SoC/seg_data">
-      <obj_property name="ElementShortName">seg_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">seg_data[7:0]</obj_property>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iGPIO/REN">
+      <obj_property name="ElementShortName">REN</obj_property>
+      <obj_property name="ObjectShortName">REN</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iGPIO/CS">
+      <obj_property name="ElementShortName">CS</obj_property>
+      <obj_property name="ObjectShortName">CS</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iGPIO/button_reg">
+      <obj_property name="ElementShortName">button_reg</obj_property>
+      <obj_property name="ObjectShortName">button_reg</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iGPIO/btn2">
+      <obj_property name="ElementShortName">btn2</obj_property>
+      <obj_property name="ObjectShortName">btn2</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iGPIO/sw_reg">
+      <obj_property name="ElementShortName">sw_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sw_reg[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iGPIO/sw">
+      <obj_property name="ElementShortName">sw[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sw[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iGPIO/Addr">
+      <obj_property name="ElementShortName">Addr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">Addr[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iGPIO/DataIn">
+      <obj_property name="ElementShortName">DataIn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataIn[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iUART/Addr">
+      <obj_property name="ElementShortName">Addr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">Addr[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iUART/DataIn">
+      <obj_property name="ElementShortName">DataIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DataIn[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_RV32I_SoC/DUT/iUART/uart_tx_reg">
+      <obj_property name="ElementShortName">uart_tx_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_tx_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_RV32I_SoC/DUT/iUART/uart_en_reg">
+      <obj_property name="ElementShortName">uart_en_reg</obj_property>
+      <obj_property name="ObjectShortName">uart_en_reg</obj_property>
    </wvobject>
 </wave_config>

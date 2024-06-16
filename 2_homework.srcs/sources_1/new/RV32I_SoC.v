@@ -60,7 +60,7 @@ module RV32I_SoC(
     clk_wiz_0 iPLL ( 
         .clk0(clk_main), 
         .clk90(clk_text),
-        .clk180(clk_data), 
+        .clk180(clk_data),
         .reset(btn),        //active high 
         .locked(locked),    //'1' after clock becomes stable
         .clk_in1(clk_125mhz)

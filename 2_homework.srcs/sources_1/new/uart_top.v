@@ -45,11 +45,12 @@ module uart_top(
 //    end
     
     // Read
-    always @ (posedge clk) begin
-        if (rst) DataOut <= 0;
-        else if (CS & REN) begin
-            if (Addr == 12'h00C) DataOut <= uart_rx_data;
+    always @ (*) begin
+        if (CS & REN) begin
+            if (Addr == 12'h008) DataOut = uart_rx_data;
+            else DataOut = 0;
         end
+        else DataOut = 0;
     end
     
     // Write
@@ -61,8 +62,8 @@ module uart_top(
             uart_tx_reg <= 0;
         end
         else if (CS & WEN) begin 
-            if (Addr == 12'h004) uart_en_reg <= DataIn;
-            else if (Addr == 12'h008) uart_tx_reg <= DataIn;
+            if (Addr == 12'h000) uart_en_reg <= DataIn;
+            else if (Addr == 12'h004) uart_tx_reg <= DataIn;
         end
     end
 

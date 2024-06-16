@@ -19,7 +19,7 @@
 // 0xFFFF_2000 -------------------------------
 //                           UART               4KB
 // 0xFFFF_1000 -------------------------------
-//               Reserved for Peripheral-1      4KB
+//               Reserved for Peripheral-2      4KB
 // 0xFFFF_0000 -------------------------------
 //
 //                        Reserved
@@ -38,7 +38,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//! Need to edit!!!!
+
 module Addr_Decoder(
         input [31:0] addr,
         output reg cs_mem,

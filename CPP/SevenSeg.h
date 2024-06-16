@@ -2,7 +2,8 @@
 #define SEVENSEG_H_
 
 #define GPIO_BASE 0xFFFF2000
-#define Button_Status GPIO_BASE + 9 // if pointer of int, increment(+1) is equal to address(+4)
+#define Button_Status GPIO_BASE + 0 // if pointer of int, increment(+1) is equal to address(+4)
+#define SW_Status GPIO_BASE + 1
 #define LEDG GPIO_BASE + 2
 #define SevenSeg0 GPIO_BASE + 3
 #define SevenSeg1 GPIO_BASE + 4
@@ -10,7 +11,6 @@
 #define SevenSeg3 GPIO_BASE + 6
 #define SevenSeg4 GPIO_BASE + 7
 #define SevenSeg5 GPIO_BASE + 8
-#define SW_Status GPIO_BASE + 1
 
 #define SEG_0 0x7E     /* Display "0" on 7 Segment */
 #define SEG_1 0x30     /* Display "1" on 7 Segment */
@@ -33,8 +33,8 @@
 #define SEG_DOT 0x80   /* Display "." on 7 Segment */
 
 #define UART_BASE 0xFFFF1000
-#define UART_STATUS UART_BASE + 1
-#define UART_TX UART_BASE + 2
-#define UART_RX UART_BASE + 3
+#define UART_STATUS UART_BASE + 0
+#define UART_TX UART_BASE + 1
+#define UART_RX UART_BASE + 2
 
 #endif /* SEVENSEG_H_ */
