@@ -28,7 +28,7 @@ module GPIO(
     input   WEN,
     input   [11:0] Addr, 
     input   [31:0] DataIn,
-    input   uart_tx_en,
+    input   btn2,
     input   [3:0] sw,
     output  reg [31:0]  DataOut,
     output  reg [6:0] HEX0,
@@ -40,12 +40,26 @@ module GPIO(
     output  reg [3:0] LEDS
     );
     
+    // Register
+    reg button_reg;
+    reg [3:0] sw_reg;
+    always @ (posedge clk) begin
+        if (rst) begin
+            button_reg <= 0;
+            sw_reg <= 0;
+        end
+        else begin
+            button_reg <= btn2;
+            sw_reg <= sw;
+        end
+    end
+
     // Register Read
     always @(posedge clk) begin
         if (rst) DataOut <= 0;
         else if (CS & REN) begin
-            if (Addr==12'h000) DataOut <= uart_tx_en;
-            else if (Addr==12'h004) DataOut <= sw;
+            if (Addr==12'h024) DataOut <= button_reg;
+            else if (Addr==12'h004) DataOut <= sw_reg;
         end
     end
     

@@ -23,7 +23,7 @@
 module RV32I_SoC(
     input   clk_125mhz, 
     input   btn,    // active high rst when button is pressed
-    input   uart_tx_en,
+    input   btn2,
     input [3:0]    sw,
     output         uart_txd,
     output [3:0]   leds,  
@@ -102,7 +102,7 @@ module RV32I_SoC(
         .WEN(data_we),
         .Addr(data_addr),  
         .DataIn(write_data),
-        .uart_tx_en(uart_tx_en),
+        .btn2(btn2),
         .sw(sw),
         .DataOut(read_data_gpio),
         .HEX0(HEX0),

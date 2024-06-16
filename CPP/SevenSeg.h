@@ -2,8 +2,8 @@
 #define SEVENSEG_H_
 
 #define GPIO_BASE 0xFFFF2000
-#define Button_Status GPIO_BASE + 0
-#define SW_Status GPIO_BASE + 1 // if pointer of int, increment(+1) is equal to address(+4)
+#define SW_Status GPIO_BASE + 9
+#define Button_Status GPIO_BASE + 1 // if pointer of int, increment(+1) is equal to address(+4)
 #define LEDG GPIO_BASE + 2
 #define SevenSeg0 GPIO_BASE + 3
 #define SevenSeg1 GPIO_BASE + 4

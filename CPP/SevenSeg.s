@@ -13,63 +13,48 @@ SevenSeg:
 	sw	s0,40(sp)
 	addi	s0,sp,48
 	li	a5,-57344
-	addi	a5,a5,8
-	sw	a5,-24(s0)
-	li	a5,-57344
+	addi	a5,a5,36
 	sw	a5,-28(s0)
 	li	a5,-57344
-	addi	a5,a5,4
+	addi	a5,a5,8
 	sw	a5,-32(s0)
-	li	a5,-61440
-	sw	a5,-36(s0)
-	li	a5,-61440
+	li	a5,-57344
 	addi	a5,a5,4
-	sw	a5,-40(s0)
-	sb	zero,-17(s0)
-	sb	zero,-18(s0)
-.L6:
+	sw	a5,-36(s0)
+	sw	zero,-20(s0)
+	sw	zero,-24(s0)
+.L4:
 	lw	a5,-28(s0)
-	lw	a4,0(a5)
+	lw	a5,0(a5)
+	sw	a5,-40(s0)
+	lw	a5,-36(s0)
+	lw	a5,0(a5)
+	sw	a5,-44(s0)
+	lw	a4,-44(s0)
 	li	a5,1
 	bne	a4,a5,.L2
-	lw	a5,-32(s0)
-	lw	a4,0(a5)
-	li	a5,9
-	bgtu	a4,a5,.L3
-	lw	a5,-32(s0)
-	lw	a5,0(a5)
-	andi	a5,a5,0xff
-	ori	a5,a5,48
-	sb	a5,-17(s0)
-	j	.L4
-.L3:
-	lw	a5,-32(s0)
-	lw	a5,0(a5)
-	andi	a5,a5,0xff
-	addi	a5,a5,55
-	sb	a5,-17(s0)
-.L4:
-	lbu	a4,-17(s0)
-	lw	a5,-36(s0)
-	sw	a4,0(a5)
-	lbu	a4,-18(s0)
-	lbu	a5,-17(s0)
+	lw	a5,-24(s0)
+	bne	a5,zero,.L2
+	lw	a5,-40(s0)
+	lw	a4,-20(s0)
 	mv	a1,a4
 	mv	a0,a5
 	call	display
-	lbu	a5,-18(s0)
+	lw	a5,-20(s0)
 	addi	a5,a5,1
-	sb	a5,-18(s0)
+	sw	a5,-20(s0)
 .L2:
-	lbu	a4,-18(s0)
-	li	a5,6
-	bne	a4,a5,.L5
-	sb	zero,-18(s0)
-.L5:
-	lbu	a4,-17(s0)
-	lw	a5,-24(s0)
+	lw	a5,-32(s0)
+	lw	a4,-40(s0)
 	sw	a4,0(a5)
-	j	.L6
+	lw	a4,-20(s0)
+	li	a5,5
+	bleu	a4,a5,.L3
+	sw	zero,-20(s0)
+.L3:
+	lw	a5,-44(s0)
+	sw	a5,-24(s0)
+	j	.L4
 	.size	SevenSeg, .-SevenSeg
 	.align	2
 	.globl	display
@@ -78,9 +63,8 @@ display:
 	addi	sp,sp,-64
 	sw	s0,60(sp)
 	addi	s0,sp,64
-	mv	a5,a0
+	sw	a0,-52(s0)
 	sw	a1,-56(s0)
-	sb	a5,-49(s0)
 	li	a5,-57344
 	addi	a5,a5,12
 	sw	a5,-24(s0)
@@ -99,7 +83,19 @@ display:
 	li	a5,-57344
 	addi	a5,a5,32
 	sw	a5,-44(s0)
-	lbu	a5,-49(s0)
+	lw	a4,-52(s0)
+	li	a5,9
+	bgt	a4,a5,.L6
+	lw	a5,-52(s0)
+	ori	a5,a5,48
+	sw	a5,-52(s0)
+	j	.L7
+.L6:
+	lw	a5,-52(s0)
+	addi	a5,a5,55
+	sw	a5,-52(s0)
+.L7:
+	lw	a5,-52(s0)
 	addi	a5,a5,-48
 	li	a4,22
 	bgtu	a5,a4,.L8
@@ -231,28 +227,88 @@ display:
 	lw	a5,-24(s0)
 	lw	a4,-20(s0)
 	sw	a4,0(a5)
+	lw	a5,-28(s0)
+	sw	zero,0(a5)
+	lw	a5,-32(s0)
+	sw	zero,0(a5)
+	lw	a5,-36(s0)
+	sw	zero,0(a5)
+	lw	a5,-40(s0)
+	sw	zero,0(a5)
+	lw	a5,-44(s0)
+	sw	zero,0(a5)
 	j	.L35
 .L33:
+	lw	a5,-24(s0)
+	sw	zero,0(a5)
 	lw	a5,-28(s0)
 	lw	a4,-20(s0)
 	sw	a4,0(a5)
+	lw	a5,-32(s0)
+	sw	zero,0(a5)
+	lw	a5,-36(s0)
+	sw	zero,0(a5)
+	lw	a5,-40(s0)
+	sw	zero,0(a5)
+	lw	a5,-44(s0)
+	sw	zero,0(a5)
 	j	.L35
 .L32:
+	lw	a5,-24(s0)
+	sw	zero,0(a5)
+	lw	a5,-28(s0)
+	sw	zero,0(a5)
 	lw	a5,-32(s0)
 	lw	a4,-20(s0)
 	sw	a4,0(a5)
+	lw	a5,-36(s0)
+	sw	zero,0(a5)
+	lw	a5,-40(s0)
+	sw	zero,0(a5)
+	lw	a5,-44(s0)
+	sw	zero,0(a5)
 	j	.L35
 .L31:
+	lw	a5,-24(s0)
+	sw	zero,0(a5)
+	lw	a5,-28(s0)
+	sw	zero,0(a5)
+	lw	a5,-32(s0)
+	sw	zero,0(a5)
 	lw	a5,-36(s0)
 	lw	a4,-20(s0)
 	sw	a4,0(a5)
+	lw	a5,-40(s0)
+	sw	zero,0(a5)
+	lw	a5,-44(s0)
+	sw	zero,0(a5)
 	j	.L35
 .L30:
+	lw	a5,-24(s0)
+	sw	zero,0(a5)
+	lw	a5,-28(s0)
+	sw	zero,0(a5)
+	lw	a5,-32(s0)
+	sw	zero,0(a5)
+	lw	a5,-36(s0)
+	sw	zero,0(a5)
 	lw	a5,-40(s0)
 	lw	a4,-20(s0)
 	sw	a4,0(a5)
+	lw	a5,-44(s0)
+	sw	zero,0(a5)
 	j	.L35
 .L28:
+	lw	a5,-24(s0)
+	sw	zero,0(a5)
+	lw	a5,-28(s0)
+	sw	zero,0(a5)
+	lw	a5,-32(s0)
+	sw	zero,0(a5)
+	lw	a5,-36(s0)
+	sw	zero,0(a5)
+	lw	a5,-40(s0)
+	sw	zero,0(a5)
 	lw	a5,-44(s0)
 	lw	a4,-20(s0)
 	sw	a4,0(a5)

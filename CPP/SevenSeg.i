@@ -5,43 +5,39 @@
 # 1 "SevenSeg.h" 1
 # 2 "SevenSeg.c" 2
 
-void display(char, int);
+void display(int, int);
 
 void SevenSeg()
 {
+ unsigned int *sw_addr = (unsigned int *)0xFFFF2000 + 9;
  unsigned int *led_addr = (unsigned int *)0xFFFF2000 + 2;
- unsigned int *button_addr = (unsigned int *)0xFFFF2000 + 0;
- unsigned int *sw_addr = (unsigned int *)0xFFFF2000 + 1;
- unsigned int *uart_tx_addr = (unsigned int *)0xFFFF1000 + 0;
- unsigned int *uart_rx_addr = (unsigned int *)0xFFFF1000 + 1;
+ unsigned int *button_addr = (unsigned int *)0xFFFF2000 + 1;
 
- unsigned char data, pose;
 
- data = 0;
- pose = 0;
+
+ unsigned int data, pose = 0;
+ unsigned int button_status, old_status = 0;
 
  while (1)
  {
-  if (*button_addr == 1)
+  data = *sw_addr;
+  button_status = *button_addr;
+  if ((button_status == 1) && (old_status == 0))
   {
-   if (*sw_addr < 10)
-    data = 0x30 | *sw_addr;
-   else
-    data = 0x37 + *sw_addr;
-   *uart_tx_addr = data;
    display(data, pose);
    pose++;
   }
 
-  if (pose == 6)
+  *led_addr = data;
+  if (pose > 5)
    pose = 0;
 
-  *led_addr = data;
+  old_status = button_status;
  }
  return;
 }
 
-void display(char asci, int pose)
+void display(int asci, int pose)
 {
  unsigned int *seg0_addr = (unsigned int *)0xFFFF2000 + 3;
  unsigned int *seg1_addr = (unsigned int *)0xFFFF2000 + 4;
@@ -51,6 +47,10 @@ void display(char asci, int pose)
  unsigned int *seg5_addr = (unsigned int *)0xFFFF2000 + 8;
 
  unsigned int num;
+ if (asci < 10)
+  asci = 0x30 | asci;
+ else
+  asci = 0x37 + asci;
  switch (asci)
  {
  case '0':
@@ -110,20 +110,50 @@ void display(char asci, int pose)
  {
  case 0:
   *seg0_addr = num;
+  *seg1_addr = 0x00;
+  *seg2_addr = 0x00;
+  *seg3_addr = 0x00;
+  *seg4_addr = 0x00;
+  *seg5_addr = 0x00;
   break;
  case 1:
+  *seg0_addr = 0x00;
   *seg1_addr = num;
+  *seg2_addr = 0x00;
+  *seg3_addr = 0x00;
+  *seg4_addr = 0x00;
+  *seg5_addr = 0x00;
   break;
  case 2:
+  *seg0_addr = 0x00;
+  *seg1_addr = 0x00;
   *seg2_addr = num;
+  *seg3_addr = 0x00;
+  *seg4_addr = 0x00;
+  *seg5_addr = 0x00;
   break;
  case 3:
+  *seg0_addr = 0x00;
+  *seg1_addr = 0x00;
+  *seg2_addr = 0x00;
   *seg3_addr = num;
+  *seg4_addr = 0x00;
+  *seg5_addr = 0x00;
   break;
  case 4:
+  *seg0_addr = 0x00;
+  *seg1_addr = 0x00;
+  *seg2_addr = 0x00;
+  *seg3_addr = 0x00;
   *seg4_addr = num;
+  *seg5_addr = 0x00;
   break;
  case 5:
+  *seg0_addr = 0x00;
+  *seg1_addr = 0x00;
+  *seg2_addr = 0x00;
+  *seg3_addr = 0x00;
+  *seg4_addr = 0x00;
   *seg5_addr = num;
   break;
  default:

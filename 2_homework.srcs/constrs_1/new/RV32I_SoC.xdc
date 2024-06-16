@@ -7,8 +7,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports btn]
 set_property PACKAGE_PIN Y16 [get_ports btn]
 
 # BTN for UART TX
-set_property IOSTANDARD LVCMOS33 [get_ports uart_tx_en]
-set_property PACKAGE_PIN K19 [get_ports uart_tx_en]
+set_property IOSTANDARD LVCMOS33 [get_ports btn2]
+set_property PACKAGE_PIN K19 [get_ports btn2]
 
 # 4 LEDS
 set_property PACKAGE_PIN M14 [get_ports {leds[0]}]
@@ -22,10 +22,15 @@ set_property IOSTANDARD LVCMOS33 [get_ports {leds[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {leds[3]}]
 
 ##Switches
-set_property -dict { PACKAGE_PIN G15   IOSTANDARD LVCMOS33 } [get_ports { sw[0] }]; #IO_L19N_T3_VREF_35 Sch=sw[0]
-set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { sw[1] }]; #IO_L24P_T3_34 Sch=sw[1]
-set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { sw[2] }]; #IO_L4N_T0_34 Sch=sw[2]
-set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS33 } [get_ports { sw[3] }]; #IO_L9P_T1_DQS_34 Sch=sw[3]
+set_property PACKAGE_PIN G15 [get_ports {sw[0]}]
+set_property PACKAGE_PIN P15 [get_ports {sw[1]}]
+set_property PACKAGE_PIN W13 [get_ports {sw[2]}]
+set_property PACKAGE_PIN T16 [get_ports {sw[3]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[3]}]
 
 ## UART TXD (Pmod JA)
 set_property IOSTANDARD LVCMOS33 [get_ports uart_txd]

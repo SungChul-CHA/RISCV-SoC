@@ -1,42 +1,38 @@
 #include "SevenSeg.h"
 
-void display(char, int);
+void display(int, int);
 
 void SevenSeg()
 {
+	unsigned int *sw_addr = (unsigned int *)SW_Status;
 	unsigned int *led_addr = (unsigned int *)LEDG;
 	unsigned int *button_addr = (unsigned int *)Button_Status;
-	unsigned int *sw_addr = (unsigned int *)SW_Status;
 	unsigned int *uart_tx_addr = (unsigned int *)UART_TX;
 	unsigned int *uart_rx_addr = (unsigned int *)UART_RX;
 
-	unsigned char data, pose;
-
-	data = 0;
-	pose = 0;
+	unsigned int data, pose = 0;
+	unsigned int button_status, old_status = 0;
 
 	while (1)
 	{
-		if (*button_addr == 1)
+		data = *sw_addr;
+		button_status = *button_addr;
+		if ((button_status == 1) && (old_status == 0))
 		{
-			if (*sw_addr < 10)
-				data = 0x30 | *sw_addr;
-			else
-				data = 0x37 + *sw_addr; // 0x41 = 0x37 + 0x0A
-			*uart_tx_addr = data;
 			display(data, pose);
 			pose++;
 		}
 
-		if (pose == 6)
+		*led_addr = data;
+		if (pose > 5)
 			pose = 0;
 
-		*led_addr = data;
+		old_status = button_status;
 	}
 	return;
 }
 
-void display(char asci, int pose)
+void display(int asci, int pose)
 {
 	unsigned int *seg0_addr = (unsigned int *)SevenSeg0;
 	unsigned int *seg1_addr = (unsigned int *)SevenSeg1;
@@ -46,6 +42,10 @@ void display(char asci, int pose)
 	unsigned int *seg5_addr = (unsigned int *)SevenSeg5;
 
 	unsigned int num;
+	if (asci < 10)
+		asci = 0x30 | asci;
+	else
+		asci = 0x37 + asci; // 0x41 = 0x37 + 0x0A
 	switch (asci)
 	{
 	case '0':
@@ -105,20 +105,50 @@ void display(char asci, int pose)
 	{
 	case 0:
 		*seg0_addr = num;
+		*seg1_addr = SEG_BLANK;
+		*seg2_addr = SEG_BLANK;
+		*seg3_addr = SEG_BLANK;
+		*seg4_addr = SEG_BLANK;
+		*seg5_addr = SEG_BLANK;
 		break;
 	case 1:
+		*seg0_addr = SEG_BLANK;
 		*seg1_addr = num;
+		*seg2_addr = SEG_BLANK;
+		*seg3_addr = SEG_BLANK;
+		*seg4_addr = SEG_BLANK;
+		*seg5_addr = SEG_BLANK;
 		break;
 	case 2:
+		*seg0_addr = SEG_BLANK;
+		*seg1_addr = SEG_BLANK;
 		*seg2_addr = num;
+		*seg3_addr = SEG_BLANK;
+		*seg4_addr = SEG_BLANK;
+		*seg5_addr = SEG_BLANK;
 		break;
 	case 3:
+		*seg0_addr = SEG_BLANK;
+		*seg1_addr = SEG_BLANK;
+		*seg2_addr = SEG_BLANK;
 		*seg3_addr = num;
+		*seg4_addr = SEG_BLANK;
+		*seg5_addr = SEG_BLANK;
 		break;
 	case 4:
+		*seg0_addr = SEG_BLANK;
+		*seg1_addr = SEG_BLANK;
+		*seg2_addr = SEG_BLANK;
+		*seg3_addr = SEG_BLANK;
 		*seg4_addr = num;
+		*seg5_addr = SEG_BLANK;
 		break;
 	case 5:
+		*seg0_addr = SEG_BLANK;
+		*seg1_addr = SEG_BLANK;
+		*seg2_addr = SEG_BLANK;
+		*seg3_addr = SEG_BLANK;
+		*seg4_addr = SEG_BLANK;
 		*seg5_addr = num;
 		break;
 	default:

@@ -392,8 +392,8 @@ module rv32i_cpu(
     
     assign MemAddr = alu_out;  
     assign MemWdata = rs2_data; 
-    assign MemWen = (store & funct3[1:0] == 2'b00) ? 4'b0001 : 
-                    (store & funct3[1:0] == 2'b01) ? 4'b0011 :
+    assign MemWen = (store & (funct3 == 3'b000)) ? 4'b0001 : 
+                    (store & (funct3 == 3'b001)) ? 4'b0011 :
                     (store) ? 4'b1111 : 4'd0; 
 
 endmodule

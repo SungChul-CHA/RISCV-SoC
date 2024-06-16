@@ -18,6 +18,8 @@ LDFLAGS= -N -X --no-warn-rwx-segments -T$(EXE).lds
 CCFLAGS= -c -g -march=rv32i
 
 all: $(TARGET)
+	cp insts_data_test.coe /home/tony/Desktop/SoC/Vivado/2_homework/2_homework.srcs/sources_1/ip/ram_2port_2048x32/
+
 $(TARGET): $(SRC).o $(TARGET).o
 	$(LD) $(LDFLAGS) $^ -o $(EXE)
 	$(OBJDUMP) -xS  $(EXE) > $(EXE).dump

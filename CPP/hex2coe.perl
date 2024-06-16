@@ -14,7 +14,7 @@ close(FH);
 open (FH, "<labcode.hex") or die "oooops: $!";
 
 # Instruction & Data Memory Initialization
-$file = 'insts_data_uart.coe';
+$file = 'insts_data_test.coe';
 open(MEM, ">$file");
 
 print MEM "memory_initialization_radix=16;\n";
