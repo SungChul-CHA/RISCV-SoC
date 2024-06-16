@@ -21,13 +21,13 @@ void SevenSeg()
 		if ((button_status == 1) && (old_status == 0))
 		{
 			*uart_tx_addr = data;
-			display(data, pose);
+			*led_addr = data;
 			*uart_en_addr = button_status;
 			pose++;
 		}
 		*uart_en_addr = 0;
 
-		*led_addr = data;
+		display(*uart_rx_addr, pose);
 		if (pose > 5)
 			pose = 0;
 

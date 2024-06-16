@@ -38,17 +38,17 @@ module uart_top(
     );
     
     // register
-    reg [7:0] uart_rx_reg;
-    always @ (posedge clk) begin
-        if (rst) uart_rx_reg <= 0;
-        else uart_rx_reg <= uart_rx_data;
-    end
+//    reg [7:0] uart_rx_reg;
+//    always @ (posedge clk) begin
+//        if (rst) uart_rx_reg <= 0;
+//        else uart_rx_reg <= uart_rx_data;
+//    end
     
     // Read
     always @ (posedge clk) begin
         if (rst) DataOut <= 0;
         else if (CS & REN) begin
-            if (Addr == 12'h00C) DataOut <= uart_rx_reg;
+            if (Addr == 12'h00C) DataOut <= uart_rx_data;
         end
     end
     

@@ -47,11 +47,9 @@ SevenSeg:
 	lw	a5,-40(s0)
 	lw	a4,-52(s0)
 	sw	a4,0(a5)
-	lw	a5,-52(s0)
-	lw	a4,-20(s0)
-	mv	a1,a4
-	mv	a0,a5
-	call	display
+	lw	a5,-32(s0)
+	lw	a4,-52(s0)
+	sw	a4,0(a5)
 	lw	a5,-48(s0)
 	lw	a4,-56(s0)
 	sw	a4,0(a5)
@@ -61,9 +59,13 @@ SevenSeg:
 .L2:
 	lw	a5,-48(s0)
 	sw	zero,0(a5)
-	lw	a5,-32(s0)
-	lw	a4,-52(s0)
-	sw	a4,0(a5)
+	lw	a5,-44(s0)
+	lw	a5,0(a5)
+	mv	a4,a5
+	lw	a5,-20(s0)
+	mv	a1,a5
+	mv	a0,a4
+	call	display
 	lw	a4,-20(s0)
 	li	a5,5
 	bleu	a4,a5,.L3

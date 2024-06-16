@@ -2,12 +2,12 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Sun Jun 16 18:56:10 2024
-# Process ID: 2918530
+# Start of session at: Sun Jun 16 20:28:13 2024
+# Process ID: 4094234
 # Current directory: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/impl_1
 # Command line: vivado -log RV32I_SoC.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source RV32I_SoC.tcl -notrace
 # Log file: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/impl_1/RV32I_SoC.vdi
 # Journal file: /mnt/Shared/SoC/Vivado/2_homework/2_homework.runs/impl_1/vivado.jou
-# Running On: tony-ubuntu, OS: Linux, CPU Frequency: 3767.798 MHz, CPU Physical cores: 14, Host memory: 33372 MB
+# Running On: tony-ubuntu, OS: Linux, CPU Frequency: 1310.490 MHz, CPU Physical cores: 14, Host memory: 33372 MB
 #-----------------------------------------------------------
 source RV32I_SoC.tcl -notrace
