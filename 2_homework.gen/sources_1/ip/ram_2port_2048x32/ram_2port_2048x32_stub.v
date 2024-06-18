@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
 // Date        : Sun Jun 16 23:14:39 2024
 // Host        : tony-ubuntu running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /mnt/Shared/SoC/Vivado/2_homework/2_homework.gen/sources_1/ip/ram_2port_2048x32/ram_2port_2048x32_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top ram_2port_2048x32 -prefix
+//               ram_2port_2048x32_ ram_2port_2048x32_stub.v
 // Design      : ram_2port_2048x32
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

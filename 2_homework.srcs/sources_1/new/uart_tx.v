@@ -25,8 +25,8 @@ module uart_tx (
 	reg [15:0] count;
 	wire uart_start_pulse, transit;
 	
-//    debounce debounce_inst (clk, rst, uart_tx_en, , uart_start_pulse); 
-    assign uart_start_pulse = uart_tx_en;
+    debounce debounce_inst (clk, rst, uart_tx_en, , uart_start_pulse); 
+//    assign uart_start_pulse = uart_tx_en;
 		
     always @* begin
         case (state)
